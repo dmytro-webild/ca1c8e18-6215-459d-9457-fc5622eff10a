@@ -76,14 +76,8 @@ export default function LandingPage() {
             { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" }
           ]}
           buttonAnimation="slide-up"
-          avatars={[
-            { src: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/professional-headshot-photo-of-a-friendl-1774010020721-9f765162.png", alt: "User 1" },
-            { src: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/professional-headshot-photo-of-a-solar-e-1774010016981-df83bd1d.png", alt: "User 2" }
-          ]}
-          avatarText="✓ Dynamisch  ✓ Engagierend"
           imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png"
           imageAlt="Hero Scroll Dashboard"
-          mediaAnimation="blur-reveal"
         />
       </div>
 
