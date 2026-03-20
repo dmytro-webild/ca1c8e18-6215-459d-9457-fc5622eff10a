@@ -187,6 +187,8 @@ export default function LandingPage() {
               placeholder: "Geben Sie Ihre Frage ein..."
             }
           ]}
+          cardClassName="min-h-[450px] 2xl:min-h-[600px]"
+          gridClassName="grid-cols-1 md:grid-cols-3 gap-6"
         />
       </div>
 
