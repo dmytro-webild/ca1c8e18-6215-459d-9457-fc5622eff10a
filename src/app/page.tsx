@@ -6,12 +6,11 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
-import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, Phone } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -185,10 +184,25 @@ export default function LandingPage() {
                 }
               ],
               placeholder: "Geben Sie Ihre Frage ein..."
+            },
+            {
+              title: "Telefon-KI für Anrufer",              description: "Ein dedizierter Agent für eingehende Anrufe von Interessenten und bestehenden Kunden. Verwaltet komplexe Konversationen, versteht Solarfachbegriffe und leitet an das richtige Team weiter.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+              bentoComponent: "phone",              statusIcon: Phone,
+              alertIcon: Zap,
+              alertTitle: "Anruf in Bearbeitung",              alertMessage: "Intelligente Anrufverarbeitung aktiv",              apps: [
+                { name: "Voice Processing", icon: MessageSquare },
+                { name: "CRM Integration", icon: Info },
+                { name: "Call Routing", icon: Zap },
+                { name: "Recording", icon: Lightbulb },
+                { name: "Analytics", icon: TrendingUp },
+                { name: "Quality Check", icon: Shield },
+                { name: "Notifications", icon: AlertCircle },
+                { name: "Support", icon: HelpCircle }
+              ]
             }
           ]}
           cardClassName="min-h-[450px] 2xl:min-h-[600px]"
-          gridClassName="grid-cols-1 md:grid-cols-3 gap-6"
+          gridClassName="grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
         />
       </div>
 
