@@ -59,11 +59,14 @@ export default function LandingPage() {
           <NavbarLayoutFloatingInline
             navItems={[
               { name: "Probleme", id: "problems" },
-              { name: "Unsere Agenten", id: "agents" },
+              { name: "Agenten", id: "agents" },
               { name: "So funktioniert's", id: "howitworks" },
               { name: "FAQ", id: "faq" }
             ]}
-            button={{ text: "Kostenloses Gespräch", href: "https://calendly.com/voicelinkai/info" }}
+            button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
+            logoText="VoiceLink"
+            logoHighlight="AI"
+            logoHighlightColor="#ff8c00"
           />
         </div>
 
