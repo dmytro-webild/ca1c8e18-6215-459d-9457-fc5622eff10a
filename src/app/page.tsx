@@ -146,7 +146,6 @@ export default function LandingPage() {
           animationType="blur-reveal"
           features={[
             {
-              id: 1,
               title: "KI-Telefonassistent",              description: "Dein Team ist auf dem Dach. Der Agent beantwortet Routineanrufe, bucht Termine und qualifiziert Interessenten – 24/7, ohne dass jemand abheben muss.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
               bentoComponent: "phone",              statusIcon: Zap,
               alertIcon: AlertCircle,
@@ -162,7 +161,6 @@ export default function LandingPage() {
               ]
             },
             {
-              id: 2,
               title: "KI-Buchungsagent",              description: "Termine buchen sich selbst. Der Agent koordiniert automatisch Aufmaßtermine, Installationen und Wartungen – direkt in deinen Kalender, ohne manuelle Abstimmung.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
               bentoComponent: "timeline",              heading: "Booking Timeline",              subheading: "Automated scheduling",              items: [
                 { label: "Customer Request", detail: "Inquiry received" },
@@ -172,7 +170,6 @@ export default function LandingPage() {
               completedLabel: "All steps optimized"
             },
             {
-              id: 3,
               title: "KI-Chat-Agent",              description: "Website-Besucher werden zu Leads. Der Agent qualifiziert Interessenten in Echtzeit, sammelt Daten und übergibt warme Leads an dein Team – mit vollständigen Projektinformationen.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
               bentoComponent: "chat",              aiIcon: Bot,
               userIcon: MessageSquare,
