@@ -28,8 +28,6 @@ export default function LandingPage() {
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
-          brandName="VoiceLinkAI"
-          brandLogo="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/voicelink-ai-logo-1774010020000-voicelink.png"
           navItems={[
             { name: "Probleme", id: "problems" },
             { name: "Unsere Agenten", id: "agents" },
