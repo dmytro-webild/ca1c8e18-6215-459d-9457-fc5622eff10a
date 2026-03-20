@@ -3,6 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import HeroBillboard from '@/components/sections/hero/HeroBillboard';
+import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll';
 import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
@@ -59,6 +60,29 @@ export default function LandingPage() {
           avatarText="✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Keine IT-Kenntnisse nötig"
           imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png"
           imageAlt="VoiceLinkAI Solar Dashboard"
+          mediaAnimation="blur-reveal"
+        />
+      </div>
+
+      <div id="hero-scroll" data-section="hero-scroll">
+        <HeroBillboardScroll
+          title="Scroll-optimierte Hero Section"
+          description="Diese Section nutzt Scroll-Animationen für eine bessere User Experience"
+          background={{ variant: "animated-grid" }}
+          tag="Scroll Animation"
+          tagIcon={Sparkles}
+          tagAnimation="blur-reveal"
+          buttons={[
+            { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" }
+          ]}
+          buttonAnimation="slide-up"
+          avatars={[
+            { src: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/professional-headshot-photo-of-a-friendl-1774010020721-9f765162.png", alt: "User 1" },
+            { src: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/professional-headshot-photo-of-a-solar-e-1774010016981-df83bd1d.png", alt: "User 2" }
+          ]}
+          avatarText="✓ Dynamisch  ✓ Engagierend"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png"
+          imageAlt="Hero Scroll Dashboard"
           mediaAnimation="blur-reveal"
         />
       </div>
