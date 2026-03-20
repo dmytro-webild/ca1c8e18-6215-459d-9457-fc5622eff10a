@@ -186,7 +186,7 @@ export default function LandingPage() {
               placeholder: "Geben Sie Ihre Frage ein..."
             },
             {
-              title: "Telefon-KI für Anrufer",              description: "Ein dedizierter Agent für eingehende Anrufe von Interessenten und bestehenden Kunden. Verwaltet komplexe Konversationen, versteht Solarfachbegriffe und leitet an das richtige Team weiter.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+              title: "KI-Agent für direkte Anrufe",              description: "Interessenten und Kunden können deinen KI-Agent direkt anrufen. Ein dedizierter Agent für Telefonate bearbeitet komplexe Konversationen, versteht Solarfachbegriffe und leitet an das richtige Team weiter.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
               bentoComponent: "phone",              statusIcon: Phone,
               alertIcon: Zap,
               alertTitle: "Anruf in Bearbeitung",              alertMessage: "Intelligente Anrufverarbeitung aktiv",              apps: [
@@ -278,6 +278,25 @@ export default function LandingPage() {
               id: "6",              title: "Funktioniert das auch bei uns mit nur 5 Mitarbeitern?",              content: "Gerade dann. Kleine Teams spüren den Druck durch Routineaufgaben am stärksten. Ein KI-Agent ist wie ein zusätzlicher Mitarbeiter für alle Aufgaben, die keinen Menschen brauchen – ohne Personalkosten, ohne Einarbeitung."
             }
           ]}
+        />
+      </div>
+
+      <div id="call-agent" data-section="call-agent">
+        <ContactSplit
+          tag="Kunden rufen direkt an"
+          title="Dein KI-Agent beantwortet jeden Anruf – 24/7"
+          description="Interessenten und Kunden können deinen KI-Agent direkt anrufen. Er versteht ihre Anliegen, beantwortet Fragen zu deinen Solaranlagen und Förderungen und leitet komplexe Anfragen intelligent an dein Team weiter. Kein Anruf geht verloren, jeder Kunde wird professionell betreut."
+          tagIcon={Phone}
+          tagAnimation="blur-reveal"
+          background={{ variant: "radial-gradient" }}
+          useInvertedBackground={false}
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png"
+          imageAlt="Call Agent"
+          mediaAnimation="blur-reveal"
+          mediaPosition="left"
+          inputPlaceholder="deine@email.de"
+          buttonText="👉 Anrufen & austesten"
+          termsText="Durch das Klicken auf den Button akzeptierst du den Anruf mit unserem KI-Agenten. Alle Gespräche sind anonymisiert und DSGVO-konform."
         />
       </div>
 
