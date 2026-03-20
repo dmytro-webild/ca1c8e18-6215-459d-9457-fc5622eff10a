@@ -64,7 +64,6 @@ export default function LandingPage() {
               { name: "FAQ", id: "faq" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
-            brandName="VoiceLinkAI"
           />
         </div>
 
