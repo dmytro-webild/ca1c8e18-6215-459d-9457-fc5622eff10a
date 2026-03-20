@@ -10,7 +10,8 @@ import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap } from 'lucide-react';
+import FeatureBento from '@/components/sections/feature/FeatureBento';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -134,26 +135,59 @@ export default function LandingPage() {
       </div>
 
       <div id="agents" data-section="agents">
-        <ProductCardThree
+        <FeatureBento
           title="Die 3 KI-Agenten für dein Solarunternehmen"
-          description="Jeder Agent automatisiert einen der größten Zeitfresser – speziell trainiert auf die Anforderungen von Solarunternehmen."
+          description="Jeder Agent automatisiert einen der größten Zeitfresser – speziell trainiert auf die Anforderungen von Solarunternehmen. Das KI-Chat-Agent wird als professionelle Produktvisualisierung mit Website-Mockup, Chat-Widget-Konversation und Live-Performance-Metriken präsentiert."
           textboxLayout="default"
           useInvertedBackground={false}
           tag="Unsere Agenten"
           tagIcon={Bot}
           tagAnimation="blur-reveal"
-          gridVariant="three-columns-all-equal-width"
           animationType="blur-reveal"
-          carouselMode="buttons"
-          products={[
+          features={[
             {
-              id: "agent-1",              name: "KI-Telefonassistent",              price: "Dein Team ist auf dem Dach",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-illustration-of-an-ai-voice-ass-1774010018958-c4a7e817.png",              imageAlt: "KI-Telefonassistent",              priceButtonProps: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" }
+              id: 1,
+              title: "KI-Telefonassistent",              description: "Dein Team ist auf dem Dach. Der Agent beantwortet Routineanrufe, bucht Termine und qualifiziert Interessenten – 24/7, ohne dass jemand abheben muss.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+              bentoComponent: "phone",              statusIcon: Zap,
+              alertIcon: AlertCircle,
+              alertTitle: "Agent aktiv",              alertMessage: "Bearbeitet eingehende Anrufe",              apps: [
+                { name: "Call Handler", icon: MessageSquare },
+                { name: "CRM Link", icon: Info },
+                { name: "Calendar", icon: Lightbulb },
+                { name: "Reports", icon: TrendingUp },
+                { name: "Security", icon: Shield },
+                { name: "Analytics", icon: TrendingUp },
+                { name: "Integration", icon: Zap },
+                { name: "Support", icon: HelpCircle }
+              ]
             },
             {
-              id: "agent-2",              name: "KI-Buchungsagent",              price: "Termine buchen sich selbst",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-booking-and-scheduling-interface-showi-1774010018912-03800597.png",              imageAlt: "KI-Buchungsagent",              priceButtonProps: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" }
+              id: 2,
+              title: "KI-Buchungsagent",              description: "Termine buchen sich selbst. Der Agent koordiniert automatisch Aufmaßtermine, Installationen und Wartungen – direkt in deinen Kalender, ohne manuelle Abstimmung.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+              bentoComponent: "timeline",              heading: "Booking Timeline",              subheading: "Automated scheduling",              items: [
+                { label: "Customer Request", detail: "Inquiry received" },
+                { label: "Calendar Check", detail: "Availability verified" },
+                { label: "Booking Confirmed", detail: "Appointment scheduled" }
+              ],
+              completedLabel: "All steps optimized"
             },
             {
-              id: "agent-3",              name: "KI-Chat-Agent",              price: "Website-Besucher werden zu Leads",              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-website-chat-interface-showing-ai-chat-1774010018721-a0024f4c.png",              imageAlt: "KI-Chat-Agent",              priceButtonProps: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" }
+              id: 3,
+              title: "KI-Chat-Agent",              description: "Website-Besucher werden zu Leads. Der Agent qualifiziert Interessenten in Echtzeit, sammelt Daten und übergibt warme Leads an dein Team – mit vollständigen Projektinformationen.",              button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+              bentoComponent: "chat",              aiIcon: Bot,
+              userIcon: MessageSquare,
+              exchanges: [
+                {
+                  userMessage: "Ich interessiere mich für eine Solaranlage für mein Einfamilienhaus",                  aiResponse: "Sehr gerne! Wie groß ist Ihr Dach ungefähr, und wie viel Strom verbrauchen Sie monatlich?"
+                },
+                {
+                  userMessage: "Etwa 30qm nach Süden, Verbrauch ca. 4000kWh pro Jahr",                  aiResponse: "Perfekt! Das ist optimal für eine 8-10kW Anlage. Sollen wir einen kostenlosen Aufmaßtermin vereinbaren?"
+                },
+                {
+                  userMessage: "Ja, gerne! Wann passt es denn?",                  aiResponse: "Nächste Woche? Montag oder Dienstag, morgens oder nachmittags?"
+                }
+              ],
+              placeholder: "Geben Sie Ihre Frage ein..."
             }
           ]}
         />
