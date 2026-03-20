@@ -290,7 +290,7 @@ export default function LandingPage() {
           tagAnimation="blur-reveal"
           background={{ variant: "radial-gradient" }}
           useInvertedBackground={false}
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png?_wi=1"
           imageAlt="Call Agent"
           mediaAnimation="blur-reveal"
           mediaPosition="left"
@@ -309,7 +309,7 @@ export default function LandingPage() {
           tagAnimation="blur-reveal"
           background={{ variant: "radial-gradient" }}
           useInvertedBackground={true}
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png"
+          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png?_wi=2"
           imageAlt="Closing CTA"
           mediaAnimation="blur-reveal"
           mediaPosition="right"
