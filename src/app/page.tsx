@@ -71,7 +71,7 @@ export default function LandingPage() {
           tagAnimation="blur-reveal"
           metrics={[
             { id: "1", value: "38%", description: "verpasste Anrufe durch unzureichende Kapazität" },
-            { id: "2", value: "€4.200", description: "monatlicher Umsatzverlust durch Ineffizienz" },
+            { id: "2", value: "€42.000", description: "monatlicher Umsatzverlust durch Ineffizienz" },
             { id: "3", value: "+31%", description: "Umsatzsteigerung mit KI-Agent" },
             { id: "4", value: "100%", description: "DSGVO-konform und sicher" }
           ]}
