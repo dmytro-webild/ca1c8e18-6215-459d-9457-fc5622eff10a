@@ -65,14 +65,14 @@ export default function LandingPage() {
 
       <div id="metrics" data-section="metrics">
         <MetricCardFourteen
-          title="Was unsere KI-Agenten erreichen"
-          tag="Bewährte Ergebnisse"
+          title="VoiceLinkAI – Infografik zu Statistiken"
+          tag="Professionelle Ergebnisse für Solarunternehmen"
           tagAnimation="blur-reveal"
           metrics={[
-            { id: "1", value: "24/7", description: "Erreichbarkeit für deine Kunden" },
-            { id: "2", value: "< 30 Sek.", description: "Reaktionszeit auf jede Anfrage" },
-            { id: "3", value: "120+", description: "Stunden pro Monat gespart" },
-            { id: "4", value: "100%", description: "DSGVO-konform" }
+            { id: "1", value: "38%", description: "verpasste Anrufe durch unzureichende Kapazität" },
+            { id: "2", value: "€4.200", description: "monatlicher Umsatzverlust durch Ineffizienz" },
+            { id: "3", value: "+31%", description: "Umsatzsteigerung mit KI-Agent" },
+            { id: "4", value: "100%", description: "DSGVO-konform und sicher" }
           ]}
           metricsAnimation="blur-reveal"
           useInvertedBackground={true}
