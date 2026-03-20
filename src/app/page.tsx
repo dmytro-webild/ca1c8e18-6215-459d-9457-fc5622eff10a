@@ -34,6 +34,8 @@ export default function LandingPage() {
             { name: "So funktioniert's", id: "howitworks" },
             { name: "FAQ", id: "faq" }
           ]}
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774011280319-l98mhmnk.png"
+          logoAlt="VoiceLinkAI Logo"
           button={{
             text: "👉 Kostenloses Erstgespräch",            href: "https://calendly.com/voicelinkai/info"
           }}
