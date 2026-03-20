@@ -28,6 +28,7 @@ export default function LandingPage() {
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
+          brandName="VoiceLinkAI"
           navItems={[
             { name: "Probleme", id: "problems" },
             { name: "Unsere Agenten", id: "agents" },
