@@ -62,6 +62,7 @@ export default function LandingPage() {
           imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png"
           imageAlt="VoiceLinkAI Solar Dashboard"
           mediaAnimation="blur-reveal"
+          buttonContainerClassName="flex flex-col items-start gap-4"
         />
       </div>
 
