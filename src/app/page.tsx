@@ -35,7 +35,6 @@ export default function LandingPage() {
             { name: "So funktioniert's", id: "howitworks" },
             { name: "FAQ", id: "faq" }
           ]}
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774014576106-u67j9ibo.png"
           button={{ text: "Kostenloses Gespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
@@ -288,7 +287,6 @@ export default function LandingPage() {
       <div id="footer" data-section="footer">
         <FooterBaseCard
           logoText="VoiceLinkAI"
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774014576106-u67j9ibo.png"
           columns={[
             {
               title: "Produkt",              items: [
