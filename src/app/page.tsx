@@ -307,8 +307,8 @@ export default function LandingPage() {
             mediaAnimation="blur-reveal"
             mediaPosition="right"
             inputPlaceholder="deine@email.de"
-            buttonText="👉 Jetzt kostenlose Prozessanalyse buchen"
-            termsText="Durch das Klicken auf den Button stimmst du zu, dass du auf die Calendly-Seite weitergeleitet wirst."
+            buttonText="👉 Prozessanalyse-Termin buchen"
+            termsText="Kostenlos, unverbindlich, 15 Min. Analyse"
           />
         </div>
 
