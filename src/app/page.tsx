@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, X } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -37,20 +37,21 @@ const animatedBorderStyle = `
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
   }
 
-  #vs-infographic {
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 32, 45, 0.95));
-    border: 2px solid rgba(255, 140, 0, 0.4);
-    border-radius: 12px;
-    padding: 3rem 2rem;
-    margin: 2rem auto;
+  .vs-infographic {
+    width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 140, 0, 0.3);
   }
 
   .vs-container {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 2rem;
-    align-items: stretch;
+    align-items: start;
   }
 
   .vs-column {
@@ -72,129 +73,137 @@ const animatedBorderStyle = `
   .vs-divider {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
-    min-width: 60px;
   }
 
   .vs-badge {
-    background: rgba(255, 140, 0, 0.15);
-    border: 2px solid rgba(255, 140, 0, 0.6);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #ff8c00;
-    font-size: 18px;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+    border: 1px solid rgba(255, 140, 0, 0.8);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-align: center;
+    animation: glow-badge 2s ease-in-out infinite;
   }
 
-  .vs-item {
-    background: rgba(255, 140, 0, 0.05);
-    border: 1px solid rgba(255, 140, 0, 0.3);
-    border-radius: 8px;
+  @keyframes glow-badge {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 140, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.5);
+    }
+  }
+
+  .vs-stat {
     padding: 1.5rem;
+    background: rgba(26, 32, 45, 0.5);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
     transition: all 0.3s ease;
   }
 
-  .vs-item:hover {
-    background: rgba(255, 140, 0, 0.1);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+  .vs-stat:hover {
+    background: rgba(26, 32, 45, 0.8);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
   }
 
-  .vs-column.left .vs-item {
-    border-color: rgba(220, 53, 69, 0.4);
-    background: rgba(220, 53, 69, 0.05);
+  .vs-stat.left {
+    border-left: 3px solid #e63946;
   }
 
-  .vs-column.left .vs-item:hover {
-    background: rgba(220, 53, 69, 0.1);
-    box-shadow: 0 0 15px rgba(220, 53, 69, 0.2);
+  .vs-stat.right {
+    border-left: 3px solid #ffa500;
   }
 
-  .vs-column.right .vs-item {
-    border-color: rgba(255, 165, 0, 0.4);
-    background: rgba(255, 165, 0, 0.05);
-  }
-
-  .vs-column.right .vs-item:hover {
-    background: rgba(255, 165, 0, 0.1);
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
-  }
-
-  .vs-item-stat {
+  .vs-stat-value {
     font-size: 1.75rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 0.5rem;
   }
 
-  .vs-column.left .vs-item-stat {
-    color: #dc3545;
+  .vs-stat.left .vs-stat-value {
+    color: #e63946;
   }
 
-  .vs-column.right .vs-item-stat {
-    color: #ff8c00;
+  .vs-stat.right .vs-stat-value {
+    color: #ffa500;
   }
 
-  .vs-item-label {
-    font-size: 0.95rem;
-    color: #b0b8c1;
+  .vs-stat-label {
+    font-size: 0.875rem;
+    color: #b8bec8;
     line-height: 1.4;
   }
 
-  .vs-footer {
-    background: linear-gradient(90deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.2));
-    border-top: 2px solid rgba(255, 140, 0, 0.4);
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  .vs-icon-container {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+
+  .vs-icon-container.left {
+    background: rgba(230, 57, 70, 0.1);
+  }
+
+  .vs-icon-container.right {
+    background: rgba(255, 165, 0, 0.1);
+  }
+
+  .vs-icon-container.left svg {
+    color: #e63946;
+  }
+
+  .vs-icon-container.right svg {
+    color: #ffa500;
+  }
+
+  .vs-bottom-bar {
+    grid-column: 1 / -1;
+    background: linear-gradient(90deg, #ff8c00, #ffa500);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
     text-align: center;
-    color: #e8eef7;
-    font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
   }
 
   @media (max-width: 768px) {
-    #vs-infographic {
-      padding: 1.5rem 1rem;
-    }
-
     .vs-container {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
-    .vs-column {
-      border: none !important;
-      padding: 0 !important;
-    }
-
-    .vs-column.left {
-      border-bottom: 1px solid rgba(255, 140, 0, 0.2) !important;
-      padding-bottom: 1.5rem !important;
-    }
-
+    .vs-column.left,
     .vs-column.right {
-      border-top: 1px solid rgba(255, 140, 0, 0.2) !important;
-      padding-top: 1.5rem !important;
+      border: none;
+      padding: 0;
     }
 
     .vs-divider {
-      flex-direction: row;
-      justify-content: center;
-      min-width: unset;
-      margin: 1rem 0;
+      display: none;
     }
 
-    .vs-badge {
-      width: 50px;
-      height: 50px;
-      font-size: 16px;
+    .vs-infographic {
+      padding: 1.5rem;
+    }
+
+    .vs-stat {
+      padding: 1rem;
     }
   }
 `;
@@ -254,75 +263,87 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          <div id="vs-infographic" data-section="vs-infographic">
+          <div className="vs-infographic">
             <div className="vs-container">
-              {/* LEFT COLUMN - PROBLEMS */}
               <div className="vs-column left">
-                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                  <div style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#dc3545', marginBottom: '0.5rem' }}>Ohne KI-Agent</div>
-                  <div style={{ fontSize: '0.9rem', color: '#b0b8c1' }}>Die tägliche Realität</div>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#e63946", marginBottom: "1rem" }}>Ohne KI-Agent</h3>
+                
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <X size={24} />
+                  </div>
+                  <div className="vs-stat-value">38%</div>
+                  <div className="vs-stat-label">Verpasste Anrufe</div>
                 </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">38%</div>
-                  <div className="vs-item-label">verpasste Anrufe durch überlastetes Team</div>
+
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <AlertCircle size={24} />
+                  </div>
+                  <div className="vs-stat-value">€42.000</div>
+                  <div className="vs-stat-label">Monatlicher Umsatzverlust</div>
                 </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">€42.000</div>
-                  <div className="vs-item-label">monatlicher Umsatzverlust durch langsame Reaktion</div>
+
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <TrendingUp size={24} />
+                  </div>
+                  <div className="vs-stat-value">3–4 Tage</div>
+                  <div className="vs-stat-label">Wartezeit bis Angebotserstellung</div>
                 </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">2–3 Tage</div>
-                  <div className="vs-item-label">Wartezeit bis zur Angebotserstellung</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">60+ Stunden</div>
-                  <div className="vs-item-label">monatlich für Terminkoordination verschwendet</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">40%</div>
-                  <div className="vs-item-label">offene Angebote, die nicht nachgefasst werden</div>
+
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <AlertCircle size={24} />
+                  </div>
+                  <div className="vs-stat-value">60%</div>
+                  <div className="vs-stat-label">Keine Nachfasse-Strategie</div>
                 </div>
               </div>
 
-              {/* CENTER DIVIDER */}
               <div className="vs-divider">
-                <X size={32} color="#ff8c00" strokeWidth={1.5} />
                 <div className="vs-badge">VS</div>
-                <X size={32} color="#ff8c00" strokeWidth={1.5} />
               </div>
 
-              {/* RIGHT COLUMN - SOLUTIONS */}
               <div className="vs-column right">
-                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                  <div style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#ff8c00', marginBottom: '0.5rem' }}>Mit VoiceLinkAI</div>
-                  <div style={{ fontSize: '0.9rem', color: '#b0b8c1' }}>Die intelligente Alternative</div>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#ffa500", marginBottom: "1rem" }}>Mit VoiceLinkAI</h3>
+                
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <CheckCircle size={24} />
+                  </div>
+                  <div className="vs-stat-value">100%</div>
+                  <div className="vs-stat-label">Alle Anrufe beantwortet</div>
                 </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">+98%</div>
-                  <div className="vs-item-label">aller Anrufe werden sofort bearbeitet oder weitergeleitet</div>
+
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <Zap size={24} />
+                  </div>
+                  <div className="vs-stat-value">+31%</div>
+                  <div className="vs-stat-label">Umsatzsteigerung</div>
                 </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">+€131.000</div>
-                  <div className="vs-item-label">zusätzlicher monatlicher Umsatz durch +31% Konversionssteigerung</div>
+
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <MessageSquare size={24} />
+                  </div>
+                  <div className="vs-stat-value">< 30 Min</div>
+                  <div className="vs-stat-label">Angebot innerhalb kurzer Zeit</div>
                 </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">< 2 Minuten</div>
-                  <div className="vs-item-label">automatische Angebotserstellung und Versand</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">100%</div>
-                  <div className="vs-item-label">Terminkoordination vollständig automatisiert</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">0% Fallenlassen</div>
-                  <div className="vs-item-label">intelligentes Nachfassen + automatische Lead-Qualifizierung</div>
+
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <Rocket size={24} />
+                  </div>
+                  <div className="vs-stat-value">Auto</div>
+                  <div className="vs-stat-label">Intelligente Lead-Nachfasse</div>
                 </div>
               </div>
-            </div>
 
-            {/* FOOTER BAR */}
-            <div className="vs-footer">
-              💼 Alle Systeme DSGVO-konform. Integration in dein CRM + Kalender in 1–2 Wochen. Kostenlos Starten – Erstgespräch buchen →
+              <div className="vs-bottom-bar">
+                ✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Sofort messbare Ergebnisse
+              </div>
             </div>
           </div>
         </div>
