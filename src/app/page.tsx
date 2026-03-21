@@ -11,7 +11,8 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield } from 'lucide-react';
+import HeroLogo from '@/components/sections/hero/HeroLogo';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, Phone, PhoneOff, Mic } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -37,6 +38,40 @@ const animatedBorderStyle = `
     border: 1px solid rgba(255, 140, 0, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
   }
+
+  @keyframes float-up {
+    0% {
+      transform: translateY(0px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotate-phone {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+  }
+
+  .animated-phone-icon {
+    animation: rotate-phone 2s ease-in-out infinite;
+  }
+
+  .pulse-ring {
+    animation: float-up 2s ease-in-out infinite;
+  }
 `;
 
 export default function LandingPage() {
@@ -61,6 +96,7 @@ export default function LandingPage() {
               { name: "Probleme", id: "problems" },
               { name: "Agenten", id: "agents" },
               { name: "So funktioniert's", id: "howitworks" },
+              { name: "Live Demo", id: "live-demo" },
               { name: "FAQ", id: "faq" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
@@ -217,6 +253,87 @@ export default function LandingPage() {
               }
             ]}
           />
+        </div>
+
+        <div id="live-demo" data-section="live-demo">
+          <div className="relative w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-transparent via-background to-transparent">
+            <div className="mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
+              {/* Live Badge */}
+              <div className="flex justify-center mb-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/50">
+                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+                  <span className="text-sm font-medium text-foreground">LIVE DEMO</span>
+                </div>
+              </div>
+
+              {/* Main Headline */}
+              <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Überzeuge dich selbst
+              </h2>
+
+              {/* Subheadline */}
+              <p className="text-center text-base md:text-lg text-foreground/80 mb-12 max-w-2xl mx-auto">
+                Rufe unseren KI-Agenten jetzt an und erlebe in Live-Aktion, wie er Anrufe beantwortet, Fragen klärt und Termine bucht – genau wie bei deinen Kunden.
+              </p>
+
+              {/* Dark Card Container */}
+              <div className="bg-card border border-accent/30 rounded-lg p-8 md:p-12 shadow-2xl">
+                {/* Animated Phone Icon */}
+                <div className="flex justify-center mb-8">
+                  <div className="relative w-20 h-20 md:w-24 md:h-24">
+                    {/* Animated rings */}
+                    <div className="absolute inset-0 rounded-full border-2 border-accent/40 pulse-ring" style={{animationDelay: '0s'}}></div>
+                    <div className="absolute inset-0 rounded-full border-2 border-accent/20 pulse-ring" style={{animationDelay: '0.5s'}}></div>
+                    
+                    {/* Phone icon */}
+                    <div className="absolute inset-0 flex items-center justify-center animated-phone-icon">
+                      <Phone className="w-10 h-10 md:w-12 md:h-12 text-accent" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phone Number Display */}
+                <div className="text-center mb-8">
+                  <p className="text-sm text-foreground/60 mb-2">Rufe jetzt an:</p>
+                  <a href="tel:+49123456789" className="text-3xl md:text-4xl font-bold text-primary-cta hover:text-primary-cta/80 transition-colors">
+                    +49 (123) 456789
+                  </a>
+                </div>
+
+                {/* CTA Button */}
+                <div className="flex justify-center mb-8">
+                  <button className="px-8 md:px-12 py-3 md:py-4 bg-primary-cta text-primary-cta-text rounded-lg font-semibold hover:bg-primary-cta/90 transition-all transform hover:scale-105">
+                    Jetzt anrufen
+                  </button>
+                </div>
+
+                {/* Status Info */}
+                <p className="text-center text-sm text-foreground/60">
+                  Verfügbar täglich von 9:00 – 18:00 Uhr • Wartezeit: &lt; 2 Sekunden
+                </p>
+              </div>
+
+              {/* Testimonial Quote Section */}
+              <div className="mt-12 md:mt-16">
+                <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-8 md:p-10">
+                  <div className="text-center">
+                    <p className="text-lg md:text-xl text-foreground mb-6 italic">
+                      "Der Agent hat unseren Telefonverkehr um 60% reduziert. Das bedeutet für jedes Teamitglied fast 10 Stunden pro Woche zurück – Zeit, die wir jetzt in echte Kundenprojekte investieren."
+                    </p>
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/20 flex items-center justify-center">
+                        <span className="text-sm font-semibold text-accent">JK</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Jan Köhler</p>
+                        <p className="text-sm text-foreground/70">Geschäftsführer, Solar-Tech GmbH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="howitworks" data-section="howitworks">
