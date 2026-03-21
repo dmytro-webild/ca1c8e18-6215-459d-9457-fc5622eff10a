@@ -561,6 +561,69 @@ const animatedBorderStyle = `
       height: 500px;
     }
   }
+
+  /* Statistics Section */
+  .statistics-section {
+    width: 100%;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.5), rgba(26, 32, 45, 0.7));
+  }
+
+  .statistics-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .statistics-card {
+    padding: 2rem;
+    background: rgba(26, 32, 45, 0.6);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .statistics-card:hover {
+    background: rgba(26, 32, 45, 0.9);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
+  }
+
+  .statistics-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff8c00;
+    margin-bottom: 0.5rem;
+  }
+
+  .statistics-label {
+    font-size: 1rem;
+    color: #b8bec8;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .statistics-section {
+      padding: 2rem 1rem;
+    }
+
+    .statistics-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .statistics-value {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export default function LandingPage() {
@@ -707,6 +770,32 @@ export default function LandingPage() {
                     <div className="call-agent-action-btn decline">✕</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="statistics" data-section="statistics" className="statistics-section">
+          <div className="statistics-container">
+            <h2 style={{ fontSize: "2rem", fontWeight: "700", color: "#ffffff", marginBottom: "0.5rem" }}>Impact der KI-Agenten</h2>
+            <p style={{ fontSize: "1.125rem", color: "#b8bec8", marginBottom: "2rem" }}>Die messbaren Ergebnisse unserer Kunden</p>
+            
+            <div className="statistics-grid">
+              <div className="statistics-card">
+                <div className="statistics-value">60%</div>
+                <div className="statistics-label">der Routineanrufe automatisiert</div>
+              </div>
+              <div className="statistics-card">
+                <div className="statistics-value">8-12h</div>
+                <div className="statistics-label">pro Mitarbeiter pro Woche eingespart</div>
+              </div>
+              <div className="statistics-card">
+                <div className="statistics-value">35%</div>
+                <div className="statistics-label">mehr qualifizierte Leads</div>
+              </div>
+              <div className="statistics-card">
+                <div className="statistics-value">24/7</div>
+                <div className="statistics-label">ununterbrochene Kundenerreichbarkeit</div>
               </div>
             </div>
           </div>
