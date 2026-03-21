@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import HeroBillboard from '@/components/sections/hero/HeroBillboard';
-import MetricCardEleven from '@/components/sections/metrics/MetricCardEleven';
+import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
@@ -674,7 +674,7 @@ export default function LandingPage() {
               { src: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/professional-headshot-photo-of-a-senior--1774010017132-8d1af2da.png", alt: "Geschäftsführer" }
             ]}
             avatarText="✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Keine IT-Kenntnisse nötig"
-            imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=1"
+            imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png"
             imageAlt="VoiceLinkAI Solar Dashboard"
             mediaAnimation="blur-reveal"
           />
@@ -775,31 +775,30 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div id="statistics" data-section="statistics">
-          <MetricCardEleven
-            title="Impact der KI-Agenten"
-            description="Die messbaren Ergebnisse unserer Kunden"
-            textboxLayout="default"
-            useInvertedBackground={false}
-            tag="42.000+ Interaktionen automatisiert"
-            tagIcon={TrendingUp}
-            tagAnimation="blur-reveal"
-            animationType="blur-reveal"
-            metrics={[
-              {
-                id: "1",                value: "60%",                title: "Routineanrufe automatisiert",                description: "der Routineaufrufe werden durch KI bearbeitet",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=2",                imageAlt: "Automation Dashboard"
-              },
-              {
-                id: "2",                value: "8-12h",                title: "Stunden eingespart",                description: "pro Mitarbeiter pro Woche",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=3",                imageAlt: "Time Savings"
-              },
-              {
-                id: "3",                value: "35%",                title: "Mehr qualifizierte Leads",                description: "durch intelligente Vorqualifizierung",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=4",                imageAlt: "Lead Generation"
-              },
-              {
-                id: "4",                value: "24/7",                title: "Kundenerreichbarkeit",                description: "ohne Ausnahmen, rund um die Uhr",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=5",                imageAlt: "24/7 Support"
-              }
-            ]}
-          />
+        <div id="statistics" data-section="statistics" className="statistics-section">
+          <div className="statistics-container">
+            <h2 style={{ fontSize: "2rem", fontWeight: "700", color: "#ffffff", marginBottom: "0.5rem" }}>Impact der KI-Agenten</h2>
+            <p style={{ fontSize: "1.125rem", color: "#b8bec8", marginBottom: "2rem" }}>Die messbaren Ergebnisse unserer Kunden</p>
+            
+            <div className="statistics-grid">
+              <div className="statistics-card">
+                <div className="statistics-value">60%</div>
+                <div className="statistics-label">der Routineanrufe automatisiert</div>
+              </div>
+              <div className="statistics-card">
+                <div className="statistics-value">8-12h</div>
+                <div className="statistics-label">pro Mitarbeiter pro Woche eingespart</div>
+              </div>
+              <div className="statistics-card">
+                <div className="statistics-value">35%</div>
+                <div className="statistics-label">mehr qualifizierte Leads</div>
+              </div>
+              <div className="statistics-card">
+                <div className="statistics-value">24/7</div>
+                <div className="statistics-label">ununterbrochene Kundenerreichbarkeit</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="problems" data-section="problems">
