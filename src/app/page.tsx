@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Sun, Clock, Brain } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -225,6 +225,154 @@ const animatedBorderStyle = `
     background: linear-gradient(135deg, #ff8c00, #ffa500);
     padding: 4px;
     border-radius: 4px;
+  }
+
+  .trust-bar {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(90deg, rgba(15, 20, 25, 0.7), rgba(26, 32, 45, 0.8));
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #b8bec8;
+  }
+
+  .trust-item svg {
+    width: 20px;
+    height: 20px;
+    color: #ffa500;
+    flex-shrink: 0;
+  }
+
+  .feature-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .feature-column {
+    padding: 1.5rem;
+    background: rgba(26, 32, 45, 0.5);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-column:hover {
+    background: rgba(26, 32, 45, 0.8);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+  }
+
+  .feature-column-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 165, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .feature-column-icon svg {
+    color: #ffa500;
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-column-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-column-text {
+    font-size: 0.875rem;
+    color: #b8bec8;
+    line-height: 1.5;
+  }
+
+  .bottom-cta-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    text-align: center;
+  }
+
+  .bottom-cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .bottom-cta-description {
+    font-size: 1.125rem;
+    color: #b8bec8;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .bottom-cta-button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+  }
+
+  .bottom-cta-button:hover {
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.8);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .trust-bar {
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .trust-item {
+      font-size: 0.85rem;
+    }
+
+    .feature-columns {
+      grid-template-columns: 1fr;
+    }
+
+    .bottom-cta-title {
+      font-size: 1.5rem;
+    }
+
+    .bottom-cta-description {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -478,6 +626,49 @@ export default function LandingPage() {
           />
         </div>
 
+        <div id="agents-trust" data-section="agents-trust" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
+          <div className="trust-bar">
+            <div className="trust-item">
+              <Brain size={20} />
+              <span>Echte KI-Agenten</span>
+            </div>
+            <div className="trust-item">
+              <Clock size={20} />
+              <span>Keine Wartezeiten</span>
+            </div>
+            <div className="trust-item">
+              <Sun size={20} />
+              <span>Solar-trainiert</span>
+            </div>
+          </div>
+
+          <div className="feature-columns">
+            <div className="feature-column">
+              <div className="feature-column-icon">
+                <Brain size={24} />
+              </div>
+              <div className="feature-column-title">Echte KI-Agenten</div>
+              <div className="feature-column-text">Keine Chatbots, keine starre Skripte. Unsere Agenten verstehen Kontext, lernen aus Gesprächen und treffen intelligente Entscheidungen – speziell trainiert auf Solarbranche.</div>
+            </div>
+
+            <div className="feature-column">
+              <div className="feature-column-icon">
+                <Clock size={24} />
+              </div>
+              <div className="feature-column-title">Keine Wartezeiten</div>
+              <div className="feature-column-text">Sofortige Bearbeitung eingehender Anfragen, 24/7 ohne Verzögerung. Kunden bekommen in Sekunden Antwort – nicht in Stunden oder Tagen.</div>
+            </div>
+
+            <div className="feature-column">
+              <div className="feature-column-icon">
+                <Sun size={24} />
+              </div>
+              <div className="feature-column-title">Solar-trainiert</div>
+              <div className="feature-column-text">Unser Training deckt ab: Solaranlagen-Grundlagen, Förderungen (KfW, BAFA), Einspeisevergütung, Netzanmeldung und alle typischen Kundeneinwände.</div>
+            </div>
+          </div>
+        </div>
+
         <div id="howitworks" data-section="howitworks">
           <FeatureCardNineteen
             title="In 3 Schritten zu deinem KI-Agenten"
@@ -553,31 +744,17 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="bottom-cta" data-section="bottom-cta">
-          <div style={{
-            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)",            textAlign: "center"
-          }}>
-            <h2 style={{
-              fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "1.5rem",              lineHeight: "1.3"
-            }}>
+        <div id="bottom-cta" data-section="bottom-cta" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
+          <div className="bottom-cta-section">
+            <h2 className="bottom-cta-title">
               Bereit für Veränderung?
             </h2>
-            <p style={{
-              fontSize: "1.125rem",              color: "#b8bec8",              marginBottom: "2rem",              lineHeight: "1.6"
-            }}>
+            <p className="bottom-cta-description">
               Buche jetzt dein kostenloses Erstgespräch und erfahre, wie KI-Agenten dein Team entlasten können.
             </p>
             <a
               href="https://calendly.com/voicelinkai/info"
-              style={{
-                display: "inline-block",                padding: "0.875rem 2rem",                background: "linear-gradient(135deg, #ff8c00, #ffa500)",                color: "#ffffff",                textDecoration: "none",                borderRadius: "8px",                fontWeight: "600",                fontSize: "1rem",                transition: "all 0.3s ease",                boxShadow: "0 0 20px rgba(255, 140, 0, 0.5)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.8)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 20px rgba(255, 140, 0, 0.5)";
-              }}
+              className="bottom-cta-button"
             >
               👉 Kostenloses Erstgespräch buchen
             </a>
