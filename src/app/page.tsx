@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -226,6 +226,347 @@ const animatedBorderStyle = `
     padding: 4px;
     border-radius: 4px;
   }
+
+  /* AI Agent Illustration Styles */
+  .ai-agent-illustration {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
+  }
+
+  /* Animated grid background */
+  .grid-background {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(0deg, transparent 24%, rgba(255, 140, 0, 0.1) 25%, rgba(255, 140, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 140, 0, 0.1) 75%, rgba(255, 140, 0, 0.1) 76%, transparent 77%, transparent),
+      linear-gradient(90deg, transparent 24%, rgba(255, 140, 0, 0.1) 25%, rgba(255, 140, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 140, 0, 0.1) 75%, rgba(255, 140, 0, 0.1) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    animation: grid-drift 20s linear infinite;
+    opacity: 0.5;
+  }
+
+  @keyframes grid-drift {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(50px, 50px);
+    }
+  }
+
+  /* Central dark circle with pulse rings */
+  .agent-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26, 32, 45, 0.9), rgba(15, 20, 25, 0.95));
+    border: 2px solid rgba(255, 140, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+      0 0 30px rgba(255, 140, 0, 0.3),
+      inset 0 0 40px rgba(255, 140, 0, 0.1);
+  }
+
+  /* Animated pulse rings */
+  .pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 140, 0, 0.3);
+  }
+
+  .pulse-ring-1 {
+    width: 360px;
+    height: 360px;
+    animation: pulse-expand 3s ease-out infinite;
+  }
+
+  .pulse-ring-2 {
+    width: 440px;
+    height: 440px;
+    animation: pulse-expand 3s ease-out infinite 1s;
+  }
+
+  @keyframes pulse-expand {
+    0% {
+      width: 280px;
+      height: 280px;
+      opacity: 1;
+      border-color: rgba(255, 140, 0, 0.8);
+    }
+    100% {
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+      border-color: rgba(255, 140, 0, 0.1);
+    }
+  }
+
+  /* Abstract geometric AI face */
+  .ai-face {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-eyes {
+    display: flex;
+    gap: 30px;
+  }
+
+  .ai-eye {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+    animation: eye-glow 2s ease-in-out infinite;
+  }
+
+  .ai-eye:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes eye-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.9);
+    }
+  }
+
+  /* Animated sound wave bars */
+  .sound-waves {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 40px;
+  }
+
+  .wave-bar {
+    width: 4px;
+    background: linear-gradient(180deg, #ffa500, #ff8c00);
+    border-radius: 2px;
+    animation: wave-pulse 0.8s ease-in-out infinite;
+  }
+
+  .wave-bar:nth-child(1) {
+    height: 15px;
+    animation-delay: 0s;
+  }
+
+  .wave-bar:nth-child(2) {
+    height: 25px;
+    animation-delay: 0.1s;
+  }
+
+  .wave-bar:nth-child(3) {
+    height: 35px;
+    animation-delay: 0.2s;
+  }
+
+  .wave-bar:nth-child(4) {
+    height: 25px;
+    animation-delay: 0.3s;
+  }
+
+  .wave-bar:nth-child(5) {
+    height: 15px;
+    animation-delay: 0.4s;
+  }
+
+  @keyframes wave-pulse {
+    0%, 100% {
+      height: 15px;
+      opacity: 0.6;
+    }
+    50% {
+      height: 35px;
+      opacity: 1;
+    }
+  }
+
+  /* Status pill */
+  .status-pill {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(26, 32, 45, 0.8);
+    border: 1px solid rgba(255, 140, 0, 0.5);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #ffa500;
+    font-weight: 600;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffa500;
+    border-radius: 50%;
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes status-pulse {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+    }
+    50% {
+      opacity: 0.5;
+      box-shadow: 0 0 12px rgba(255, 165, 0, 0.9);
+    }
+  }
+
+  /* Phone icon */
+  .phone-icon-container {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.1));
+    border: 2px solid rgba(255, 140, 0, 0.5);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+  }
+
+  /* Benefits list on right side */
+  .benefits-list {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 200px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(26, 32, 45, 0.6);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #e8eef7;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    background: rgba(26, 32, 45, 0.9);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+  }
+
+  .benefit-icon {
+    width: 24px;
+    height: 24px;
+    color: #ff8c00;
+    flex-shrink: 0;
+  }
+
+  /* Agent label */
+  .agent-label {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .benefits-list {
+      position: static;
+      transform: none;
+      margin-top: 2rem;
+      min-width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ai-agent-illustration {
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ai-agent-illustration {
+      height: 400px;
+    }
+
+    .agent-circle {
+      width: 200px;
+      height: 200px;
+    }
+
+    .pulse-ring-1 {
+      width: 280px;
+      height: 280px;
+    }
+
+    .pulse-ring-2 {
+      width: 360px;
+      height: 360px;
+    }
+
+    .status-pill {
+      top: 20px;
+      right: 20px;
+    }
+
+    .phone-icon-container {
+      bottom: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+    }
+
+    .agent-label {
+      bottom: 20px;
+    }
+
+    .benefits-list {
+      flex-direction: column;
+    }
+  }
 `;
 
 export default function LandingPage() {
@@ -283,87 +624,111 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          <div className="vs-infographic">
-            <div className="vs-container">
-              <div className="vs-column left">
-                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#e63946", marginBottom: "1rem", textAlign: "center" }}>Ohne KI-Agent</h3>
-                
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <X size={24} />
+          {/* AI Agent Illustration */}
+          <div style={{
+            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)"
+          }}>
+            <h2 style={{
+              fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "2rem",              textAlign: "center"
+            }}>
+              Dein virtueller KI-Agent für Live-Support
+            </h2>
+            <div style={{
+              display: "grid",              gridTemplateColumns: "1fr 1fr",              gap: "3rem",              alignItems: "center",              marginBottom: "2rem"
+            }}>
+              {/* Illustration */}
+              <div className="ai-agent-illustration">
+                <div className="grid-background" />
+                <div className="pulse-ring pulse-ring-1" />
+                <div className="pulse-ring pulse-ring-2" />
+                <div className="agent-circle">
+                  <div className="ai-face">
+                    <div className="ai-eyes">
+                      <div className="ai-eye" />
+                      <div className="ai-eye" />
+                    </div>
+                    <div className="sound-waves">
+                      <div className="wave-bar" />
+                      <div className="wave-bar" />
+                      <div className="wave-bar" />
+                      <div className="wave-bar" />
+                      <div className="wave-bar" />
+                    </div>
                   </div>
-                  <div className="vs-stat-value">38%</div>
-                  <div className="vs-stat-label">Verpasste Anrufe</div>
                 </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <AlertCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">€42.000</div>
-                  <div className="vs-stat-label">Monatlicher Umsatzverlust</div>
+                <div className="status-pill">
+                  <div className="status-dot" />
+                  Live aktiv
                 </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <TrendingUp size={24} />
-                  </div>
-                  <div className="vs-stat-value">3–4 Tage</div>
-                  <div className="vs-stat-label">Wartezeit bis Angebotserstellung</div>
-                </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <AlertCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">60%</div>
-                  <div className="vs-stat-label">Keine Nachfasse-Strategie</div>
-                </div>
+                <div className="phone-icon-container">☎️</div>
+                <div className="agent-label">KI-Agent "Max"</div>
               </div>
 
-              <div className="vs-divider">
-                <div className="vs-badge">VS</div>
+              {/* Benefits List */}
+              <div>
+                <h3 style={{
+                  fontSize: "1.5rem",                  fontWeight: "700",                  color: "#ffffff",                  marginBottom: "1.5rem"
+                }}>
+                  Live Agenten-Vorteile
+                </h3>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  <div className="benefit-item">
+                    <Headphones size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>24/7 Telefonservice</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Kein Anruf geht verloren</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <Calendar size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Automatische Buchung</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Termine direkt im Kalender</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <MessageCircle size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Chat-Integration</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Website-Qualifizierung</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <Zap size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Instant CRM-Sync</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Alle Daten live verfügbar</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <CheckCircle size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Lead-Qualifizierung</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Nur warme Leads zu deinem Team</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              <div className="vs-column right">
-                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#ffa500", marginBottom: "1rem", textAlign: "center" }}>Mit VoiceLinkAI</h3>
-                
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <CheckCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">100%</div>
-                  <div className="vs-stat-label">Alle Anrufe beantwortet</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <Zap size={24} />
-                  </div>
-                  <div className="vs-stat-value">+31%</div>
-                  <div className="vs-stat-label">Umsatzsteigerung</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <MessageSquare size={24} />
-                  </div>
-                  <div className="vs-stat-value">&lt; 30 Min</div>
-                  <div className="vs-stat-label">Angebot innerhalb kurzer Zeit</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <Rocket size={24} />
-                  </div>
-                  <div className="vs-stat-value">Auto</div>
-                  <div className="vs-stat-label">Intelligente Lead-Nachfasse</div>
-                </div>
-              </div>
-
-              <div className="vs-bottom-bar">
-                ✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Sofort messbare Ergebnisse
-              </div>
+            {/* Call-to-Action Button */}
+            <div style={{ textAlign: "center", marginTop: "2rem" }}>
+              <a
+                href="https://calendly.com/voicelinkai/info"
+                style={{
+                  display: "inline-block",                  padding: "1rem 2.5rem",                  background: "linear-gradient(135deg, #ff8c00, #ffa500)",                  color: "#ffffff",                  textDecoration: "none",                  borderRadius: "8px",                  fontWeight: "700",                  fontSize: "1.125rem",                  transition: "all 0.3s ease",                  boxShadow: "0 0 30px rgba(255, 140, 0, 0.5)"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 0 40px rgba(255, 140, 0, 0.8)";
+                  e.currentTarget.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.5)";
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
+                👉 Jetzt Demo buchen
+              </a>
             </div>
           </div>
         </div>
