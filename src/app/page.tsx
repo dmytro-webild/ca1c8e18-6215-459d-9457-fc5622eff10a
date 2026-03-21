@@ -72,6 +72,39 @@ const animatedBorderStyle = `
   .pulse-ring {
     animation: float-up 2s ease-in-out infinite;
   }
+
+  @keyframes soundwave {
+    0%, 100% {
+      height: 0.5rem;
+    }
+    50% {
+      height: 2rem;
+    }
+  }
+
+  .soundwave-bar {
+    animation: soundwave 0.6s ease-in-out infinite;
+  }
+
+  .soundwave-bar:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .soundwave-bar:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .soundwave-bar:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .soundwave-bar:nth-child(4) {
+    animation-delay: 0.1s;
+  }
+
+  .soundwave-bar:nth-child(5) {
+    animation-delay: 0s;
+  }
 `;
 
 export default function LandingPage() {
@@ -257,7 +290,7 @@ export default function LandingPage() {
 
         <div id="live-demo" data-section="live-demo">
           <div className="relative w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-transparent via-background to-transparent">
-            <div className="mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
+            <div className="mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
               {/* Live Badge */}
               <div className="flex justify-center mb-8">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/50">
@@ -268,69 +301,133 @@ export default function LandingPage() {
 
               {/* Main Headline */}
               <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Überzeuge dich selbst
+                Rufe den KI-Agent direkt an
               </h2>
 
               {/* Subheadline */}
               <p className="text-center text-base md:text-lg text-foreground/80 mb-12 max-w-2xl mx-auto">
-                Rufe unseren KI-Agenten jetzt an und erlebe in Live-Aktion, wie er Anrufe beantwortet, Fragen klärt und Termine bucht – genau wie bei deinen Kunden.
+                Überzeuge dich selbst – Live Demo mit unserem KI-Agenten Laura. Erlebe in Echtzeit, wie er Anrufe beantwortet, Fragen klärt und Termine bucht.
               </p>
 
               {/* Dark Card Container */}
-              <div className="bg-card border border-accent/30 rounded-lg p-8 md:p-12 shadow-2xl">
-                {/* Animated Phone Icon */}
-                <div className="flex justify-center mb-8">
-                  <div className="relative w-20 h-20 md:w-24 md:h-24">
-                    {/* Animated rings */}
+              <div className="bg-card border border-accent/30 rounded-lg p-8 md:p-12 shadow-2xl mb-12">
+                {/* AI Avatar with Pulse Rings and Soundwave */}
+                <div className="flex justify-center mb-12">
+                  <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
+                    {/* Animated pulse rings */}
                     <div className="absolute inset-0 rounded-full border-2 border-accent/40 pulse-ring" style={{animationDelay: '0s'}}></div>
                     <div className="absolute inset-0 rounded-full border-2 border-accent/20 pulse-ring" style={{animationDelay: '0.5s'}}></div>
                     
-                    {/* Phone icon */}
-                    <div className="absolute inset-0 flex items-center justify-center animated-phone-icon">
-                      <Phone className="w-10 h-10 md:w-12 md:h-12 text-accent" />
+                    {/* AI Avatar Circle */}
+                    <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-accent/40 to-accent/20 flex items-center justify-center border border-accent/50">
+                      <Bot className="w-12 h-12 md:w-16 md:h-16 text-accent" />
+                    </div>
+
+                    {/* Soundwave Bars */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-12 flex gap-1">
+                      <div className="w-1 bg-accent/80 rounded soundwave-bar" style={{animationDelay: '0s'}}></div>
+                      <div className="w-1 bg-accent/80 rounded soundwave-bar" style={{animationDelay: '0.1s'}}></div>
+                      <div className="w-1 bg-accent/80 rounded soundwave-bar" style={{animationDelay: '0.2s'}}></div>
+                      <div className="w-1 bg-accent/80 rounded soundwave-bar" style={{animationDelay: '0.1s'}}></div>
+                      <div className="w-1 bg-accent/80 rounded soundwave-bar" style={{animationDelay: '0s'}}></div>
                     </div>
                   </div>
                 </div>
 
+                {/* Agent Name and Status */}
+                <div className="text-center mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Laura</h3>
+                  <p className="text-sm text-accent flex items-center justify-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    Online • Bereit zum Gespräch
+                  </p>
+                </div>
+
+                {/* Feature Pills */}
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  <div className="px-4 py-2 bg-background-accent/20 border border-accent/30 rounded-full text-sm text-foreground">
+                    ✓ 24/7 verfügbar
+                  </div>
+                  <div className="px-4 py-2 bg-background-accent/20 border border-accent/30 rounded-full text-sm text-foreground">
+                    ✓ Deutsche Sprache
+                  </div>
+                  <div className="px-4 py-2 bg-background-accent/20 border border-accent/30 rounded-full text-sm text-foreground">
+                    ✓ Sofortige Antwort
+                  </div>
+                </div>
+
                 {/* Phone Number Display */}
-                <div className="text-center mb-8">
-                  <p className="text-sm text-foreground/60 mb-2">Rufe jetzt an:</p>
-                  <a href="tel:+49123456789" className="text-3xl md:text-4xl font-bold text-primary-cta hover:text-primary-cta/80 transition-colors">
+                <div className="text-center mb-10">
+                  <p className="text-sm text-foreground/60 mb-3">Rufe jetzt an:</p>
+                  <a href="tel:+49123456789" className="text-4xl md:text-5xl font-bold text-primary-cta hover:text-primary-cta/80 transition-colors">
                     +49 (123) 456789
                   </a>
                 </div>
 
-                {/* CTA Button */}
-                <div className="flex justify-center mb-8">
-                  <button className="px-8 md:px-12 py-3 md:py-4 bg-primary-cta text-primary-cta-text rounded-lg font-semibold hover:bg-primary-cta/90 transition-all transform hover:scale-105">
+                {/* CTA Button with Phone Icon */}
+                <div className="flex justify-center mb-10">
+                  <button className="px-8 md:px-12 py-4 md:py-5 bg-primary-cta text-primary-cta-text rounded-lg font-semibold hover:bg-primary-cta/90 transition-all transform hover:scale-105 flex items-center gap-3 animated-phone-icon">
+                    <Phone className="w-5 h-5" />
                     Jetzt anrufen
                   </button>
                 </div>
 
                 {/* Status Info */}
-                <p className="text-center text-sm text-foreground/60">
+                <p className="text-center text-sm text-foreground/60 border-t border-accent/20 pt-6">
                   Verfügbar täglich von 9:00 – 18:00 Uhr • Wartezeit: &lt; 2 Sekunden
                 </p>
               </div>
 
+              {/* Three Feature Columns Below Card */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-6 md:p-8">
+                  <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
+                    <Zap className="w-6 h-6 text-accent" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Echter KI-Agent</h4>
+                  <p className="text-sm text-foreground/70">Keine Aufnahme – ein echter intelligenter Agent, der versteht, was du sagst, und sinnvoll antwortet.</p>
+                </div>
+                <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-6 md:p-8">
+                  <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
+                    <Sparkles className="w-6 h-6 text-accent" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">Hochwertige Konversation</h4>
+                  <p className="text-sm text-foreground/70">Laura versteht Kontext, stellt Rückfragen und leitet komplexe Anfragen nahtlos an dein Team weiter.</p>
+                </div>
+                <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-6 md:p-8">
+                  <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
+                    <Shield className="w-6 h-6 text-accent" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">DSGVO-konform</h4>
+                  <p className="text-sm text-foreground/70">Alle Daten werden nach deutschem und EU-Recht verarbeitet – keine Bedenken beim Datenschutz.</p>
+                </div>
+              </div>
+
               {/* Testimonial Quote Section */}
-              <div className="mt-12 md:mt-16">
-                <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-8 md:p-10">
-                  <div className="text-center">
-                    <p className="text-lg md:text-xl text-foreground mb-6 italic">
-                      "Der Agent hat unseren Telefonverkehr um 60% reduziert. Das bedeutet für jedes Teamitglied fast 10 Stunden pro Woche zurück – Zeit, die wir jetzt in echte Kundenprojekte investieren."
-                    </p>
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/20 flex items-center justify-center">
-                        <span className="text-sm font-semibold text-accent">JK</span>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">Jan Köhler</p>
-                        <p className="text-sm text-foreground/70">Geschäftsführer, Solar-Tech GmbH</p>
-                      </div>
+              <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-8 md:p-10">
+                <div className="text-center">
+                  <p className="text-lg md:text-xl text-foreground mb-6 italic">
+                    "Der Agent hat unseren Telefonverkehr um 60% reduziert. Das bedeutet für jedes Teamitglied fast 10 Stunden pro Woche zurück – Zeit, die wir jetzt in echte Kundenprojekte investieren."
+                  </p>
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/20 flex items-center justify-center">
+                      <span className="text-sm font-semibold text-accent">JK</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Jan Köhler</p>
+                      <p className="text-sm text-foreground/70">Geschäftsführer, Solar-Tech GmbH</p>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Bottom CTA Section */}
+              <div className="mt-12 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Bereit für deine Live Demo?</h3>
+                <p className="text-foreground/70 mb-6">Erlebe jetzt selbst, wie viel Zeit dein Team sparen kann.</p>
+                <a href="https://calendly.com/voicelinkai/info" className="inline-block px-8 md:px-12 py-3 md:py-4 bg-primary-cta text-primary-cta-text rounded-lg font-semibold hover:bg-primary-cta/90 transition-all">
+                  → Kostenloses Beratungsgespräch buchen
+                </a>
               </div>
             </div>
           </div>
