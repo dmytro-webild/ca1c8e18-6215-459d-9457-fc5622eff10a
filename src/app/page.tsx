@@ -206,6 +206,26 @@ const animatedBorderStyle = `
       padding: 1rem;
     }
   }
+
+  .voicelink-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .voicelink-logo svg {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    padding: 4px;
+    border-radius: 4px;
+  }
 `;
 
 export default function LandingPage() {
