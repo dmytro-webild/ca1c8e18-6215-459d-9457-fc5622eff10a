@@ -348,7 +348,7 @@ export default function LandingPage() {
                   <div className="vs-icon-container right">
                     <MessageSquare size={24} />
                   </div>
-                  <div className="vs-stat-value">< 30 Min</div>
+                  <div className="vs-stat-value">&lt; 30 Min</div>
                   <div className="vs-stat-label">Angebot innerhalb kurzer Zeit</div>
                 </div>
 
