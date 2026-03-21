@@ -776,30 +776,41 @@ export default function LandingPage() {
         </div>
 
         <div id="statistics" data-section="statistics">
-          <MetricCardEleven
-            title="Impact der KI-Agenten"
-            description="Die messbaren Ergebnisse unserer Kunden"
-            textboxLayout="default"
-            useInvertedBackground={false}
-            tag="42.000+ Interaktionen automatisiert"
-            tagIcon={TrendingUp}
-            tagAnimation="blur-reveal"
-            animationType="blur-reveal"
-            metrics={[
-              {
-                id: "1",                value: "60%",                title: "Routineanrufe automatisiert",                description: "der Routineaufrufe werden durch KI bearbeitet",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=2",                imageAlt: "Automation Dashboard"
-              },
-              {
-                id: "2",                value: "8-12h",                title: "Stunden eingespart",                description: "pro Mitarbeiter pro Woche",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=3",                imageAlt: "Time Savings"
-              },
-              {
-                id: "3",                value: "35%",                title: "Mehr qualifizierte Leads",                description: "durch intelligente Vorqualifizierung",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=4",                imageAlt: "Lead Generation"
-              },
-              {
-                id: "4",                value: "24/7",                title: "Kundenerreichbarkeit",                description: "ohne Ausnahmen, rund um die Uhr",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=5",                imageAlt: "24/7 Support"
-              }
-            ]}
-          />
+          <div className="vs-infographic">
+            <div className="vs-container">
+              {/* Left column - Old approach */}
+              <div className="vs-column left">
+                <div className="vs-stat left">
+                  <div className="vs-stat-value">38%</div>
+                  <div className="vs-stat-label">Routineanfragen bearbeitet manuell</div>
+                </div>
+                <div className="vs-stat left">
+                  <div className="vs-stat-value">42.000€</div>
+                  <div className="vs-stat-label">Jährliche Kosten durch ineffiziente Prozesse</div>
+                </div>
+              </div>
+
+              {/* Center divider */}
+              <div className="vs-divider">
+                <div className="vs-badge">VS</div>
+              </div>
+
+              {/* Right column - With KI-Agenten */}
+              <div className="vs-column right">
+                <div className="vs-stat right">
+                  <div className="vs-stat-value">+31%</div>
+                  <div className="vs-stat-label">Kapazitätssteigerung durch Automatisierung</div>
+                </div>
+                <div className="vs-stat right">
+                  <div className="vs-stat-value">100%</div>
+                  <div className="vs-stat-label">Keine verlorenen Anfragen – rund um die Uhr</div>
+                </div>
+              </div>
+            </div>
+            <div className="vs-bottom-bar">
+              💡 Quelle: Durchschnittswerte aus 50+ Solarunternehmen
+            </div>
+          </div>
         </div>
 
         <div id="problems" data-section="problems">
@@ -868,7 +879,7 @@ export default function LandingPage() {
             animationType="blur-reveal"
             features={[
               {
-                title: "KI-Telefonassistent",                description: "Dein Team ist auf dem Dach. Der Agent beantwortet Routineanrufe, bucht Termine und qualifiziert Interessenten – 24/7, ohne dass jemand abheben muss. 💡 Höchste ROI: Verarbeitet 60% des Routineanrufvolumens, gibt 8–12 Stunden pro Woche pro Mitarbeiter frei.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+                title: "KI-Telefonassistent",                description: "Dein Team ist auf dem Dach. Der Agent beantwortet Routineanrufe, bucht Termine und qualifiziert Interessenten – 24/7, ohne dass jemand abheben muss. 💡 Höchste ROI: Handles 60% of routine call volume, frees up 8-12 hours/week per employee.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
                 bentoComponent: "phone",                statusIcon: Zap,
                 alertIcon: AlertCircle,
                 alertTitle: "Agent aktiv",                alertMessage: "Bearbeitet eingehende Anrufe",                apps: [
@@ -883,7 +894,7 @@ export default function LandingPage() {
                 ]
               },
               {
-                title: "KI-Buchungsagent",                description: "Termine buchen sich selbst. Der Agent koordiniert automatisch Aufmaßtermine, Installationen und Wartungen – direkt in deinen Kalender, ohne manuelle Abstimmung. 💡 ROI für große Teams: Eliminiert 40% der Scheduling-Back-and-Forth-E-Mails.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+                title: "KI-Buchungsagent",                description: "Termine buchen sich selbst. Der Agent koordiniert automatisch Aufmaßtermine, Installationen und Wartungen – direkt in deinen Kalender, ohne manuelle Abstimmung. 💡 ROI für große Teams: Eliminates 40% of scheduling back-and-forth emails.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
                 bentoComponent: "timeline",                heading: "Booking Timeline",                subheading: "Automated scheduling",                items: [
                   { label: "Customer Request", detail: "Inquiry received" },
                   { label: "Calendar Check", detail: "Availability verified" },
@@ -892,7 +903,7 @@ export default function LandingPage() {
                 completedLabel: "All steps optimized"
               },
               {
-                title: "KI-Chat-Agent",                description: "Website-Besucher werden zu Leads. Der Agent qualifiziert Interessenten in Echtzeit, sammelt Daten und übergibt warme Leads an dein Team – mit vollständigen Projektinformationen. 💡 Best for lead generation: Konvertiert 35% mehr Website-Besucher in qualifizierte Anfragen.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+                title: "KI-Chat-Agent",                description: "Website-Besucher werden zu Leads. Der Agent qualifiziert Interessenten in Echtzeit, sammelt Daten und übergibt warme Leads an dein Team – mit vollständigen Projektinformationen. 💡 Best for lead generation: Converts 35% more website visitors into qualified inquiries.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
                 bentoComponent: "chat",                aiIcon: Bot,
                 userIcon: MessageSquare,
                 exchanges: [
