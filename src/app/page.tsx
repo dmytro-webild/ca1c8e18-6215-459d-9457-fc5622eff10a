@@ -661,7 +661,7 @@ export default function LandingPage() {
                   Live aktiv
                 </div>
                 <div className="phone-icon-container">☎️</div>
-                <div className="agent-label">KI-Agent "Laura"</div>
+                <div className="agent-label">KI-Agent "Max"</div>
               </div>
 
               {/* Benefits List */}
