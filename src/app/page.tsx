@@ -6,12 +6,11 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
-import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -36,6 +35,176 @@ const animatedBorderStyle = `
   div[data-section] > div > [class*="Card"] {
     border: 1px solid rgba(255, 140, 0, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
+  }
+
+  .vs-infographic {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+  }
+
+  .vs-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .vs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .vs-column.left {
+    border-right: 1px solid rgba(255, 140, 0, 0.2);
+    padding-right: 2rem;
+  }
+
+  .vs-column.right {
+    border-left: 1px solid rgba(255, 140, 0, 0.2);
+    padding-left: 2rem;
+  }
+
+  .vs-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .vs-badge {
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+    border: 1px solid rgba(255, 140, 0, 0.8);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-align: center;
+    animation: glow-badge 2s ease-in-out infinite;
+  }
+
+  @keyframes glow-badge {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 140, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.5);
+    }
+  }
+
+  .vs-stat {
+    padding: 1.5rem;
+    background: rgba(26, 32, 45, 0.5);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .vs-stat:hover {
+    background: rgba(26, 32, 45, 0.8);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+  }
+
+  .vs-stat.left {
+    border-left: 3px solid #e63946;
+  }
+
+  .vs-stat.right {
+    border-left: 3px solid #ffa500;
+  }
+
+  .vs-stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .vs-stat.left .vs-stat-value {
+    color: #e63946;
+  }
+
+  .vs-stat.right .vs-stat-value {
+    color: #ffa500;
+  }
+
+  .vs-stat-label {
+    font-size: 0.875rem;
+    color: #b8bec8;
+    line-height: 1.4;
+  }
+
+  .vs-icon-container {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+
+  .vs-icon-container.left {
+    background: rgba(230, 57, 70, 0.1);
+  }
+
+  .vs-icon-container.right {
+    background: rgba(255, 165, 0, 0.1);
+  }
+
+  .vs-icon-container.left svg {
+    color: #e63946;
+  }
+
+  .vs-icon-container.right svg {
+    color: #ffa500;
+  }
+
+  .vs-bottom-bar {
+    grid-column: 1 / -1;
+    background: linear-gradient(90deg, #ff8c00, #ffa500);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 768px) {
+    .vs-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .vs-column.left,
+    .vs-column.right {
+      border: none;
+      padding: 0;
+    }
+
+    .vs-divider {
+      display: none;
+    }
+
+    .vs-infographic {
+      padding: 1.5rem;
+    }
+
+    .vs-stat {
+      padding: 1rem;
+    }
   }
 `;
 
@@ -94,19 +263,89 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          <MetricCardFourteen
-            title="VoiceLinkAI – Professionelle Before/After Infografik"
-            tag="Statistiken für Solarunternehmen"
-            tagAnimation="blur-reveal"
-            metrics={[
-              { id: "1", value: "38%", description: "verpasste Anrufe ohne KI-Agent" },
-              { id: "2", value: "€42.000", description: "monatlicher Umsatzverlust ohne KI" },
-              { id: "3", value: "+31%", description: "Umsatzsteigerung mit VoiceLinkAI" },
-              { id: "4", value: "100%", description: "DSGVO-konform und sicher" }
-            ]}
-            metricsAnimation="blur-reveal"
-            useInvertedBackground={true}
-          />
+          <div className="vs-infographic">
+            <div className="vs-container">
+              <div className="vs-column left">
+                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#e63946", marginBottom: "1rem" }}>Ohne KI-Agent</h3>
+                
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <X size={24} />
+                  </div>
+                  <div className="vs-stat-value">38%</div>
+                  <div className="vs-stat-label">Verpasste Anrufe</div>
+                </div>
+
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <AlertCircle size={24} />
+                  </div>
+                  <div className="vs-stat-value">€42.000</div>
+                  <div className="vs-stat-label">Monatlicher Umsatzverlust</div>
+                </div>
+
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <TrendingUp size={24} />
+                  </div>
+                  <div className="vs-stat-value">3–4 Tage</div>
+                  <div className="vs-stat-label">Wartezeit bis Angebotserstellung</div>
+                </div>
+
+                <div className="vs-stat left">
+                  <div className="vs-icon-container left">
+                    <AlertCircle size={24} />
+                  </div>
+                  <div className="vs-stat-value">60%</div>
+                  <div className="vs-stat-label">Keine Nachfasse-Strategie</div>
+                </div>
+              </div>
+
+              <div className="vs-divider">
+                <div className="vs-badge">VS</div>
+              </div>
+
+              <div className="vs-column right">
+                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#ffa500", marginBottom: "1rem" }}>Mit VoiceLinkAI</h3>
+                
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <CheckCircle size={24} />
+                  </div>
+                  <div className="vs-stat-value">100%</div>
+                  <div className="vs-stat-label">Alle Anrufe beantwortet</div>
+                </div>
+
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <Zap size={24} />
+                  </div>
+                  <div className="vs-stat-value">+31%</div>
+                  <div className="vs-stat-label">Umsatzsteigerung</div>
+                </div>
+
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <MessageSquare size={24} />
+                  </div>
+                  <div className="vs-stat-value">< 30 Min</div>
+                  <div className="vs-stat-label">Angebot innerhalb kurzer Zeit</div>
+                </div>
+
+                <div className="vs-stat right">
+                  <div className="vs-icon-container right">
+                    <Rocket size={24} />
+                  </div>
+                  <div className="vs-stat-value">Auto</div>
+                  <div className="vs-stat-label">Intelligente Lead-Nachfasse</div>
+                </div>
+              </div>
+
+              <div className="vs-bottom-bar">
+                ✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Sofort messbare Ergebnisse
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="problems" data-section="problems">
