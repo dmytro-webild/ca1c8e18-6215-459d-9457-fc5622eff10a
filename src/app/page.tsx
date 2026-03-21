@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Sun, Clock, Brain } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -227,151 +227,337 @@ const animatedBorderStyle = `
     border-radius: 4px;
   }
 
-  .trust-bar {
+  /* AI Agent Illustration Styles */
+  .ai-agent-illustration {
+    position: relative;
     width: 100%;
-    padding: 1.5rem 2rem;
-    background: linear-gradient(90deg, rgba(15, 20, 25, 0.7), rgba(26, 32, 45, 0.8));
-    border: 1px solid rgba(255, 140, 0, 0.2);
-    border-radius: 8px;
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
+  }
+
+  /* Virtual Girl Illustration Container */
+  .virtual-girl-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
   }
 
-  .trust-item {
+  /* Grid background */
+  .grid-background {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(0deg, transparent 24%, rgba(255, 140, 0, 0.1) 25%, rgba(255, 140, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 140, 0, 0.1) 75%, rgba(255, 140, 0, 0.1) 76%, transparent 77%, transparent),
+      linear-gradient(90deg, transparent 24%, rgba(255, 140, 0, 0.1) 25%, rgba(255, 140, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 140, 0, 0.1) 75%, rgba(255, 140, 0, 0.1) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    animation: grid-drift 20s linear infinite;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+
+  @keyframes grid-drift {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(50px, 50px);
+    }
+  }
+
+  /* Virtual girl avatar container */
+  .virtual-girl-avatar {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.05));
+    border-radius: 20px;
+    border: 2px solid rgba(255, 140, 0, 0.4);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 0.95rem;
-    color: #b8bec8;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.3), inset 0 0 40px rgba(255, 140, 0, 0.1);
   }
 
-  .trust-item svg {
-    width: 20px;
-    height: 20px;
+  /* Glow effect behind avatar */
+  .avatar-glow {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.3), transparent);
+    border-radius: 50%;
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  /* Simple avatar representation */
+  .avatar-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .avatar-head {
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(135deg, #fdbcb4, #f9a78a);
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+  }
+
+  .avatar-eyes {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+  }
+
+  .avatar-eye {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+  }
+
+  .avatar-smile {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    border-bottom: 2px solid #333;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .avatar-hair {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 30px;
+    background: linear-gradient(135deg, #8b6b47, #a0826d);
+    border-radius: 50% 50% 0 0;
+  }
+
+  .avatar-body {
+    width: 120px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.15));
+    border-radius: 15px;
+    border: 2px solid rgba(255, 140, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
     color: #ffa500;
+    font-weight: 600;
+  }
+
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    background: #ffa500;
+    border-radius: 50%;
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes status-pulse {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+    }
+    50% {
+      opacity: 0.5;
+      box-shadow: 0 0 12px rgba(255, 165, 0, 0.9);
+    }
+  }
+
+  /* Animated pulse rings around girl */
+  .pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 140, 0, 0.3);
+  }
+
+  .pulse-ring-1 {
+    width: 380px;
+    height: 380px;
+    animation: pulse-expand-girl 3s ease-out infinite;
+  }
+
+  .pulse-ring-2 {
+    width: 460px;
+    height: 460px;
+    animation: pulse-expand-girl 3s ease-out infinite 1s;
+  }
+
+  @keyframes pulse-expand-girl {
+    0% {
+      width: 300px;
+      height: 300px;
+      opacity: 1;
+      border-color: rgba(255, 140, 0, 0.8);
+    }
+    100% {
+      width: 520px;
+      height: 520px;
+      opacity: 0;
+      border-color: rgba(255, 140, 0, 0.1);
+    }
+  }
+
+  /* Status pill */
+  .status-pill {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(26, 32, 45, 0.8);
+    border: 1px solid rgba(255, 140, 0, 0.5);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #ffa500;
+    font-weight: 600;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #ffa500;
+    border-radius: 50%;
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  /* Benefits list on right side */
+  .benefits-list {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 200px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(26, 32, 45, 0.6);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #e8eef7;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    background: rgba(26, 32, 45, 0.9);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+  }
+
+  .benefit-icon {
+    width: 24px;
+    height: 24px;
+    color: #ff8c00;
     flex-shrink: 0;
   }
 
-  .feature-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    margin-top: 2rem;
-  }
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .benefits-list {
+      position: static;
+      transform: none;
+      margin-top: 2rem;
+      min-width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-  .feature-column {
-    padding: 1.5rem;
-    background: rgba(26, 32, 45, 0.5);
-    border: 1px solid rgba(255, 140, 0, 0.2);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-
-  .feature-column:hover {
-    background: rgba(26, 32, 45, 0.8);
-    border-color: rgba(255, 140, 0, 0.5);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
-  }
-
-  .feature-column-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 165, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-
-  .feature-column-icon svg {
-    color: #ffa500;
-    width: 24px;
-    height: 24px;
-  }
-
-  .feature-column-title {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-  }
-
-  .feature-column-text {
-    font-size: 0.875rem;
-    color: #b8bec8;
-    line-height: 1.5;
-  }
-
-  .bottom-cta-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
-    border-radius: 12px;
-    border: 1px solid rgba(255, 140, 0, 0.3);
-    text-align: center;
-  }
-
-  .bottom-cta-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    line-height: 1.3;
-  }
-
-  .bottom-cta-description {
-    font-size: 1.125rem;
-    color: #b8bec8;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-
-  .bottom-cta-button {
-    display: inline-block;
-    padding: 0.875rem 2rem;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-  }
-
-  .bottom-cta-button:hover {
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.8);
-    transform: translateY(-2px);
+    .virtual-girl-container {
+      height: 500px;
+    }
   }
 
   @media (max-width: 768px) {
-    .trust-bar {
-      gap: 1rem;
-      padding: 1rem;
+    .virtual-girl-container {
+      height: 400px;
     }
 
-    .trust-item {
-      font-size: 0.85rem;
+    .virtual-girl-avatar {
+      width: 250px;
+      height: 350px;
     }
 
-    .feature-columns {
-      grid-template-columns: 1fr;
+    .avatar-head {
+      width: 70px;
+      height: 90px;
     }
 
-    .bottom-cta-title {
-      font-size: 1.5rem;
+    .avatar-body {
+      width: 100px;
+      height: 75px;
     }
 
-    .bottom-cta-description {
-      font-size: 1rem;
+    .pulse-ring-1 {
+      width: 320px;
+      height: 320px;
+    }
+
+    .pulse-ring-2 {
+      width: 400px;
+      height: 400px;
+    }
+
+    .status-pill {
+      top: 20px;
+      right: 20px;
+    }
+
+    .benefits-list {
+      flex-direction: column;
     }
   }
 `;
@@ -431,87 +617,117 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          <div className="vs-infographic">
-            <div className="vs-container">
-              <div className="vs-column left">
-                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#e63946", marginBottom: "1rem", textAlign: "center" }}>Ohne KI-Agent</h3>
+          {/* AI Agent Illustration with Virtual Girl */}
+          <div style={{
+            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)"
+          }}>
+            <h2 style={{
+              fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "2rem",              textAlign: "center"
+            }}>
+              Dein virtueller KI-Agent für Live-Support
+            </h2>
+            <div style={{
+              display: "grid",              gridTemplateColumns: "1fr 1fr",              gap: "3rem",              alignItems: "center",              marginBottom: "2rem"
+            }}>
+              {/* Virtual Girl Illustration */}
+              <div className="virtual-girl-container">
+                <div className="grid-background" />
+                <div className="pulse-ring pulse-ring-1" />
+                <div className="pulse-ring pulse-ring-2" />
                 
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <X size={24} />
+                <div className="virtual-girl-avatar">
+                  <div className="avatar-glow" />
+                  <div className="avatar-content">
+                    <div style={{ position: "relative" }}>
+                      <div className="avatar-hair" />
+                      <div className="avatar-head">
+                        <div className="avatar-eyes">
+                          <div className="avatar-eye" />
+                          <div className="avatar-eye" />
+                        </div>
+                        <div className="avatar-smile" />
+                      </div>
+                    </div>
+                    <div className="avatar-body">
+                      <div className="avatar-status">
+                        <div className="status-indicator" />
+                        <span>Online</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="vs-stat-value">38%</div>
-                  <div className="vs-stat-label">Verpasste Anrufe</div>
                 </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <AlertCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">€42.000</div>
-                  <div className="vs-stat-label">Monatlicher Umsatzverlust</div>
-                </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <TrendingUp size={24} />
-                  </div>
-                  <div className="vs-stat-value">3–4 Tage</div>
-                  <div className="vs-stat-label">Wartezeit bis Angebotserstellung</div>
-                </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <AlertCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">60%</div>
-                  <div className="vs-stat-label">Keine Nachfasse-Strategie</div>
-                </div>
-              </div>
-
-              <div className="vs-divider">
-                <div className="vs-badge">VS</div>
-              </div>
-
-              <div className="vs-column right">
-                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#ffa500", marginBottom: "1rem", textAlign: "center" }}>Mit VoiceLinkAI</h3>
                 
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <CheckCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">100%</div>
-                  <div className="vs-stat-label">Alle Anrufe beantwortet</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <Zap size={24} />
-                  </div>
-                  <div className="vs-stat-value">+31%</div>
-                  <div className="vs-stat-label">Umsatzsteigerung</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <MessageSquare size={24} />
-                  </div>
-                  <div className="vs-stat-value">&lt; 30 Min</div>
-                  <div className="vs-stat-label">Angebot innerhalb kurzer Zeit</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <Rocket size={24} />
-                  </div>
-                  <div className="vs-stat-value">Auto</div>
-                  <div className="vs-stat-label">Intelligente Lead-Nachfasse</div>
+                <div className="status-pill">
+                  <div className="status-dot" />
+                  Live aktiv
                 </div>
               </div>
 
-              <div className="vs-bottom-bar">
-                ✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Sofort messbare Ergebnisse
+              {/* Benefits List */}
+              <div>
+                <h3 style={{
+                  fontSize: "1.5rem",                  fontWeight: "700",                  color: "#ffffff",                  marginBottom: "1.5rem"
+                }}>
+                  Live Agenten-Vorteile
+                </h3>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  <div className="benefit-item">
+                    <Headphones size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>24/7 Telefonservice</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Kein Anruf geht verloren</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <Calendar size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Automatische Buchung</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Termine direkt im Kalender</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <MessageCircle size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Chat-Integration</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Website-Qualifizierung</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <Zap size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Instant CRM-Sync</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Alle Daten live verfügbar</p>
+                    </div>
+                  </div>
+                  <div className="benefit-item">
+                    <CheckCircle size={24} className="benefit-icon" />
+                    <div>
+                      <strong style={{ color: "#ffa500" }}>Lead-Qualifizierung</strong>
+                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Nur warme Leads zu deinem Team</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            {/* Call-to-Action Button */}
+            <div style={{ textAlign: "center", marginTop: "2rem" }}>
+              <a
+                href="https://calendly.com/voicelinkai/info"
+                style={{
+                  display: "inline-block",                  padding: "1rem 2.5rem",                  background: "linear-gradient(135deg, #ff8c00, #ffa500)",                  color: "#ffffff",                  textDecoration: "none",                  borderRadius: "8px",                  fontWeight: "700",                  fontSize: "1.125rem",                  transition: "all 0.3s ease",                  boxShadow: "0 0 30px rgba(255, 140, 0, 0.5)"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 0 40px rgba(255, 140, 0, 0.8)";
+                  e.currentTarget.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.5)";
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
+                👉 Jetzt Demo buchen
+              </a>
             </div>
           </div>
         </div>
@@ -626,49 +842,6 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="agents-trust" data-section="agents-trust" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-          <div className="trust-bar">
-            <div className="trust-item">
-              <Brain size={20} />
-              <span>Echte KI-Agenten</span>
-            </div>
-            <div className="trust-item">
-              <Clock size={20} />
-              <span>Keine Wartezeiten</span>
-            </div>
-            <div className="trust-item">
-              <Sun size={20} />
-              <span>Solar-trainiert</span>
-            </div>
-          </div>
-
-          <div className="feature-columns">
-            <div className="feature-column">
-              <div className="feature-column-icon">
-                <Brain size={24} />
-              </div>
-              <div className="feature-column-title">Echte KI-Agenten</div>
-              <div className="feature-column-text">Keine Chatbots, keine starre Skripte. Unsere Agenten verstehen Kontext, lernen aus Gesprächen und treffen intelligente Entscheidungen – speziell trainiert auf Solarbranche.</div>
-            </div>
-
-            <div className="feature-column">
-              <div className="feature-column-icon">
-                <Clock size={24} />
-              </div>
-              <div className="feature-column-title">Keine Wartezeiten</div>
-              <div className="feature-column-text">Sofortige Bearbeitung eingehender Anfragen, 24/7 ohne Verzögerung. Kunden bekommen in Sekunden Antwort – nicht in Stunden oder Tagen.</div>
-            </div>
-
-            <div className="feature-column">
-              <div className="feature-column-icon">
-                <Sun size={24} />
-              </div>
-              <div className="feature-column-title">Solar-trainiert</div>
-              <div className="feature-column-text">Unser Training deckt ab: Solaranlagen-Grundlagen, Förderungen (KfW, BAFA), Einspeisevergütung, Netzanmeldung und alle typischen Kundeneinwände.</div>
-            </div>
-          </div>
-        </div>
-
         <div id="howitworks" data-section="howitworks">
           <FeatureCardNineteen
             title="In 3 Schritten zu deinem KI-Agenten"
@@ -744,17 +917,31 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="bottom-cta" data-section="bottom-cta" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
-          <div className="bottom-cta-section">
-            <h2 className="bottom-cta-title">
+        <div id="bottom-cta" data-section="bottom-cta">
+          <div style={{
+            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)",            textAlign: "center"
+          }}>
+            <h2 style={{
+              fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "1.5rem",              lineHeight: "1.3"
+            }}>
               Bereit für Veränderung?
             </h2>
-            <p className="bottom-cta-description">
+            <p style={{
+              fontSize: "1.125rem",              color: "#b8bec8",              marginBottom: "2rem",              lineHeight: "1.6"
+            }}>
               Buche jetzt dein kostenloses Erstgespräch und erfahre, wie KI-Agenten dein Team entlasten können.
             </p>
             <a
               href="https://calendly.com/voicelinkai/info"
-              className="bottom-cta-button"
+              style={{
+                display: "inline-block",                padding: "0.875rem 2rem",                background: "linear-gradient(135deg, #ff8c00, #ffa500)",                color: "#ffffff",                textDecoration: "none",                borderRadius: "8px",                fontWeight: "600",                fontSize: "1rem",                transition: "all 0.3s ease",                boxShadow: "0 0 20px rgba(255, 140, 0, 0.5)"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.8)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 20px rgba(255, 140, 0, 0.5)";
+              }}
             >
               👉 Kostenloses Erstgespräch buchen
             </a>
