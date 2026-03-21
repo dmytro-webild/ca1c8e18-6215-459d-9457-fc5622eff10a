@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Sun, Clock, Brain } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Sun, Clock, Brain, Phone, Activity } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -352,6 +352,207 @@ const animatedBorderStyle = `
     transform: translateY(-2px);
   }
 
+  /* AI Agent Call Section Styles */
+  .ai-agent-call-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 32, 45, 0.98));
+    border-radius: 16px;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    text-align: center;
+  }
+
+  .ai-agent-call-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .ai-agent-call-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    color: #ffa500;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .ai-agent-call-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .ai-agent-call-description {
+    font-size: 1.125rem;
+    color: #b8bec8;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-agent-call-card {
+    background: linear-gradient(135deg, rgba(26, 32, 45, 0.6), rgba(35, 42, 60, 0.8));
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 0 auto 2rem;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(255, 140, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .ai-agent-call-card:hover {
+    border-color: rgba(255, 140, 0, 0.4);
+    box-shadow: 0 12px 48px rgba(255, 140, 0, 0.2);
+  }
+
+  .ai-agent-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.15));
+    border: 2px solid rgba(255, 140, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+
+  .ai-agent-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .ai-agent-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #10b981;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .ai-agent-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .ai-agent-phone {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #ffa500;
+    margin-bottom: 1.5rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+  }
+
+  .ai-agent-phone-label {
+    font-size: 0.875rem;
+    color: #b8bec8;
+    margin-bottom: 2rem;
+  }
+
+  .ai-agent-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .ai-agent-feature {
+    padding: 1rem;
+    background: rgba(26, 32, 45, 0.5);
+    border: 1px solid rgba(255, 140, 0, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .ai-agent-feature:hover {
+    background: rgba(26, 32, 45, 0.8);
+    border-color: rgba(255, 140, 0, 0.4);
+  }
+
+  .ai-agent-feature-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.75rem;
+    background: rgba(255, 165, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-agent-feature-icon svg {
+    color: #ffa500;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ai-agent-feature-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+  }
+
+  .ai-agent-feature-text {
+    font-size: 0.75rem;
+    color: #b8bec8;
+  }
+
+  .ai-agent-cta-button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+
+  .ai-agent-cta-button:hover {
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.8);
+    transform: translateY(-2px);
+  }
+
   @media (max-width: 768px) {
     .trust-bar {
       gap: 1rem;
@@ -372,6 +573,18 @@ const animatedBorderStyle = `
 
     .bottom-cta-description {
       font-size: 1rem;
+    }
+
+    .ai-agent-call-title {
+      font-size: 1.75rem;
+    }
+
+    .ai-agent-call-description {
+      font-size: 1rem;
+    }
+
+    .ai-agent-features {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 `;
@@ -665,6 +878,70 @@ export default function LandingPage() {
               </div>
               <div className="feature-column-title">Solar-trainiert</div>
               <div className="feature-column-text">Unser Training deckt ab: Solaranlagen-Grundlagen, Förderungen (KfW, BAFA), Einspeisevergütung, Netzanmeldung und alle typischen Kundeneinwände.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="call-ai-agent" data-section="call-ai-agent" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
+          <div className="ai-agent-call-section">
+            <div className="ai-agent-call-header">
+              <div className="ai-agent-call-tag">
+                <Phone size={16} />
+                Live AI Agent
+              </div>
+              <h2 className="ai-agent-call-title">Sprich direkt mit unserem KI-Agenten</h2>
+              <p className="ai-agent-call-description">
+                Erlebe die Zukunft der Kundenbetreuung. Unser KI-Agent antwortet sofort auf Anrufe, beantwortet Fragen kompetent und bucht Termine – rund um die Uhr, ohne Wartezeit.
+              </p>
+            </div>
+
+            <div className="ai-agent-call-card">
+              <div className="ai-agent-avatar">🤖</div>
+              <div className="ai-agent-name">VoiceLink AI Agent</div>
+              <div className="ai-agent-status">
+                <div className="ai-agent-status-dot"></div>
+                Online & Bereit
+              </div>
+              <div className="ai-agent-phone">+49 (0) 123 456789</div>
+              <div className="ai-agent-phone-label">Tippen Sie diese Nummer für direkten Zugang</div>
+
+              <div className="ai-agent-features">
+                <div className="ai-agent-feature">
+                  <div className="ai-agent-feature-icon">
+                    <MessageSquare size={20} />
+                  </div>
+                  <div className="ai-agent-feature-title">Instant Antwort</div>
+                  <div className="ai-agent-feature-text">Keine Warteschleifen</div>
+                </div>
+
+                <div className="ai-agent-feature">
+                  <div className="ai-agent-feature-icon">
+                    <Activity size={20} />
+                  </div>
+                  <div className="ai-agent-feature-title">Terminbuchung</div>
+                  <div className="ai-agent-feature-text">Direkt verfügbar</div>
+                </div>
+
+                <div className="ai-agent-feature">
+                  <div className="ai-agent-feature-icon">
+                    <Brain size={20} />
+                  </div>
+                  <div className="ai-agent-feature-title">Solar-Wissen</div>
+                  <div className="ai-agent-feature-text">Branche-trainiert</div>
+                </div>
+
+                <div className="ai-agent-feature">
+                  <div className="ai-agent-feature-icon">
+                    <Clock size={20} />
+                  </div>
+                  <div className="ai-agent-feature-title">24/7 Verfügbar</div>
+                  <div className="ai-agent-feature-text">Rund um die Uhr</div>
+                </div>
+              </div>
+
+              <a href="https://calendly.com/voicelinkai/info" className="ai-agent-cta-button">
+                👉 Live Demo starten
+              </a>
             </div>
           </div>
         </div>
