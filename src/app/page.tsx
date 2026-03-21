@@ -553,6 +553,37 @@ export default function LandingPage() {
           />
         </div>
 
+        <div id="bottom-cta" data-section="bottom-cta">
+          <div style={{
+            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)",            textAlign: "center"
+          }}>
+            <h2 style={{
+              fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "1.5rem",              lineHeight: "1.3"
+            }}>
+              Bereit für Veränderung?
+            </h2>
+            <p style={{
+              fontSize: "1.125rem",              color: "#b8bec8",              marginBottom: "2rem",              lineHeight: "1.6"
+            }}>
+              Buche jetzt dein kostenloses Erstgespräch und erfahre, wie KI-Agenten dein Team entlasten können.
+            </p>
+            <a
+              href="https://calendly.com/voicelinkai/info"
+              style={{
+                display: "inline-block",                padding: "0.875rem 2rem",                background: "linear-gradient(135deg, #ff8c00, #ffa500)",                color: "#ffffff",                textDecoration: "none",                borderRadius: "8px",                fontWeight: "600",                fontSize: "1rem",                transition: "all 0.3s ease",                boxShadow: "0 0 20px rgba(255, 140, 0, 0.5)"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.8)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 20px rgba(255, 140, 0, 0.5)";
+              }}
+            >
+              👉 Kostenloses Erstgespräch buchen
+            </a>
+          </div>
+        </div>
+
         <div id="closing-cta" data-section="closing-cta">
           <ContactSplit
             tag="Bereit für Veränderung?"
