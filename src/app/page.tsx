@@ -868,7 +868,7 @@ export default function LandingPage() {
             animationType="blur-reveal"
             features={[
               {
-                title: "KI-Telefonassistent",                description: "Dein Team ist auf dem Dach. Der Agent beantwortet Routineanrufe, bucht Termine und qualifiziert Interessenten – 24/7, ohne dass jemand abheben muss. 💡 Höchste ROI: Handles 60% of routine call volume, frees up 8-12 hours/week per employee.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+                title: "KI-Telefonassistent",                description: "Dein Team ist auf dem Dach. Der Agent beantwortet Routineanrufe, bucht Termine und qualifiziert Interessenten – 24/7, ohne dass jemand abheben muss. 💡 Höchste ROI: Verarbeitet 60% des Routineanrufvolumens, gibt 8–12 Stunden pro Woche pro Mitarbeiter frei.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
                 bentoComponent: "phone",                statusIcon: Zap,
                 alertIcon: AlertCircle,
                 alertTitle: "Agent aktiv",                alertMessage: "Bearbeitet eingehende Anrufe",                apps: [
@@ -883,7 +883,7 @@ export default function LandingPage() {
                 ]
               },
               {
-                title: "KI-Buchungsagent",                description: "Termine buchen sich selbst. Der Agent koordiniert automatisch Aufmaßtermine, Installationen und Wartungen – direkt in deinen Kalender, ohne manuelle Abstimmung. 💡 ROI für große Teams: Eliminates 40% of scheduling back-and-forth emails.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+                title: "KI-Buchungsagent",                description: "Termine buchen sich selbst. Der Agent koordiniert automatisch Aufmaßtermine, Installationen und Wartungen – direkt in deinen Kalender, ohne manuelle Abstimmung. 💡 ROI für große Teams: Eliminiert 40% der Scheduling-Back-and-Forth-E-Mails.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
                 bentoComponent: "timeline",                heading: "Booking Timeline",                subheading: "Automated scheduling",                items: [
                   { label: "Customer Request", detail: "Inquiry received" },
                   { label: "Calendar Check", detail: "Availability verified" },
@@ -892,7 +892,7 @@ export default function LandingPage() {
                 completedLabel: "All steps optimized"
               },
               {
-                title: "KI-Chat-Agent",                description: "Website-Besucher werden zu Leads. Der Agent qualifiziert Interessenten in Echtzeit, sammelt Daten und übergibt warme Leads an dein Team – mit vollständigen Projektinformationen. 💡 Best for lead generation: Converts 35% more website visitors into qualified inquiries.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
+                title: "KI-Chat-Agent",                description: "Website-Besucher werden zu Leads. Der Agent qualifiziert Interessenten in Echtzeit, sammelt Daten und übergibt warme Leads an dein Team – mit vollständigen Projektinformationen. 💡 Best for lead generation: Konvertiert 35% mehr Website-Besucher in qualifizierte Anfragen.",                button: { text: "Mehr erfahren", href: "https://calendly.com/voicelinkai/info" },
                 bentoComponent: "chat",                aiIcon: Bot,
                 userIcon: MessageSquare,
                 exchanges: [
