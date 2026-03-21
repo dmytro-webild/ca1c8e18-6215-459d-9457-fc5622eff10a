@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle, Phone } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -227,337 +227,338 @@ const animatedBorderStyle = `
     border-radius: 4px;
   }
 
-  /* AI Agent Illustration Styles */
-  .ai-agent-illustration {
-    position: relative;
+  /* Dark Full-Width Call Section */
+  .call-agent-section {
     width: 100%;
-    max-width: 600px;
-    height: 600px;
-    margin: 0 auto;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    padding: 4rem 2rem;
+    border-top: 2px solid rgba(255, 140, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 140, 0, 0.4);
   }
 
-  /* Virtual Girl Illustration Container */
-  .virtual-girl-container {
-    position: relative;
+  .call-agent-container {
     width: 100%;
-    max-width: 600px;
-    height: 600px;
+    max-width: 1400px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: center;
-    justify-content: center;
   }
 
-  /* Grid background */
-  .grid-background {
-    position: absolute;
-    inset: 0;
-    background-image: 
-      linear-gradient(0deg, transparent 24%, rgba(255, 140, 0, 0.1) 25%, rgba(255, 140, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 140, 0, 0.1) 75%, rgba(255, 140, 0, 0.1) 76%, transparent 77%, transparent),
-      linear-gradient(90deg, transparent 24%, rgba(255, 140, 0, 0.1) 25%, rgba(255, 140, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 140, 0, 0.1) 75%, rgba(255, 140, 0, 0.1) 76%, transparent 77%, transparent);
-    background-size: 50px 50px;
-    animation: grid-drift 20s linear infinite;
-    opacity: 0.5;
-    border-radius: 50%;
-  }
-
-  @keyframes grid-drift {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(50px, 50px);
-    }
-  }
-
-  /* Virtual girl avatar container */
-  .virtual-girl-avatar {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.05));
-    border-radius: 20px;
-    border: 2px solid rgba(255, 140, 0, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.3), inset 0 0 40px rgba(255, 140, 0, 0.1);
-  }
-
-  /* Glow effect behind avatar */
-  .avatar-glow {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(255, 140, 0, 0.3), transparent);
-    border-radius: 50%;
-    animation: glow-pulse 3s ease-in-out infinite;
-  }
-
-  @keyframes glow-pulse {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 0.5;
-    }
-    50% {
-      transform: scale(1.1);
-      opacity: 0.8;
-    }
-  }
-
-  /* Simple avatar representation */
-  .avatar-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
+  .call-agent-content {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .call-agent-tag {
+    display: inline-flex;
     align-items: center;
-    gap: 20px;
-  }
-
-  .avatar-head {
-    width: 80px;
-    height: 100px;
-    background: linear-gradient(135deg, #fdbcb4, #f9a78a);
-    border-radius: 50% 50% 45% 45%;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
-  }
-
-  .avatar-eyes {
-    position: absolute;
-    top: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-  }
-
-  .avatar-eye {
-    width: 12px;
-    height: 12px;
-    background: #333;
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
-  }
-
-  .avatar-smile {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 15px;
-    border-bottom: 2px solid #333;
-    border-radius: 0 0 30px 30px;
-  }
-
-  .avatar-hair {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90px;
-    height: 30px;
-    background: linear-gradient(135deg, #8b6b47, #a0826d);
-    border-radius: 50% 50% 0 0;
-  }
-
-  .avatar-body {
-    width: 120px;
-    height: 90px;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.15));
-    border-radius: 15px;
-    border: 2px solid rgba(255, 140, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .avatar-status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 20px;
     font-size: 0.875rem;
-    color: #ffa500;
+    color: #ff8c00;
     font-weight: 600;
   }
 
-  .status-indicator {
-    width: 10px;
-    height: 10px;
-    background: #ffa500;
-    border-radius: 50%;
-    animation: status-pulse 2s ease-in-out infinite;
+  .call-agent-tag svg {
+    width: 16px;
+    height: 16px;
   }
 
-  @keyframes status-pulse {
+  .call-agent-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .call-agent-subheadline {
+    font-size: 1.125rem;
+    color: #b8bec8;
+    line-height: 1.6;
+  }
+
+  .call-agent-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .call-agent-feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .call-agent-feature-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    color: #ff8c00;
+    margin-top: 0.25rem;
+  }
+
+  .call-agent-feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .call-agent-feature-title {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  .call-agent-feature-desc {
+    font-size: 0.875rem;
+    color: #b8bec8;
+  }
+
+  .call-agent-cta {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.5);
+  }
+
+  .call-agent-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 140, 0, 0.8);
+  }
+
+  .call-agent-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+  }
+
+  .call-agent-phone-mockup {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.05));
+    border: 2px solid rgba(255, 140, 0, 0.4);
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 0 40px rgba(255, 140, 0, 0.3), inset 0 0 60px rgba(255, 140, 0, 0.1);
+  }
+
+  .call-agent-phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 32, 45, 0.9), rgba(15, 20, 25, 0.95));
+    border-radius: 35px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .call-agent-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #ff8c00;
+    font-weight: 600;
+  }
+
+  .call-agent-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff8c00;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
     0%, 100% {
       opacity: 1;
-      box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+      box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
     }
     50% {
       opacity: 0.5;
-      box-shadow: 0 0 12px rgba(255, 165, 0, 0.9);
     }
   }
 
-  /* Animated pulse rings around girl */
-  .pulse-ring {
+  .call-agent-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.4);
+  }
+
+  .call-agent-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .call-agent-activity {
+    font-size: 0.875rem;
+    color: #b8bec8;
+  }
+
+  .call-agent-dial-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .call-agent-dial-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    color: #ff8c00;
+    font-weight: 600;
+    cursor: default;
+    transition: all 0.3s ease;
+  }
+
+  .call-agent-dial-button:nth-child(1) { content: '1'; }
+  .call-agent-dial-button:nth-child(2) { content: '2'; }
+  .call-agent-dial-button:nth-child(3) { content: '3'; }
+  .call-agent-dial-button:nth-child(4) { content: '4'; }
+  .call-agent-dial-button:nth-child(5) { content: '5'; }
+  .call-agent-dial-button:nth-child(6) { content: '6'; }
+  .call-agent-dial-button:nth-child(7) { content: '7'; }
+  .call-agent-dial-button:nth-child(8) { content: '8'; }
+  .call-agent-dial-button:nth-child(9) { content: '9'; }
+
+  .call-agent-action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .call-agent-action-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .call-agent-action-btn.accept {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+  }
+
+  .call-agent-action-btn.decline {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+  }
+
+  .call-agent-pulse-rings {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .call-agent-pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 2px solid rgba(255, 140, 0, 0.3);
+    border-radius: 50%;
+    animation: pulse-ring 2s ease-out infinite;
   }
 
-  .pulse-ring-1 {
-    width: 380px;
-    height: 380px;
-    animation: pulse-expand-girl 3s ease-out infinite;
+  .call-agent-pulse-ring:nth-child(1) {
+    width: 320px;
+    height: 320px;
+    animation-delay: 0s;
   }
 
-  .pulse-ring-2 {
-    width: 460px;
-    height: 460px;
-    animation: pulse-expand-girl 3s ease-out infinite 1s;
+  .call-agent-pulse-ring:nth-child(2) {
+    width: 420px;
+    height: 420px;
+    animation-delay: 0.6s;
   }
 
-  @keyframes pulse-expand-girl {
+  @keyframes pulse-ring {
     0% {
-      width: 300px;
-      height: 300px;
       opacity: 1;
-      border-color: rgba(255, 140, 0, 0.8);
+      transform: translate(-50%, -50%) scale(1);
     }
     100% {
-      width: 520px;
-      height: 520px;
       opacity: 0;
-      border-color: rgba(255, 140, 0, 0.1);
+      transform: translate(-50%, -50%) scale(1.4);
     }
   }
 
-  /* Status pill */
-  .status-pill {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: rgba(26, 32, 45, 0.8);
-    border: 1px solid rgba(255, 140, 0, 0.5);
-    border-radius: 20px;
-    font-size: 0.875rem;
-    color: #ffa500;
-    font-weight: 600;
-  }
-
-  .status-dot {
-    width: 8px;
-    height: 8px;
-    background: #ffa500;
-    border-radius: 50%;
-    animation: status-pulse 2s ease-in-out infinite;
-  }
-
-  /* Benefits list on right side */
-  .benefits-list {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-width: 200px;
-  }
-
-  .benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px;
-    background: rgba(26, 32, 45, 0.6);
-    border: 1px solid rgba(255, 140, 0, 0.2);
-    border-radius: 8px;
-    font-size: 0.875rem;
-    color: #e8eef7;
-    transition: all 0.3s ease;
-  }
-
-  .benefit-item:hover {
-    background: rgba(26, 32, 45, 0.9);
-    border-color: rgba(255, 140, 0, 0.5);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
-  }
-
-  .benefit-icon {
-    width: 24px;
-    height: 24px;
-    color: #ff8c00;
-    flex-shrink: 0;
-  }
-
-  /* Responsive adjustments */
   @media (max-width: 1024px) {
-    .benefits-list {
-      position: static;
-      transform: none;
-      margin-top: 2rem;
-      min-width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+    .call-agent-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    .virtual-girl-container {
-      height: 500px;
+    .call-agent-headline {
+      font-size: 2rem;
+    }
+
+    .call-agent-visual {
+      min-height: 400px;
     }
   }
 
   @media (max-width: 768px) {
-    .virtual-girl-container {
-      height: 400px;
+    .call-agent-section {
+      padding: 2rem 1rem;
     }
 
-    .virtual-girl-avatar {
+    .call-agent-headline {
+      font-size: 1.5rem;
+    }
+
+    .call-agent-subheadline {
+      font-size: 1rem;
+    }
+
+    .call-agent-phone-mockup {
       width: 250px;
-      height: 350px;
-    }
-
-    .avatar-head {
-      width: 70px;
-      height: 90px;
-    }
-
-    .avatar-body {
-      width: 100px;
-      height: 75px;
-    }
-
-    .pulse-ring-1 {
-      width: 320px;
-      height: 320px;
-    }
-
-    .pulse-ring-2 {
-      width: 400px;
-      height: 400px;
-    }
-
-    .status-pill {
-      top: 20px;
-      right: 20px;
-    }
-
-    .benefits-list {
-      flex-direction: column;
+      height: 500px;
     }
   }
 `;
@@ -616,118 +617,97 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="metrics" data-section="metrics">
-          {/* AI Agent Illustration with Virtual Girl */}
-          <div style={{
-            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)"
-          }}>
-            <h2 style={{
-              fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "2rem",              textAlign: "center"
-            }}>
-              Dein virtueller KI-Agent für Live-Support
-            </h2>
-            <div style={{
-              display: "grid",              gridTemplateColumns: "1fr 1fr",              gap: "3rem",              alignItems: "center",              marginBottom: "2rem"
-            }}>
-              {/* Virtual Girl Illustration */}
-              <div className="virtual-girl-container">
-                <div className="grid-background" />
-                <div className="pulse-ring pulse-ring-1" />
-                <div className="pulse-ring pulse-ring-2" />
-                
-                <div className="virtual-girl-avatar">
-                  <div className="avatar-glow" />
-                  <div className="avatar-content">
-                    <div style={{ position: "relative" }}>
-                      <div className="avatar-hair" />
-                      <div className="avatar-head">
-                        <div className="avatar-eyes">
-                          <div className="avatar-eye" />
-                          <div className="avatar-eye" />
-                        </div>
-                        <div className="avatar-smile" />
-                      </div>
-                    </div>
-                    <div className="avatar-body">
-                      <div className="avatar-status">
-                        <div className="status-indicator" />
-                        <span>Online</span>
-                      </div>
-                    </div>
+        <div id="call-agent" data-section="call-agent" className="call-agent-section">
+          <div className="call-agent-container">
+            {/* Content Side */}
+            <div className="call-agent-content">
+              <div className="call-agent-tag">
+                <Phone size={16} />
+                <span>Live AI Agent</span>
+              </div>
+              <h2 className="call-agent-headline">
+                Besucher können deinen KI-Agenten jetzt anrufen
+              </h2>
+              <p className="call-agent-subheadline">
+                Dein virtueller Assistent nimmt Anrufe entgegen, beantwortet Fragen und bucht Termine – 24/7, ohne dass ein Mensch abheben muss. Warme Leads für dein Team. Zufriedene Kunden. Null Anrufe verloren.
+              </p>
+              
+              <div className="call-agent-features">
+                <div className="call-agent-feature">
+                  <Headphones className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-text">
+                    <div className="call-agent-feature-title">24/7 Live Support</div>
+                    <div className="call-agent-feature-desc">Kein Anruf geht verloren – auch nachts und am Wochenende</div>
                   </div>
                 </div>
                 
-                <div className="status-pill">
-                  <div className="status-dot" />
-                  Live aktiv
+                <div className="call-agent-feature">
+                  <MessageSquare className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-text">
+                    <div className="call-agent-feature-title">Intelligente Qualifizierung</div>
+                    <div className="call-agent-feature-desc">Agent stellt die richtigen Fragen und übergibt nur warme Leads</div>
+                  </div>
                 </div>
-              </div>
-
-              {/* Benefits List */}
-              <div>
-                <h3 style={{
-                  fontSize: "1.5rem",                  fontWeight: "700",                  color: "#ffffff",                  marginBottom: "1.5rem"
-                }}>
-                  Live Agenten-Vorteile
-                </h3>
-                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                  <div className="benefit-item">
-                    <Headphones size={24} className="benefit-icon" />
-                    <div>
-                      <strong style={{ color: "#ffa500" }}>24/7 Telefonservice</strong>
-                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Kein Anruf geht verloren</p>
-                    </div>
+                
+                <div className="call-agent-feature">
+                  <Calendar className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-text">
+                    <div className="call-agent-feature-title">Automatische Terminbuchung</div>
+                    <div className="call-agent-feature-desc">Termine landen direkt in deinem Kalender – keine Rückfragen nötig</div>
                   </div>
-                  <div className="benefit-item">
-                    <Calendar size={24} className="benefit-icon" />
-                    <div>
-                      <strong style={{ color: "#ffa500" }}>Automatische Buchung</strong>
-                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Termine direkt im Kalender</p>
-                    </div>
-                  </div>
-                  <div className="benefit-item">
-                    <MessageCircle size={24} className="benefit-icon" />
-                    <div>
-                      <strong style={{ color: "#ffa500" }}>Chat-Integration</strong>
-                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Website-Qualifizierung</p>
-                    </div>
-                  </div>
-                  <div className="benefit-item">
-                    <Zap size={24} className="benefit-icon" />
-                    <div>
-                      <strong style={{ color: "#ffa500" }}>Instant CRM-Sync</strong>
-                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Alle Daten live verfügbar</p>
-                    </div>
-                  </div>
-                  <div className="benefit-item">
-                    <CheckCircle size={24} className="benefit-icon" />
-                    <div>
-                      <strong style={{ color: "#ffa500" }}>Lead-Qualifizierung</strong>
-                      <p style={{ fontSize: "0.75rem", color: "#b8bec8", marginTop: "2px" }}>Nur warme Leads zu deinem Team</p>
-                    </div>
+                </div>
+                
+                <div className="call-agent-feature">
+                  <Zap className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-text">
+                    <div className="call-agent-feature-title">CRM-Integration</div>
+                    <div className="call-agent-feature-desc">Alle Anrufdaten sind direkt in deinem System verfügbar</div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Call-to-Action Button */}
-            <div style={{ textAlign: "center", marginTop: "2rem" }}>
-              <a
-                href="https://calendly.com/voicelinkai/info"
-                style={{
-                  display: "inline-block",                  padding: "1rem 2.5rem",                  background: "linear-gradient(135deg, #ff8c00, #ffa500)",                  color: "#ffffff",                  textDecoration: "none",                  borderRadius: "8px",                  fontWeight: "700",                  fontSize: "1.125rem",                  transition: "all 0.3s ease",                  boxShadow: "0 0 30px rgba(255, 140, 0, 0.5)"
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = "0 0 40px rgba(255, 140, 0, 0.8)";
-                  e.currentTarget.style.transform = "scale(1.05)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.5)";
-                  e.currentTarget.style.transform = "scale(1)";
-                }}
-              >
-                👉 Jetzt Demo buchen
+              
+              <a href="https://calendly.com/voicelinkai/info" className="call-agent-cta">
+                👉 Live-Demo anfordern
               </a>
+            </div>
+            
+            {/* Visual Side */}
+            <div className="call-agent-visual">
+              <div className="call-agent-pulse-rings">
+                <div className="call-agent-pulse-ring" />
+                <div className="call-agent-pulse-ring" />
+              </div>
+              
+              <div className="call-agent-phone-mockup">
+                <div className="call-agent-phone-screen">
+                  <div className="call-agent-status">
+                    <div className="call-agent-status-dot" />
+                    <span>Online aktiv</span>
+                  </div>
+                  
+                  <div className="call-agent-avatar">🤖</div>
+                  
+                  <div className="call-agent-name">VoiceLink Agent</div>
+                  <div className="call-agent-activity">Im Gespräch...</div>
+                  
+                  <div className="call-agent-dial-pad">
+                    <div className="call-agent-dial-button">1</div>
+                    <div className="call-agent-dial-button">2</div>
+                    <div className="call-agent-dial-button">3</div>
+                    <div className="call-agent-dial-button">4</div>
+                    <div className="call-agent-dial-button">5</div>
+                    <div className="call-agent-dial-button">6</div>
+                    <div className="call-agent-dial-button">7</div>
+                    <div className="call-agent-dial-button">8</div>
+                    <div className="call-agent-dial-button">9</div>
+                  </div>
+                  
+                  <div className="call-agent-action-buttons">
+                    <div className="call-agent-action-btn accept">✓</div>
+                    <div className="call-agent-action-btn decline">✕</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
