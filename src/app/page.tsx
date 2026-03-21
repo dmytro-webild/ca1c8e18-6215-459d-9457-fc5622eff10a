@@ -278,20 +278,6 @@ export default function LandingPage() {
 
               {/* Dark Card Container */}
               <div className="bg-card border border-accent/30 rounded-lg p-8 md:p-12 shadow-2xl">
-                {/* Virtual Assistant Image */}
-                <div className="flex justify-center mb-8">
-                  <div className="relative w-32 h-32 md:w-40 md:h-40">
-                    <img 
-                      src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/professional-headshot-photo-of-a-friendl-1774010020721-9f765162.png"
-                      alt="Virtual Assistant"
-                      className="w-full h-full object-cover rounded-full border-4 border-accent/50 shadow-lg"
-                    />
-                    <div className="absolute -bottom-2 -right-2 bg-accent rounded-full p-3 shadow-lg">
-                      <Bot className="w-6 h-6 text-card" />
-                    </div>
-                  </div>
-                </div>
-
                 {/* Animated Phone Icon */}
                 <div className="flex justify-center mb-8">
                   <div className="relative w-20 h-20 md:w-24 md:h-24">
