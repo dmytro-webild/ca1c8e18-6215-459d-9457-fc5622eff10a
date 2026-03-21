@@ -798,12 +798,12 @@ export default function LandingPage() {
               {/* Right column - With KI-Agenten */}
               <div className="vs-column right">
                 <div className="vs-stat right">
-                  <div className="vs-stat-value">+31%</div>
-                  <div className="vs-stat-label">Kapazitätssteigerung durch Automatisierung</div>
+                  <div className="vs-stat-value">60%</div>
+                  <div className="vs-stat-label">Routineanrufvolumen automatisiert</div>
                 </div>
                 <div className="vs-stat right">
-                  <div className="vs-stat-value">100%</div>
-                  <div className="vs-stat-label">Keine verlorenen Anfragen – rund um die Uhr</div>
+                  <div className="vs-stat-value">8-12h</div>
+                  <div className="vs-stat-label">Zeitersparnis pro Mitarbeiter pro Woche</div>
                 </div>
               </div>
             </div>
