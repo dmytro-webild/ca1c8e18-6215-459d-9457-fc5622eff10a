@@ -236,7 +236,19 @@ const animatedBorderStyle = `
     margin: 0 auto;
   }
 
-  /* Animated grid background */
+  /* Virtual Girl Illustration Container */
+  .virtual-girl-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Grid background */
   .grid-background {
     position: absolute;
     inset: 0;
@@ -246,6 +258,7 @@ const animatedBorderStyle = `
     background-size: 50px 50px;
     animation: grid-drift 20s linear infinite;
     opacity: 0.5;
+    border-radius: 50%;
   }
 
   @keyframes grid-drift {
@@ -257,26 +270,141 @@ const animatedBorderStyle = `
     }
   }
 
-  /* Central dark circle with pulse rings */
-  .agent-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(26, 32, 45, 0.9), rgba(15, 20, 25, 0.95));
+  /* Virtual girl avatar container */
+  .virtual-girl-avatar {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.05));
+    border-radius: 20px;
     border: 2px solid rgba(255, 140, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 
-      0 0 30px rgba(255, 140, 0, 0.3),
-      inset 0 0 40px rgba(255, 140, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.3), inset 0 0 40px rgba(255, 140, 0, 0.1);
   }
 
-  /* Animated pulse rings */
+  /* Glow effect behind avatar */
+  .avatar-glow {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.3), transparent);
+    border-radius: 50%;
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  /* Simple avatar representation */
+  .avatar-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .avatar-head {
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(135deg, #fdbcb4, #f9a78a);
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+  }
+
+  .avatar-eyes {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+  }
+
+  .avatar-eye {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+  }
+
+  .avatar-smile {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    border-bottom: 2px solid #333;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .avatar-hair {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 30px;
+    background: linear-gradient(135deg, #8b6b47, #a0826d);
+    border-radius: 50% 50% 0 0;
+  }
+
+  .avatar-body {
+    width: 120px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.15));
+    border-radius: 15px;
+    border: 2px solid rgba(255, 140, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #ffa500;
+    font-weight: 600;
+  }
+
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    background: #ffa500;
+    border-radius: 50%;
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes status-pulse {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+    }
+    50% {
+      opacity: 0.5;
+      box-shadow: 0 0 12px rgba(255, 165, 0, 0.9);
+    }
+  }
+
+  /* Animated pulse rings around girl */
   .pulse-ring {
     position: absolute;
     top: 50%;
@@ -287,119 +415,29 @@ const animatedBorderStyle = `
   }
 
   .pulse-ring-1 {
-    width: 360px;
-    height: 360px;
-    animation: pulse-expand 3s ease-out infinite;
+    width: 380px;
+    height: 380px;
+    animation: pulse-expand-girl 3s ease-out infinite;
   }
 
   .pulse-ring-2 {
-    width: 440px;
-    height: 440px;
-    animation: pulse-expand 3s ease-out infinite 1s;
+    width: 460px;
+    height: 460px;
+    animation: pulse-expand-girl 3s ease-out infinite 1s;
   }
 
-  @keyframes pulse-expand {
+  @keyframes pulse-expand-girl {
     0% {
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
       opacity: 1;
       border-color: rgba(255, 140, 0, 0.8);
     }
     100% {
-      width: 500px;
-      height: 500px;
+      width: 520px;
+      height: 520px;
       opacity: 0;
       border-color: rgba(255, 140, 0, 0.1);
-    }
-  }
-
-  /* Abstract geometric AI face */
-  .ai-face {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .ai-eyes {
-    display: flex;
-    gap: 30px;
-  }
-
-  .ai-eye {
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
-    animation: eye-glow 2s ease-in-out infinite;
-  }
-
-  .ai-eye:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-
-  @keyframes eye-glow {
-    0%, 100% {
-      box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
-    }
-    50% {
-      box-shadow: 0 0 25px rgba(255, 140, 0, 0.9);
-    }
-  }
-
-  /* Animated sound wave bars */
-  .sound-waves {
-    display: flex;
-    align-items: flex-end;
-    gap: 6px;
-    height: 40px;
-  }
-
-  .wave-bar {
-    width: 4px;
-    background: linear-gradient(180deg, #ffa500, #ff8c00);
-    border-radius: 2px;
-    animation: wave-pulse 0.8s ease-in-out infinite;
-  }
-
-  .wave-bar:nth-child(1) {
-    height: 15px;
-    animation-delay: 0s;
-  }
-
-  .wave-bar:nth-child(2) {
-    height: 25px;
-    animation-delay: 0.1s;
-  }
-
-  .wave-bar:nth-child(3) {
-    height: 35px;
-    animation-delay: 0.2s;
-  }
-
-  .wave-bar:nth-child(4) {
-    height: 25px;
-    animation-delay: 0.3s;
-  }
-
-  .wave-bar:nth-child(5) {
-    height: 15px;
-    animation-delay: 0.4s;
-  }
-
-  @keyframes wave-pulse {
-    0%, 100% {
-      height: 15px;
-      opacity: 0.6;
-    }
-    50% {
-      height: 35px;
-      opacity: 1;
     }
   }
 
@@ -426,34 +464,6 @@ const animatedBorderStyle = `
     background: #ffa500;
     border-radius: 50%;
     animation: status-pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes status-pulse {
-    0%, 100% {
-      opacity: 1;
-      box-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
-    }
-    50% {
-      opacity: 0.5;
-      box-shadow: 0 0 12px rgba(255, 165, 0, 0.9);
-    }
-  }
-
-  /* Phone icon */
-  .phone-icon-container {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.1));
-    border: 2px solid rgba(255, 140, 0, 0.5);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
   }
 
   /* Benefits list on right side */
@@ -494,21 +504,6 @@ const animatedBorderStyle = `
     flex-shrink: 0;
   }
 
-  /* Agent label */
-  .agent-label {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 16px;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
-    color: #ffffff;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-  }
-
   /* Responsive adjustments */
   @media (max-width: 1024px) {
     .benefits-list {
@@ -521,46 +516,44 @@ const animatedBorderStyle = `
       justify-content: center;
     }
 
-    .ai-agent-illustration {
+    .virtual-girl-container {
       height: 500px;
     }
   }
 
   @media (max-width: 768px) {
-    .ai-agent-illustration {
+    .virtual-girl-container {
       height: 400px;
     }
 
-    .agent-circle {
-      width: 200px;
-      height: 200px;
+    .virtual-girl-avatar {
+      width: 250px;
+      height: 350px;
+    }
+
+    .avatar-head {
+      width: 70px;
+      height: 90px;
+    }
+
+    .avatar-body {
+      width: 100px;
+      height: 75px;
     }
 
     .pulse-ring-1 {
-      width: 280px;
-      height: 280px;
+      width: 320px;
+      height: 320px;
     }
 
     .pulse-ring-2 {
-      width: 360px;
-      height: 360px;
+      width: 400px;
+      height: 400px;
     }
 
     .status-pill {
       top: 20px;
       right: 20px;
-    }
-
-    .phone-icon-container {
-      bottom: 20px;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-    }
-
-    .agent-label {
-      bottom: 20px;
     }
 
     .benefits-list {
@@ -624,7 +617,7 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          {/* AI Agent Illustration */}
+          {/* AI Agent Illustration with Virtual Girl */}
           <div style={{
             width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)"
           }}>
@@ -636,32 +629,38 @@ export default function LandingPage() {
             <div style={{
               display: "grid",              gridTemplateColumns: "1fr 1fr",              gap: "3rem",              alignItems: "center",              marginBottom: "2rem"
             }}>
-              {/* Illustration */}
-              <div className="ai-agent-illustration">
+              {/* Virtual Girl Illustration */}
+              <div className="virtual-girl-container">
                 <div className="grid-background" />
                 <div className="pulse-ring pulse-ring-1" />
                 <div className="pulse-ring pulse-ring-2" />
-                <div className="agent-circle">
-                  <div className="ai-face">
-                    <div className="ai-eyes">
-                      <div className="ai-eye" />
-                      <div className="ai-eye" />
+                
+                <div className="virtual-girl-avatar">
+                  <div className="avatar-glow" />
+                  <div className="avatar-content">
+                    <div style={{ position: "relative" }}>
+                      <div className="avatar-hair" />
+                      <div className="avatar-head">
+                        <div className="avatar-eyes">
+                          <div className="avatar-eye" />
+                          <div className="avatar-eye" />
+                        </div>
+                        <div className="avatar-smile" />
+                      </div>
                     </div>
-                    <div className="sound-waves">
-                      <div className="wave-bar" />
-                      <div className="wave-bar" />
-                      <div className="wave-bar" />
-                      <div className="wave-bar" />
-                      <div className="wave-bar" />
+                    <div className="avatar-body">
+                      <div className="avatar-status">
+                        <div className="status-indicator" />
+                        <span>Online</span>
+                      </div>
                     </div>
                   </div>
                 </div>
+                
                 <div className="status-pill">
                   <div className="status-dot" />
                   Live aktiv
                 </div>
-                <div className="phone-icon-container">☎️</div>
-                <div className="agent-label">KI-Agent "Laura"</div>
               </div>
 
               {/* Benefits List */}
