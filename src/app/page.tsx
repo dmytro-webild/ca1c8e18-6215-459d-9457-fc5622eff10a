@@ -787,16 +787,16 @@ export default function LandingPage() {
             animationType="blur-reveal"
             metrics={[
               {
-                id: "1",                value: "60%",                title: "Routineanrufe automatisiert",                description: "der Routineaufrufe werden durch KI bearbeitet",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=2",                imageAlt: "Automation Dashboard"
+                id: "1",                value: "60%",                title: "Routineanrufe automatisiert",                description: "der Routineaufrufe werden durch KI bearbeitet",                videoSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=2",                videoAriaLabel: "Automation Dashboard"
               },
               {
-                id: "2",                value: "8-12h",                title: "Stunden eingespart",                description: "pro Mitarbeiter pro Woche",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=3",                imageAlt: "Time Savings"
+                id: "2",                value: "8-12h",                title: "Stunden eingespart",                description: "pro Mitarbeiter pro Woche",                videoSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=3",                videoAriaLabel: "Time Savings"
               },
               {
-                id: "3",                value: "35%",                title: "Mehr qualifizierte Leads",                description: "durch intelligente Vorqualifizierung",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=4",                imageAlt: "Lead Generation"
+                id: "3",                value: "35%",                title: "Mehr qualifizierte Leads",                description: "durch intelligente Vorqualifizierung",                videoSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=4",                videoAriaLabel: "Lead Generation"
               },
               {
-                id: "4",                value: "24/7",                title: "Kundenerreichbarkeit",                description: "ohne Ausnahmen, rund um die Uhr",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=5",                imageAlt: "24/7 Support"
+                id: "4",                value: "24/7",                title: "Kundenerreichbarkeit",                description: "ohne Ausnahmen, rund um die Uhr",                videoSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=5",                videoAriaLabel: "24/7 Support"
               }
             ]}
           />
