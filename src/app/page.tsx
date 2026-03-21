@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import HeroBillboard from '@/components/sections/hero/HeroBillboard';
-import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
+import MetricCardEleven from '@/components/sections/metrics/MetricCardEleven';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
@@ -775,30 +775,31 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div id="statistics" data-section="statistics" className="statistics-section">
-          <div className="statistics-container">
-            <h2 style={{ fontSize: "2rem", fontWeight: "700", color: "#ffffff", marginBottom: "0.5rem" }}>Impact der KI-Agenten</h2>
-            <p style={{ fontSize: "1.125rem", color: "#b8bec8", marginBottom: "2rem" }}>Die messbaren Ergebnisse unserer Kunden</p>
-            
-            <div className="statistics-grid">
-              <div className="statistics-card">
-                <div className="statistics-value">60%</div>
-                <div className="statistics-label">der Routineanrufe automatisiert</div>
-              </div>
-              <div className="statistics-card">
-                <div className="statistics-value">8-12h</div>
-                <div className="statistics-label">pro Mitarbeiter pro Woche eingespart</div>
-              </div>
-              <div className="statistics-card">
-                <div className="statistics-value">35%</div>
-                <div className="statistics-label">mehr qualifizierte Leads</div>
-              </div>
-              <div className="statistics-card">
-                <div className="statistics-value">24/7</div>
-                <div className="statistics-label">ununterbrochene Kundenerreichbarkeit</div>
-              </div>
-            </div>
-          </div>
+        <div id="statistics" data-section="statistics">
+          <MetricCardEleven
+            title="Impact der KI-Agenten"
+            description="Die messbaren Ergebnisse unserer Kunden"
+            textboxLayout="default"
+            useInvertedBackground={false}
+            tag="42.000+ Interaktionen automatisiert"
+            tagIcon={TrendingUp}
+            tagAnimation="blur-reveal"
+            animationType="blur-reveal"
+            metrics={[
+              {
+                id: "1",                value: "60%",                title: "Routineanrufe automatisiert",                description: "der Routineaufrufe werden durch KI bearbeitet"
+              },
+              {
+                id: "2",                value: "8-12h",                title: "Stunden eingespart",                description: "pro Mitarbeiter pro Woche"
+              },
+              {
+                id: "3",                value: "35%",                title: "Mehr qualifizierte Leads",                description: "durch intelligente Vorqualifizierung"
+              },
+              {
+                id: "4",                value: "24/7",                title: "Kundenerreichbarkeit",                description: "ohne Ausnahmen, rund um die Uhr"
+              }
+            ]}
+          />
         </div>
 
         <div id="problems" data-section="problems">
