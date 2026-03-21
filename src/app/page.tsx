@@ -95,13 +95,13 @@ export default function LandingPage() {
 
         <div id="metrics" data-section="metrics">
           <MetricCardFourteen
-            title="VoiceLinkAI – Infografik zu Statistiken"
-            tag="Professionelle Ergebnisse für Solarunternehmen"
+            title="VoiceLinkAI – Professionelle Before/After Infografik"
+            tag="Statistiken für Solarunternehmen"
             tagAnimation="blur-reveal"
             metrics={[
-              { id: "1", value: "38%", description: "verpasste Anrufe durch unzureichende Kapazität" },
-              { id: "2", value: "€42.000", description: "monatlicher Umsatzverlust durch Ineffizienz" },
-              { id: "3", value: "+31%", description: "Umsatzsteigerung mit KI-Agent" },
+              { id: "1", value: "38%", description: "verpasste Anrufe ohne KI-Agent" },
+              { id: "2", value: "€42.000", description: "monatlicher Umsatzverlust ohne KI" },
+              { id: "3", value: "+31%", description: "Umsatzsteigerung mit VoiceLinkAI" },
               { id: "4", value: "100%", description: "DSGVO-konform und sicher" }
             ]}
             metricsAnimation="blur-reveal"
