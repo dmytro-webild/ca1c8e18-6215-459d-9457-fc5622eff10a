@@ -799,11 +799,11 @@ export default function LandingPage() {
               <div className="vs-column right">
                 <div className="vs-stat right">
                   <div className="vs-stat-value">60%</div>
-                  <div className="vs-stat-label">Handles 60% of routine call volume, frees up 8-12 hours/week per employee</div>
+                  <div className="vs-stat-label">Routineanrufvolumen automatisiert</div>
                 </div>
                 <div className="vs-stat right">
-                  <div className="vs-stat-value">100%</div>
-                  <div className="vs-stat-label">Keine verlorenen Anfragen – rund um die Uhr</div>
+                  <div className="vs-stat-value">8-12h</div>
+                  <div className="vs-stat-label">Zeitersparnis pro Mitarbeiter pro Woche</div>
                 </div>
               </div>
             </div>
