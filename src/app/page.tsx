@@ -39,36 +39,35 @@ const animatedBorderStyle = `
 
   .vs-infographic {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 32, 45, 0.98));
-    border-radius: 16px;
-    border: 2px solid rgba(255, 140, 0, 0.4);
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.2), inset 0 0 60px rgba(255, 165, 0, 0.05);
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 140, 0, 0.3);
   }
 
   .vs-container {
     display: grid;
-    grid-template-columns: 1fr 120px 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
     align-items: start;
   }
 
   .vs-column {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    gap: 1.5rem;
   }
 
   .vs-column.left {
-    border-right: 2px solid rgba(255, 140, 0, 0.25);
-    padding-right: 2.5rem;
+    border-right: 1px solid rgba(255, 140, 0, 0.2);
+    padding-right: 2rem;
   }
 
   .vs-column.right {
-    border-left: 2px solid rgba(255, 140, 0, 0.25);
-    padding-left: 2.5rem;
+    border-left: 1px solid rgba(255, 140, 0, 0.2);
+    padding-left: 2rem;
   }
 
   .vs-divider {
@@ -77,165 +76,110 @@ const animatedBorderStyle = `
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    height: 100%;
   }
 
   .vs-badge {
-    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
-    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8), 0 0 50px rgba(255, 165, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 140, 0, 1);
-    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+    border: 1px solid rgba(255, 140, 0, 0.8);
+    padding: 0.75rem 1.25rem;
     border-radius: 50px;
-    font-weight: 800;
-    font-size: 0.95rem;
+    font-weight: 700;
+    font-size: 0.875rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     color: #ffffff;
     text-align: center;
-    animation: glow-badge 2.5s ease-in-out infinite;
-    white-space: nowrap;
-    font-family: var(--font-manrope), sans-serif;
+    animation: glow-badge 2s ease-in-out infinite;
   }
 
   @keyframes glow-badge {
     0%, 100% {
-      box-shadow: 0 0 25px rgba(255, 140, 0, 0.8), 0 0 50px rgba(255, 165, 0, 0.4);
-      transform: scale(1);
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
     }
     50% {
-      box-shadow: 0 0 35px rgba(255, 140, 0, 1), 0 0 70px rgba(255, 165, 0, 0.6);
-      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 140, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.5);
     }
   }
 
   .vs-stat {
-    padding: 1.75rem;
-    background: rgba(26, 32, 45, 0.6);
-    border: 2px solid rgba(255, 140, 0, 0.25);
-    border-radius: 10px;
+    padding: 1.5rem;
+    background: rgba(26, 32, 45, 0.5);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 8px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
   }
 
   .vs-stat:hover {
-    background: rgba(26, 32, 45, 0.9);
-    border-color: rgba(255, 140, 0, 0.6);
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.4), inset 0 0 15px rgba(255, 140, 0, 0.05);
-    transform: translateY(-2px);
+    background: rgba(26, 32, 45, 0.8);
+    border-color: rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
   }
 
   .vs-stat.left {
-    border-left: 4px solid #e63946;
+    border-left: 3px solid #e63946;
   }
 
   .vs-stat.right {
-    border-left: 4px solid #ffa500;
+    border-left: 3px solid #ffa500;
   }
 
   .vs-stat-value {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    font-family: var(--font-manrope), sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
   }
 
   .vs-stat.left .vs-stat-value {
-    color: #ff6b7a;
-    text-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
+    color: #e63946;
   }
 
   .vs-stat.right .vs-stat-value {
     color: #ffa500;
-    text-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
   }
 
   .vs-stat-label {
-    font-size: 0.9rem;
-    color: #d4dce8;
-    line-height: 1.5;
-    font-weight: 500;
-    font-family: var(--font-dm-sans), sans-serif;
+    font-size: 0.875rem;
+    color: #b8bec8;
+    line-height: 1.4;
   }
 
   .vs-icon-container {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
 
   .vs-icon-container.left {
-    background: linear-gradient(135deg, rgba(230, 57, 70, 0.15), rgba(230, 57, 70, 0.05));
-    border: 1px solid rgba(230, 57, 70, 0.3);
+    background: rgba(230, 57, 70, 0.1);
   }
 
   .vs-icon-container.right {
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.15), rgba(255, 165, 0, 0.05));
-    border: 1px solid rgba(255, 165, 0, 0.3);
+    background: rgba(255, 165, 0, 0.1);
   }
 
   .vs-icon-container.left svg {
-    color: #ff6b7a;
-    filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.3));
+    color: #e63946;
   }
 
   .vs-icon-container.right svg {
     color: #ffa500;
-    filter: drop-shadow(0 0 8px rgba(255, 165, 0, 0.3));
   }
 
   .vs-bottom-bar {
     grid-column: 1 / -1;
-    background: linear-gradient(90deg, #ff8c00 0%, #ffa500 50%, #ff9400 100%);
-    padding: 1.5rem 2rem;
-    border-radius: 10px;
+    background: linear-gradient(90deg, #ff8c00, #ffa500);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     color: #ffffff;
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     letter-spacing: 0.02em;
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
-    font-family: var(--font-manrope), sans-serif;
-    margin-top: 1.5rem;
-  }
-
-  .vs-column-header {
-    font-size: 1.35rem;
-    font-weight: 800;
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-family: var(--font-manrope), sans-serif;
-  }
-
-  .vs-column.left .vs-column-header {
-    color: #ff6b7a;
-    text-shadow: 0 0 15px rgba(230, 57, 70, 0.2);
-  }
-
-  .vs-column.right .vs-column-header {
-    color: #ffa500;
-    text-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
-  }
-
-  @media (max-width: 1024px) {
-    .vs-container {
-      grid-template-columns: 1fr auto 1fr;
-      gap: 2rem;
-    }
-
-    .vs-infographic {
-      padding: 2.5rem 1.5rem;
-    }
-
-    .vs-badge {
-      padding: 0.75rem 1.25rem;
-      font-size: 0.85rem;
-    }
   }
 
   @media (max-width: 768px) {
@@ -255,20 +199,11 @@ const animatedBorderStyle = `
     }
 
     .vs-infographic {
-      padding: 1.5rem 1rem;
+      padding: 1.5rem;
     }
 
     .vs-stat {
-      padding: 1.25rem;
-    }
-
-    .vs-stat-value {
-      font-size: 1.5rem;
-    }
-
-    .vs-column-header {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+      padding: 1rem;
     }
   }
 `;
@@ -331,7 +266,7 @@ export default function LandingPage() {
           <div className="vs-infographic">
             <div className="vs-container">
               <div className="vs-column left">
-                <h3 className="vs-column-header">Ohne KI-Agent</h3>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#e63946", marginBottom: "1rem", textAlign: "center" }}>Ohne KI-Agent</h3>
                 
                 <div className="vs-stat left">
                   <div className="vs-icon-container left">
@@ -371,7 +306,7 @@ export default function LandingPage() {
               </div>
 
               <div className="vs-column right">
-                <h3 className="vs-column-header">Mit VoiceLinkAI</h3>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#ffa500", marginBottom: "1rem", textAlign: "center" }}>Mit VoiceLinkAI</h3>
                 
                 <div className="vs-stat right">
                   <div className="vs-icon-container right">
@@ -470,7 +405,7 @@ export default function LandingPage() {
         <div id="agents" data-section="agents">
           <FeatureBento
             title="Die 3 KI-Agenten für dein Solarunternehmen"
-            description="Jeder Agent automatisiert einen der größten Zeitfresser – speziell trainiert auf die Anforderungen von Solarunternehmen. Das KI-Chat-Agent wird als professionelle Produktvisualisierung mit Website-Mockup, Chat-Widget-Konversation und Live-Performance-Metriken präsentiert."
+            description="Jeder Agent automatisiert einen der größten Zeitfresser – speziell trainiert auf die Anforderungen von Solarunternehmen."
             textboxLayout="default"
             useInvertedBackground={false}
             tag="Unsere Agenten – welcher passt zu deinem Bottleneck?"
