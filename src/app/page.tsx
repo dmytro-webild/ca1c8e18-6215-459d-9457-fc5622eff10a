@@ -6,11 +6,12 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
+import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, X } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -35,167 +36,6 @@ const animatedBorderStyle = `
   div[data-section] > div > [class*="Card"] {
     border: 1px solid rgba(255, 140, 0, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
-  }
-
-  #vs-infographic {
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 32, 45, 0.95));
-    border: 2px solid rgba(255, 140, 0, 0.4);
-    border-radius: 12px;
-    padding: 3rem 2rem;
-    margin: 2rem auto;
-    max-width: 1200px;
-  }
-
-  .vs-container {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 2rem;
-    align-items: stretch;
-  }
-
-  .vs-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .vs-column.left {
-    border-right: 1px solid rgba(255, 140, 0, 0.2);
-    padding-right: 2rem;
-  }
-
-  .vs-column.right {
-    border-left: 1px solid rgba(255, 140, 0, 0.2);
-    padding-left: 2rem;
-  }
-
-  .vs-divider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    min-width: 60px;
-  }
-
-  .vs-badge {
-    background: rgba(255, 140, 0, 0.15);
-    border: 2px solid rgba(255, 140, 0, 0.6);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #ff8c00;
-    font-size: 18px;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
-  }
-
-  .vs-item {
-    background: rgba(255, 140, 0, 0.05);
-    border: 1px solid rgba(255, 140, 0, 0.3);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-  }
-
-  .vs-item:hover {
-    background: rgba(255, 140, 0, 0.1);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
-  }
-
-  .vs-column.left .vs-item {
-    border-color: rgba(220, 53, 69, 0.4);
-    background: rgba(220, 53, 69, 0.05);
-  }
-
-  .vs-column.left .vs-item:hover {
-    background: rgba(220, 53, 69, 0.1);
-    box-shadow: 0 0 15px rgba(220, 53, 69, 0.2);
-  }
-
-  .vs-column.right .vs-item {
-    border-color: rgba(255, 165, 0, 0.4);
-    background: rgba(255, 165, 0, 0.05);
-  }
-
-  .vs-column.right .vs-item:hover {
-    background: rgba(255, 165, 0, 0.1);
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
-  }
-
-  .vs-item-stat {
-    font-size: 1.75rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  .vs-column.left .vs-item-stat {
-    color: #dc3545;
-  }
-
-  .vs-column.right .vs-item-stat {
-    color: #ff8c00;
-  }
-
-  .vs-item-label {
-    font-size: 0.95rem;
-    color: #b0b8c1;
-    line-height: 1.4;
-  }
-
-  .vs-footer {
-    background: linear-gradient(90deg, rgba(255, 140, 0, 0.2), rgba(255, 165, 0, 0.2));
-    border-top: 2px solid rgba(255, 140, 0, 0.4);
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    text-align: center;
-    color: #e8eef7;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-
-  @media (max-width: 768px) {
-    #vs-infographic {
-      padding: 1.5rem 1rem;
-    }
-
-    .vs-container {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .vs-column {
-      border: none !important;
-      padding: 0 !important;
-    }
-
-    .vs-column.left {
-      border-bottom: 1px solid rgba(255, 140, 0, 0.2) !important;
-      padding-bottom: 1.5rem !important;
-    }
-
-    .vs-column.right {
-      border-top: 1px solid rgba(255, 140, 0, 0.2) !important;
-      padding-top: 1.5rem !important;
-    }
-
-    .vs-divider {
-      flex-direction: row;
-      justify-content: center;
-      min-width: unset;
-      margin: 1rem 0;
-    }
-
-    .vs-badge {
-      width: 50px;
-      height: 50px;
-      font-size: 16px;
-    }
   }
 `;
 
@@ -254,77 +94,19 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          <div id="vs-infographic" data-section="vs-infographic">
-            <div className="vs-container">
-              {/* LEFT COLUMN - PROBLEMS */}
-              <div className="vs-column left">
-                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                  <div style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#dc3545', marginBottom: '0.5rem' }}>Ohne KI-Agent</div>
-                  <div style={{ fontSize: '0.9rem', color: '#b0b8c1' }}>Die tägliche Realität</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">38%</div>
-                  <div className="vs-item-label">verpasste Anrufe durch überlastetes Team</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">€42.000</div>
-                  <div className="vs-item-label">monatlicher Umsatzverlust durch langsame Reaktion</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">2–3 Tage</div>
-                  <div className="vs-item-label">Wartezeit bis zur Angebotserstellung</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">60+ Stunden</div>
-                  <div className="vs-item-label">monatlich für Terminkoordination verschwendet</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">40%</div>
-                  <div className="vs-item-label">offene Angebote, die nicht nachgefasst werden</div>
-                </div>
-              </div>
-
-              {/* CENTER DIVIDER */}
-              <div className="vs-divider">
-                <X size={32} color="#ff8c00" strokeWidth={1.5} />
-                <div className="vs-badge">VS</div>
-                <X size={32} color="#ff8c00" strokeWidth={1.5} />
-              </div>
-
-              {/* RIGHT COLUMN - SOLUTIONS */}
-              <div className="vs-column right">
-                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                  <div style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#ff8c00', marginBottom: '0.5rem' }}>Mit VoiceLinkAI</div>
-                  <div style={{ fontSize: '0.9rem', color: '#b0b8c1' }}>Die intelligente Alternative</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">+98%</div>
-                  <div className="vs-item-label">aller Anrufe werden sofort bearbeitet oder weitergeleitet</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">+€131.000</div>
-                  <div className="vs-item-label">zusätzlicher monatlicher Umsatz durch +31% Konversionssteigerung</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">< 2 Minuten</div>
-                  <div className="vs-item-label">automatische Angebotserstellung und Versand</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">100%</div>
-                  <div className="vs-item-label">Terminkoordination vollständig automatisiert</div>
-                </div>
-                <div className="vs-item">
-                  <div className="vs-item-stat">0% Fallenlassen</div>
-                  <div className="vs-item-label">intelligentes Nachfassen + automatische Lead-Qualifizierung</div>
-                </div>
-              </div>
-            </div>
-
-            {/* FOOTER BAR */}
-            <div className="vs-footer">
-              💼 Alle Systeme DSGVO-konform. Integration in dein CRM + Kalender in 1–2 Wochen. Kostenlos Starten – Erstgespräch buchen →
-            </div>
-          </div>
+          <MetricCardFourteen
+            title="VoiceLinkAI – Professionelle Before/After Infografik"
+            tag="Statistiken für Solarunternehmen"
+            tagAnimation="blur-reveal"
+            metrics={[
+              { id: "1", value: "38%", description: "verpasste Anrufe ohne KI-Agent" },
+              { id: "2", value: "€42.000", description: "monatlicher Umsatzverlust ohne KI" },
+              { id: "3", value: "+31%", description: "Umsatzsteigerung mit VoiceLinkAI" },
+              { id: "4", value: "100%", description: "DSGVO-konform und sicher" }
+            ]}
+            metricsAnimation="blur-reveal"
+            useInvertedBackground={true}
+          />
         </div>
 
         <div id="problems" data-section="problems">
