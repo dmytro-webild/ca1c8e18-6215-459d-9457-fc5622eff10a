@@ -6,11 +6,13 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
+import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X } from 'lucide-react';
+import HeroLogo from '@/components/sections/hero/HeroLogo';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, Phone, PhoneOff, Mic } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -37,174 +39,38 @@ const animatedBorderStyle = `
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
   }
 
-  .vs-infographic {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
-    border-radius: 12px;
-    border: 1px solid rgba(255, 140, 0, 0.3);
-  }
-
-  .vs-container {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .vs-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .vs-column.left {
-    border-right: 1px solid rgba(255, 140, 0, 0.2);
-    padding-right: 2rem;
-  }
-
-  .vs-column.right {
-    border-left: 1px solid rgba(255, 140, 0, 0.2);
-    padding-left: 2rem;
-  }
-
-  .vs-divider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .vs-badge {
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
-    border: 1px solid rgba(255, 140, 0, 0.8);
-    padding: 0.75rem 1.25rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-    text-align: center;
-    animation: glow-badge 2s ease-in-out infinite;
-  }
-
-  @keyframes glow-badge {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+  @keyframes float-up {
+    0% {
+      transform: translateY(0px);
+      opacity: 0;
     }
     50% {
-      box-shadow: 0 0 30px rgba(255, 140, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20px);
+      opacity: 0;
     }
   }
 
-  .vs-stat {
-    padding: 1.5rem;
-    background: rgba(26, 32, 45, 0.5);
-    border: 1px solid rgba(255, 140, 0, 0.2);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-
-  .vs-stat:hover {
-    background: rgba(26, 32, 45, 0.8);
-    border-color: rgba(255, 140, 0, 0.5);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
-  }
-
-  .vs-stat.left {
-    border-left: 3px solid #e63946;
-  }
-
-  .vs-stat.right {
-    border-left: 3px solid #ffa500;
-  }
-
-  .vs-stat-value {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .vs-stat.left .vs-stat-value {
-    color: #e63946;
-  }
-
-  .vs-stat.right .vs-stat-value {
-    color: #ffa500;
-  }
-
-  .vs-stat-label {
-    font-size: 0.875rem;
-    color: #b8bec8;
-    line-height: 1.4;
-  }
-
-  .vs-icon-container {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-  }
-
-  .vs-icon-container.left {
-    background: rgba(230, 57, 70, 0.1);
-  }
-
-  .vs-icon-container.right {
-    background: rgba(255, 165, 0, 0.1);
-  }
-
-  .vs-icon-container.left svg {
-    color: #e63946;
-  }
-
-  .vs-icon-container.right svg {
-    color: #ffa500;
-  }
-
-  .vs-bottom-bar {
-    grid-column: 1 / -1;
-    background: linear-gradient(90deg, #ff8c00, #ffa500);
-    padding: 1.25rem 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    color: #ffffff;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-  }
-
-  @media (max-width: 768px) {
-    .vs-container {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+  @keyframes rotate-phone {
+    0%, 100% {
+      transform: rotate(0deg);
     }
-
-    .vs-column.left,
-    .vs-column.right {
-      border: none;
-      padding: 0;
+    25% {
+      transform: rotate(-5deg);
     }
-
-    .vs-divider {
-      display: none;
+    75% {
+      transform: rotate(5deg);
     }
+  }
 
-    .vs-infographic {
-      padding: 1.5rem;
-    }
+  .animated-phone-icon {
+    animation: rotate-phone 2s ease-in-out infinite;
+  }
 
-    .vs-stat {
-      padding: 1rem;
-    }
+  .pulse-ring {
+    animation: float-up 2s ease-in-out infinite;
   }
 `;
 
@@ -230,6 +96,7 @@ export default function LandingPage() {
               { name: "Probleme", id: "problems" },
               { name: "Agenten", id: "agents" },
               { name: "So funktioniert's", id: "howitworks" },
+              { name: "Live Demo", id: "live-demo" },
               { name: "FAQ", id: "faq" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
@@ -263,89 +130,19 @@ export default function LandingPage() {
         </div>
 
         <div id="metrics" data-section="metrics">
-          <div className="vs-infographic">
-            <div className="vs-container">
-              <div className="vs-column left">
-                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#e63946", marginBottom: "1rem", textAlign: "center" }}>Ohne KI-Agent</h3>
-                
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <X size={24} />
-                  </div>
-                  <div className="vs-stat-value">38%</div>
-                  <div className="vs-stat-label">Verpasste Anrufe</div>
-                </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <AlertCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">€42.000</div>
-                  <div className="vs-stat-label">Monatlicher Umsatzverlust</div>
-                </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <TrendingUp size={24} />
-                  </div>
-                  <div className="vs-stat-value">3–4 Tage</div>
-                  <div className="vs-stat-label">Wartezeit bis Angebotserstellung</div>
-                </div>
-
-                <div className="vs-stat left">
-                  <div className="vs-icon-container left">
-                    <AlertCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">60%</div>
-                  <div className="vs-stat-label">Keine Nachfasse-Strategie</div>
-                </div>
-              </div>
-
-              <div className="vs-divider">
-                <div className="vs-badge">VS</div>
-              </div>
-
-              <div className="vs-column right">
-                <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#ffa500", marginBottom: "1rem", textAlign: "center" }}>Mit VoiceLinkAI</h3>
-                
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <CheckCircle size={24} />
-                  </div>
-                  <div className="vs-stat-value">100%</div>
-                  <div className="vs-stat-label">Alle Anrufe beantwortet</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <Zap size={24} />
-                  </div>
-                  <div className="vs-stat-value">+31%</div>
-                  <div className="vs-stat-label">Umsatzsteigerung</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <MessageSquare size={24} />
-                  </div>
-                  <div className="vs-stat-value">< 30 Min</div>
-                  <div className="vs-stat-label">Angebot innerhalb kurzer Zeit</div>
-                </div>
-
-                <div className="vs-stat right">
-                  <div className="vs-icon-container right">
-                    <Rocket size={24} />
-                  </div>
-                  <div className="vs-stat-value">Auto</div>
-                  <div className="vs-stat-label">Intelligente Lead-Nachfasse</div>
-                </div>
-              </div>
-
-              <div className="vs-bottom-bar">
-                ✓ DSGVO-konform  ✓ In 1–2 Wochen live  ✓ Sofort messbare Ergebnisse
-              </div>
-            </div>
-          </div>
+          <MetricCardFourteen
+            title="VoiceLinkAI – Professionelle Before/After Infografik"
+            tag="Statistiken für Solarunternehmen"
+            tagAnimation="blur-reveal"
+            metrics={[
+              { id: "1", value: "38%", description: "verpasste Anrufe ohne KI-Agent" },
+              { id: "2", value: "€42.000", description: "monatlicher Umsatzverlust ohne KI" },
+              { id: "3", value: "+31%", description: "Umsatzsteigerung mit VoiceLinkAI" },
+              { id: "4", value: "100%", description: "DSGVO-konform und sicher" }
+            ]}
+            metricsAnimation="blur-reveal"
+            useInvertedBackground={true}
+          />
         </div>
 
         <div id="problems" data-section="problems">
@@ -405,7 +202,7 @@ export default function LandingPage() {
         <div id="agents" data-section="agents">
           <FeatureBento
             title="Die 3 KI-Agenten für dein Solarunternehmen"
-            description="Jeder Agent automatisiert einen der größten Zeitfresser – speziell trainiert auf die Anforderungen von Solarunternehmen."
+            description="Jeder Agent automatisiert einen der größten Zeitfresser – speziell trainiert auf die Anforderungen von Solarunternehmen. Das KI-Chat-Agent wird als professionelle Produktvisualisierung mit Website-Mockup, Chat-Widget-Konversation und Live-Performance-Metriken präsentiert."
             textboxLayout="default"
             useInvertedBackground={false}
             tag="Unsere Agenten – welcher passt zu deinem Bottleneck?"
@@ -456,6 +253,87 @@ export default function LandingPage() {
               }
             ]}
           />
+        </div>
+
+        <div id="live-demo" data-section="live-demo">
+          <div className="relative w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-transparent via-background to-transparent">
+            <div className="mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
+              {/* Live Badge */}
+              <div className="flex justify-center mb-8">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/50">
+                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+                  <span className="text-sm font-medium text-foreground">LIVE DEMO</span>
+                </div>
+              </div>
+
+              {/* Main Headline */}
+              <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Überzeuge dich selbst
+              </h2>
+
+              {/* Subheadline */}
+              <p className="text-center text-base md:text-lg text-foreground/80 mb-12 max-w-2xl mx-auto">
+                Rufe unseren KI-Agenten jetzt an und erlebe in Live-Aktion, wie er Anrufe beantwortet, Fragen klärt und Termine bucht – genau wie bei deinen Kunden.
+              </p>
+
+              {/* Dark Card Container */}
+              <div className="bg-card border border-accent/30 rounded-lg p-8 md:p-12 shadow-2xl">
+                {/* Animated Phone Icon */}
+                <div className="flex justify-center mb-8">
+                  <div className="relative w-20 h-20 md:w-24 md:h-24">
+                    {/* Animated rings */}
+                    <div className="absolute inset-0 rounded-full border-2 border-accent/40 pulse-ring" style={{animationDelay: '0s'}}></div>
+                    <div className="absolute inset-0 rounded-full border-2 border-accent/20 pulse-ring" style={{animationDelay: '0.5s'}}></div>
+                    
+                    {/* Phone icon */}
+                    <div className="absolute inset-0 flex items-center justify-center animated-phone-icon">
+                      <Phone className="w-10 h-10 md:w-12 md:h-12 text-accent" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phone Number Display */}
+                <div className="text-center mb-8">
+                  <p className="text-sm text-foreground/60 mb-2">Rufe jetzt an:</p>
+                  <a href="tel:+49123456789" className="text-3xl md:text-4xl font-bold text-primary-cta hover:text-primary-cta/80 transition-colors">
+                    +49 (123) 456789
+                  </a>
+                </div>
+
+                {/* CTA Button */}
+                <div className="flex justify-center mb-8">
+                  <button className="px-8 md:px-12 py-3 md:py-4 bg-primary-cta text-primary-cta-text rounded-lg font-semibold hover:bg-primary-cta/90 transition-all transform hover:scale-105">
+                    Jetzt anrufen
+                  </button>
+                </div>
+
+                {/* Status Info */}
+                <p className="text-center text-sm text-foreground/60">
+                  Verfügbar täglich von 9:00 – 18:00 Uhr • Wartezeit: &lt; 2 Sekunden
+                </p>
+              </div>
+
+              {/* Testimonial Quote Section */}
+              <div className="mt-12 md:mt-16">
+                <div className="bg-background-accent/10 border border-accent/20 rounded-lg p-8 md:p-10">
+                  <div className="text-center">
+                    <p className="text-lg md:text-xl text-foreground mb-6 italic">
+                      "Der Agent hat unseren Telefonverkehr um 60% reduziert. Das bedeutet für jedes Teamitglied fast 10 Stunden pro Woche zurück – Zeit, die wir jetzt in echte Kundenprojekte investieren."
+                    </p>
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/20 flex items-center justify-center">
+                        <span className="text-sm font-semibold text-accent">JK</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Jan Köhler</p>
+                        <p className="text-sm text-foreground/70">Geschäftsführer, Solar-Tech GmbH</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="howitworks" data-section="howitworks">
