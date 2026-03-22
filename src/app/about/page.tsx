@@ -16,15 +16,6 @@ const aboutSectionStyle = `
     }
   }
 
-  @keyframes blink-dot {
-    0%, 49%, 100% {
-      opacity: 1;
-    }
-    50%, 99% {
-      opacity: 0.3;
-    }
-  }
-
   [data-section] {
     border: 1px solid rgba(255, 140, 0, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
@@ -83,7 +74,7 @@ const aboutSectionStyle = `
   .about-main-section {
     width: 100%;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #0f1419 0%, #1a202d 50%, #16213e 100%);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.5), rgba(26, 32, 45, 0.7));
   }
 
   .about-main-container {
@@ -114,17 +105,6 @@ const aboutSectionStyle = `
     font-size: 0.875rem;
     color: #ff8c00;
     font-weight: 600;
-    position: relative;
-  }
-
-  .about-section-badge::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: #ff8c00;
-    border-radius: 50%;
-    margin-right: 0.25rem;
-    animation: blink-dot 1.5s ease-in-out infinite;
   }
 
   .about-section-badge svg {
@@ -149,11 +129,6 @@ const aboutSectionStyle = `
     font-size: 1rem;
     color: #b8bec8;
     line-height: 1.7;
-  }
-
-  .about-body-paragraph strong {
-    color: #ff8c00;
-    font-weight: 700;
   }
 
   .about-quote-block {
@@ -409,6 +384,7 @@ export default function AboutPage() {
             {/* Left Column - Content */}
             <div className="about-content-left">
               <div className="about-section-badge">
+                <Zap size={16} />
                 <span>Unser Ansatz</span>
               </div>
               
@@ -418,11 +394,11 @@ export default function AboutPage() {
 
               <div className="about-content-body">
                 <p className="about-body-paragraph">
-                  Du kennst das: Dein Team hat zu tun. Es hat viel zu tun. Aber <strong>40% der Zeit</strong> verschwinden in Aufgaben, die keinen Menschen brauchen – Routineanrufe, Terminkoordination, Anfragenverwaltung, Papierkram.
+                  Du kennst das: Dein Team hat zu tun. Es hat viel zu tun. Aber 40% der Zeit verschwinden in Aufgaben, die keinen Menschen brauchen – Routineanrufe, Terminkoordination, Anfragenverwaltung, Papierkram.
                 </p>
 
                 <p className="about-body-paragraph">
-                  Wir bauen KI-Agenten, die genau diese Aufgaben übernehmen. Nicht als Baukasten, den du dir selbst zusammenklicken musst. Nicht als Plattform, auf die du dein ganzes Geschäft migrieren müsstest. Sondern als <strong>fertige Agenten, die direkt in deine bestehenden Prozesse passen</strong> – trainiert auf die Anforderungen von Solarunternehmen.
+                  Wir bauen KI-Agenten, die genau diese Aufgaben übernehmen. Nicht als Baukasten, den du dir selbst zusammenklicken musst. Nicht als Plattform, auf die du dein ganzes Geschäft migrieren müsstest. Sondern als fertige Agenten, die direkt in deine bestehenden Prozesse passen – trainiert auf die Anforderungen von Solarunternehmen.
                 </p>
 
                 <div className="about-quote-block">
