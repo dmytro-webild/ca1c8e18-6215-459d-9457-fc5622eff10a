@@ -10,7 +10,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle, Phone } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle, Phone, Volume2, BarChart3, Mic } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -258,7 +258,7 @@ const animatedBorderStyle = `
     gap: 1.5rem;
   }
 
-  .call-agent-tag {
+  .call-agent-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -272,7 +272,24 @@ const animatedBorderStyle = `
     font-weight: 600;
   }
 
-  .call-agent-tag svg {
+  .call-agent-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #f97316;
+    border-radius: 50%;
+    animation: badge-blink 1s ease-in-out infinite;
+  }
+
+  @keyframes badge-blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .call-agent-badge svg {
     width: 16px;
     height: 16px;
   }
@@ -288,6 +305,26 @@ const animatedBorderStyle = `
     font-size: 1.125rem;
     color: #b8bec8;
     line-height: 1.6;
+  }
+
+  .call-agent-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+  .call-agent-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #f97316;
+    font-weight: 500;
   }
 
   .call-agent-features {
@@ -354,144 +391,6 @@ const animatedBorderStyle = `
     min-height: 500px;
   }
 
-  .call-agent-phone-mockup {
-    position: relative;
-    width: 300px;
-    height: 600px;
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.05));
-    border: 2px solid rgba(249, 115, 22, 0.4);
-    border-radius: 40px;
-    padding: 12px;
-    box-shadow: 0 0 40px rgba(249, 115, 22, 0.3), inset 0 0 60px rgba(249, 115, 22, 0.1);
-  }
-
-  .call-agent-phone-screen {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(26, 32, 45, 0.9), rgba(15, 20, 25, 0.95));
-    border-radius: 35px;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    text-align: center;
-  }
-
-  .call-agent-status {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(249, 115, 22, 0.1);
-    border: 1px solid rgba(249, 115, 22, 0.3);
-    border-radius: 20px;
-    font-size: 0.875rem;
-    color: #f97316;
-    font-weight: 600;
-  }
-
-  .call-agent-status-dot {
-    width: 8px;
-    height: 8px;
-    background: #f97316;
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-      box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-
-  .call-agent-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #f97316, #fb923c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
-  }
-
-  .call-agent-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #ffffff;
-  }
-
-  .call-agent-activity {
-    font-size: 0.875rem;
-    color: #b8bec8;
-  }
-
-  .call-agent-dial-pad {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  .call-agent-dial-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(249, 115, 22, 0.1);
-    border: 1px solid rgba(249, 115, 22, 0.3);
-    color: #f97316;
-    font-weight: 600;
-    cursor: default;
-    transition: all 0.3s ease;
-  }
-
-  .call-agent-dial-button:nth-child(1) { content: '1'; }
-  .call-agent-dial-button:nth-child(2) { content: '2'; }
-  .call-agent-dial-button:nth-child(3) { content: '3'; }
-  .call-agent-dial-button:nth-child(4) { content: '4'; }
-  .call-agent-dial-button:nth-child(5) { content: '5'; }
-  .call-agent-dial-button:nth-child(6) { content: '6'; }
-  .call-agent-dial-button:nth-child(7) { content: '7'; }
-  .call-agent-dial-button:nth-child(8) { content: '8'; }
-  .call-agent-dial-button:nth-child(9) { content: '9'; }
-
-  .call-agent-action-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .call-agent-action-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    cursor: default;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-  }
-
-  .call-agent-action-btn.accept {
-    background: rgba(16, 185, 129, 0.2);
-    color: #10b981;
-  }
-
-  .call-agent-action-btn.decline {
-    background: rgba(239, 68, 68, 0.2);
-    color: #ef4444;
-  }
-
   .call-agent-pulse-rings {
     position: absolute;
     top: 50%;
@@ -534,6 +433,112 @@ const animatedBorderStyle = `
     }
   }
 
+  .call-agent-avatar {
+    position: relative;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #fb923c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+  }
+
+  .call-agent-agent-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .call-agent-agent-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .call-agent-agent-status {
+    font-size: 0.875rem;
+    color: #b8bec8;
+  }
+
+  .call-agent-phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    border-radius: 12px;
+  }
+
+  .call-agent-phone-icon {
+    width: 24px;
+    height: 24px;
+    color: #f97316;
+  }
+
+  .call-agent-phone-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .call-agent-sound-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 40px;
+    margin: 1.5rem 0;
+  }
+
+  .call-agent-sound-bar {
+    width: 4px;
+    background: linear-gradient(135deg, #f97316, #fb923c);
+    border-radius: 2px;
+    animation: sound-wave 0.6s ease-in-out infinite;
+  }
+
+  .call-agent-sound-bar:nth-child(1) {
+    height: 12px;
+    animation-delay: 0s;
+  }
+
+  .call-agent-sound-bar:nth-child(2) {
+    height: 24px;
+    animation-delay: 0.1s;
+  }
+
+  .call-agent-sound-bar:nth-child(3) {
+    height: 32px;
+    animation-delay: 0.2s;
+  }
+
+  .call-agent-sound-bar:nth-child(4) {
+    height: 24px;
+    animation-delay: 0.3s;
+  }
+
+  .call-agent-sound-bar:nth-child(5) {
+    height: 12px;
+    animation-delay: 0.4s;
+  }
+
+  @keyframes sound-wave {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 1024px) {
     .call-agent-container {
       grid-template-columns: 1fr;
@@ -560,11 +565,6 @@ const animatedBorderStyle = `
 
     .call-agent-subheadline {
       font-size: 1rem;
-    }
-
-    .call-agent-phone-mockup {
-      width: 250px;
-      height: 500px;
     }
   }
 
@@ -690,8 +690,8 @@ export default function LandingPage() {
           <div className="call-agent-container">
             {/* Content Side */}
             <div className="call-agent-content">
-              <div className="call-agent-tag">
-                <Phone size={16} />
+              <div className="call-agent-badge">
+                <div className="call-agent-badge-dot" />
                 <span>Live AI Agent</span>
               </div>
               <h2 className="call-agent-headline">
@@ -700,6 +700,12 @@ export default function LandingPage() {
               <p className="call-agent-subheadline">
                 Dein virtueller Assistent nimmt Anrufe entgegen, beantwortet Fragen und bucht Termine – 24/7, ohne dass ein Mensch abheben muss. Warme Leads für dein Team. Zufriedene Kunden. Null Anrufe verloren.
               </p>
+              
+              <div className="call-agent-pills">
+                <div className="call-agent-pill">✓ 24/7 Erreichbarkeit</div>
+                <div className="call-agent-pill">✓ Intelligente Qualifizierung</div>
+                <div className="call-agent-pill">✓ Automatische Terminbuchung</div>
+              </div>
               
               <div className="call-agent-features">
                 <div className="call-agent-feature">
@@ -747,34 +753,32 @@ export default function LandingPage() {
                 <div className="call-agent-pulse-ring" />
               </div>
               
-              <div className="call-agent-phone-mockup">
-                <div className="call-agent-phone-screen">
-                  <div className="call-agent-status">
-                    <div className="call-agent-status-dot" />
-                    <span>Online aktiv</span>
-                  </div>
-                  
-                  <div className="call-agent-avatar">🤖</div>
-                  
-                  <div className="call-agent-name">VoiceLink Agent</div>
-                  <div className="call-agent-activity">Im Gespräch...</div>
-                  
-                  <div className="call-agent-dial-pad">
-                    <div className="call-agent-dial-button">1</div>
-                    <div className="call-agent-dial-button">2</div>
-                    <div className="call-agent-dial-button">3</div>
-                    <div className="call-agent-dial-button">4</div>
-                    <div className="call-agent-dial-button">5</div>
-                    <div className="call-agent-dial-button">6</div>
-                    <div className="call-agent-dial-button">7</div>
-                    <div className="call-agent-dial-button">8</div>
-                    <div className="call-agent-dial-button">9</div>
-                  </div>
-                  
-                  <div className="call-agent-action-buttons">
-                    <div className="call-agent-action-btn accept">✓</div>
-                    <div className="call-agent-action-btn decline">✕</div>
-                  </div>
+              <div style={{
+                position: 'relative',
+                zIndex: 20,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '1.5rem'
+              }}>
+                <div className="call-agent-avatar">🤖</div>
+                
+                <div className="call-agent-agent-info">
+                  <div className="call-agent-agent-name">VoiceLink Agent</div>
+                  <div className="call-agent-agent-status">Im Gespräch...</div>
+                </div>
+                
+                <div className="call-agent-phone-number">
+                  <Phone className="call-agent-phone-icon" />
+                  <span className="call-agent-phone-text">+49 (0) 123 456789</span>
+                </div>
+                
+                <div className="call-agent-sound-bars">
+                  <div className="call-agent-sound-bar" />
+                  <div className="call-agent-sound-bar" />
+                  <div className="call-agent-sound-bar" />
+                  <div className="call-agent-sound-bar" />
+                  <div className="call-agent-sound-bar" />
                 </div>
               </div>
             </div>
