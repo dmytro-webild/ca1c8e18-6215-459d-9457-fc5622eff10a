@@ -688,7 +688,7 @@ export default function LandingPage() {
 
         <div id="call-agent" data-section="call-agent" className="call-agent-section">
           <div className="call-agent-container">
-            {/* Content Side */}
+            {/* Content Side - LEFT */}
             <div className="call-agent-content">
               <div className="call-agent-badge">
                 <div className="call-agent-badge-dot" />
@@ -746,7 +746,7 @@ export default function LandingPage() {
               </a>
             </div>
             
-            {/* Visual Side */}
+            {/* Visual Side - RIGHT */}
             <div className="call-agent-visual">
               <div className="call-agent-pulse-rings">
                 <div className="call-agent-pulse-ring" />
