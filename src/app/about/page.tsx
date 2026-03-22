@@ -25,6 +25,17 @@ const aboutSectionStyle = `
     }
   }
 
+  @keyframes float-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
   [data-section] {
     border: 1px solid rgba(255, 140, 0, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
@@ -100,6 +111,7 @@ const aboutSectionStyle = `
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    animation: float-up 0.8s ease-out;
   }
 
   .about-section-badge {
