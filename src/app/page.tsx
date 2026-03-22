@@ -15,17 +15,17 @@ import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workfl
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
     0%, 100% {
-      box-shadow: 0 0 8px rgba(255, 140, 0, 0.4), 0 0 12px rgba(255, 165, 0, 0.2), inset 0 0 8px rgba(255, 140, 0, 0.1);
-      border-color: rgba(255, 140, 0, 0.5);
+      box-shadow: 0 0 8px rgba(249, 115, 22, 0.4), 0 0 12px rgba(249, 115, 22, 0.2), inset 0 0 8px rgba(249, 115, 22, 0.1);
+      border-color: rgba(249, 115, 22, 0.5);
     }
     50% {
-      box-shadow: 0 0 20px rgba(255, 140, 0, 0.7), 0 0 30px rgba(255, 165, 0, 0.4), inset 0 0 12px rgba(255, 140, 0, 0.2);
-      border-color: rgba(255, 140, 0, 0.8);
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.7), 0 0 30px rgba(249, 115, 22, 0.4), inset 0 0 12px rgba(249, 115, 22, 0.2);
+      border-color: rgba(249, 115, 22, 0.8);
     }
   }
 
   [data-section] {
-    border: 1px solid rgba(255, 140, 0, 0.3);
+    border: 1px solid rgba(249, 115, 22, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
   }
 
@@ -33,7 +33,7 @@ const animatedBorderStyle = `
   [data-section] [class*="Card"],
   div[data-section] > div > [class*="card"],
   div[data-section] > div > [class*="Card"] {
-    border: 1px solid rgba(255, 140, 0, 0.3);
+    border: 1px solid rgba(249, 115, 22, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
   }
 
@@ -44,7 +44,7 @@ const animatedBorderStyle = `
     padding: 2rem;
     background: linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9));
     border-radius: 12px;
-    border: 1px solid rgba(255, 140, 0, 0.3);
+    border: 1px solid rgba(249, 115, 22, 0.3);
   }
 
   .vs-container {
@@ -61,12 +61,12 @@ const animatedBorderStyle = `
   }
 
   .vs-column.left {
-    border-right: 1px solid rgba(255, 140, 0, 0.2);
+    border-right: 1px solid rgba(249, 115, 22, 0.2);
     padding-right: 2rem;
   }
 
   .vs-column.right {
-    border-left: 1px solid rgba(255, 140, 0, 0.2);
+    border-left: 1px solid rgba(249, 115, 22, 0.2);
     padding-left: 2rem;
   }
 
@@ -79,9 +79,9 @@ const animatedBorderStyle = `
   }
 
   .vs-badge {
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
-    border: 1px solid rgba(255, 140, 0, 0.8);
+    background: linear-gradient(135deg, #f97316, #fb923c);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.3);
+    border: 1px solid rgba(249, 115, 22, 0.8);
     padding: 0.75rem 1.25rem;
     border-radius: 50px;
     font-weight: 700;
@@ -95,25 +95,25 @@ const animatedBorderStyle = `
 
   @keyframes glow-badge {
     0%, 100% {
-      box-shadow: 0 0 20px rgba(255, 140, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.3);
     }
     50% {
-      box-shadow: 0 0 30px rgba(255, 140, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.5);
+      box-shadow: 0 0 30px rgba(249, 115, 22, 0.8), 0 0 60px rgba(249, 115, 22, 0.5);
     }
   }
 
   .vs-stat {
     padding: 1.5rem;
     background: rgba(26, 32, 45, 0.5);
-    border: 1px solid rgba(255, 140, 0, 0.2);
+    border: 1px solid rgba(249, 115, 22, 0.2);
     border-radius: 8px;
     transition: all 0.3s ease;
   }
 
   .vs-stat:hover {
     background: rgba(26, 32, 45, 0.8);
-    border-color: rgba(255, 140, 0, 0.5);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
   }
 
   .vs-stat.left {
@@ -121,7 +121,7 @@ const animatedBorderStyle = `
   }
 
   .vs-stat.right {
-    border-left: 3px solid #ffa500;
+    border-left: 3px solid #f97316;
   }
 
   .vs-stat-value {
@@ -135,7 +135,7 @@ const animatedBorderStyle = `
   }
 
   .vs-stat.right .vs-stat-value {
-    color: #ffa500;
+    color: #f97316;
   }
 
   .vs-stat-label {
@@ -159,7 +159,7 @@ const animatedBorderStyle = `
   }
 
   .vs-icon-container.right {
-    background: rgba(255, 165, 0, 0.1);
+    background: rgba(249, 115, 22, 0.1);
   }
 
   .vs-icon-container.left svg {
@@ -167,12 +167,12 @@ const animatedBorderStyle = `
   }
 
   .vs-icon-container.right svg {
-    color: #ffa500;
+    color: #f97316;
   }
 
   .vs-bottom-bar {
     grid-column: 1 / -1;
-    background: linear-gradient(90deg, #ff8c00, #ffa500);
+    background: linear-gradient(90deg, #f97316, #fb923c);
     padding: 1.25rem 1.5rem;
     border-radius: 8px;
     text-align: center;
@@ -213,7 +213,7 @@ const animatedBorderStyle = `
     gap: 0.5rem;
     font-weight: 700;
     font-size: 1.125rem;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    background: linear-gradient(135deg, #f97316, #fb923c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -222,9 +222,15 @@ const animatedBorderStyle = `
   .voicelink-logo svg {
     width: 24px;
     height: 24px;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    background: linear-gradient(135deg, #f97316, #fb923c);
     padding: 4px;
     border-radius: 4px;
+  }
+
+  .voicelink-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
   }
 
   /* Dark Full-Width Call Section */
@@ -232,8 +238,8 @@ const animatedBorderStyle = `
     width: 100%;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
     padding: 4rem 2rem;
-    border-top: 2px solid rgba(255, 140, 0, 0.4);
-    border-bottom: 2px solid rgba(255, 140, 0, 0.4);
+    border-top: 2px solid rgba(249, 115, 22, 0.4);
+    border-bottom: 2px solid rgba(249, 115, 22, 0.4);
   }
 
   .call-agent-container {
@@ -258,11 +264,11 @@ const animatedBorderStyle = `
     gap: 0.5rem;
     width: fit-content;
     padding: 0.5rem 1rem;
-    background: rgba(255, 140, 0, 0.1);
-    border: 1px solid rgba(255, 140, 0, 0.3);
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
     border-radius: 20px;
     font-size: 0.875rem;
-    color: #ff8c00;
+    color: #f97316;
     font-weight: 600;
   }
 
@@ -300,7 +306,7 @@ const animatedBorderStyle = `
     width: 24px;
     height: 24px;
     min-width: 24px;
-    color: #ff8c00;
+    color: #f97316;
     margin-top: 0.25rem;
   }
 
@@ -326,18 +332,18 @@ const animatedBorderStyle = `
     width: fit-content;
     margin-top: 1rem;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    background: linear-gradient(135deg, #f97316, #fb923c);
     color: #ffffff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.5);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
   }
 
   .call-agent-cta:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(255, 140, 0, 0.8);
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.8);
   }
 
   .call-agent-visual {
@@ -352,11 +358,11 @@ const animatedBorderStyle = `
     position: relative;
     width: 300px;
     height: 600px;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 165, 0, 0.05));
-    border: 2px solid rgba(255, 140, 0, 0.4);
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.05));
+    border: 2px solid rgba(249, 115, 22, 0.4);
     border-radius: 40px;
     padding: 12px;
-    box-shadow: 0 0 40px rgba(255, 140, 0, 0.3), inset 0 0 60px rgba(255, 140, 0, 0.1);
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.3), inset 0 0 60px rgba(249, 115, 22, 0.1);
   }
 
   .call-agent-phone-screen {
@@ -378,18 +384,18 @@ const animatedBorderStyle = `
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(255, 140, 0, 0.1);
-    border: 1px solid rgba(255, 140, 0, 0.3);
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
     border-radius: 20px;
     font-size: 0.875rem;
-    color: #ff8c00;
+    color: #f97316;
     font-weight: 600;
   }
 
   .call-agent-status-dot {
     width: 8px;
     height: 8px;
-    background: #ff8c00;
+    background: #f97316;
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
   }
@@ -397,7 +403,7 @@ const animatedBorderStyle = `
   @keyframes pulse {
     0%, 100% {
       opacity: 1;
-      box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
+      box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
     }
     50% {
       opacity: 0.5;
@@ -408,12 +414,12 @@ const animatedBorderStyle = `
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    background: linear-gradient(135deg, #f97316, #fb923c);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    box-shadow: 0 0 30px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
   }
 
   .call-agent-name {
@@ -438,9 +444,9 @@ const animatedBorderStyle = `
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255, 140, 0, 0.1);
-    border: 1px solid rgba(255, 140, 0, 0.3);
-    color: #ff8c00;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    color: #f97316;
     font-weight: 600;
     cursor: default;
     transition: all 0.3s ease;
@@ -500,7 +506,7 @@ const animatedBorderStyle = `
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid rgba(255, 140, 0, 0.3);
+    border: 2px solid rgba(249, 115, 22, 0.3);
     border-radius: 50%;
     animation: pulse-ring 2s ease-out infinite;
   }
@@ -585,7 +591,7 @@ const animatedBorderStyle = `
   .statistics-card {
     padding: 2rem;
     background: rgba(26, 32, 45, 0.6);
-    border: 1px solid rgba(255, 140, 0, 0.2);
+    border: 1px solid rgba(249, 115, 22, 0.2);
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
@@ -593,14 +599,14 @@ const animatedBorderStyle = `
 
   .statistics-card:hover {
     background: rgba(26, 32, 45, 0.9);
-    border-color: rgba(255, 140, 0, 0.5);
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
   }
 
   .statistics-value {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ff8c00;
+    color: #f97316;
     margin-bottom: 0.5rem;
   }
 
@@ -652,6 +658,7 @@ export default function LandingPage() {
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoiceLinkAI"
+            logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774178090595-07yyup1t.png"
           />
         </div>
 
@@ -1000,7 +1007,7 @@ export default function LandingPage() {
 
         <div id="bottom-cta" data-section="bottom-cta">
           <div style={{
-            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(255, 140, 0, 0.3)",            textAlign: "center"
+            width: "100%",            maxWidth: "1200px",            margin: "0 auto",            padding: "2rem",            background: "linear-gradient(135deg, rgba(15, 20, 25, 0.8), rgba(26, 32, 45, 0.9))",            borderRadius: "12px",            border: "1px solid rgba(249, 115, 22, 0.3)",            textAlign: "center"
           }}>
             <h2 style={{
               fontSize: "2rem",              fontWeight: "700",              color: "#ffffff",              marginBottom: "1.5rem",              lineHeight: "1.3"
@@ -1015,13 +1022,13 @@ export default function LandingPage() {
             <a
               href="https://calendly.com/voicelinkai/info"
               style={{
-                display: "inline-block",                padding: "0.875rem 2rem",                background: "linear-gradient(135deg, #ff8c00, #ffa500)",                color: "#ffffff",                textDecoration: "none",                borderRadius: "8px",                fontWeight: "600",                fontSize: "1rem",                transition: "all 0.3s ease",                boxShadow: "0 0 20px rgba(255, 140, 0, 0.5)"
+                display: "inline-block",                padding: "0.875rem 2rem",                background: "linear-gradient(135deg, #f97316, #fb923c)",                color: "#ffffff",                textDecoration: "none",                borderRadius: "8px",                fontWeight: "600",                fontSize: "1rem",                transition: "all 0.3s ease",                boxShadow: "0 0 20px rgba(249, 115, 22, 0.5)"
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 140, 0, 0.8)";
+                e.currentTarget.style.boxShadow = "0 0 30px rgba(249, 115, 22, 0.8)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 20px rgba(255, 140, 0, 0.5)";
+                e.currentTarget.style.boxShadow = "0 0 20px rgba(249, 115, 22, 0.5)";
               }}
             >
               👉 Kostenloses Erstgespräch buchen
