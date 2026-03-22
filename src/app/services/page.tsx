@@ -9,7 +9,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle, Phone } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, X, Headphones, Calendar, MessageCircle, Phone, Volume2, Radio } from 'lucide-react';
 
 const animatedBorderStyle = `
   @keyframes glowing-orange-pulse {
@@ -35,6 +35,350 @@ const animatedBorderStyle = `
     border: 1px solid rgba(255, 140, 0, 0.3);
     animation: glowing-orange-pulse 3.5s ease-in-out infinite;
   }
+
+  /* Call Agent Section - Full Width Dark */
+  .call-agent-section {
+    width: 100%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    padding: 4rem 2rem;
+  }
+
+  .call-agent-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .call-agent-header {
+    margin-bottom: 3rem;
+  }
+
+  .call-agent-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #ff8c00;
+    font-weight: 600;
+  }
+
+  .call-agent-tag svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .call-agent-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .call-agent-subheadline {
+    font-size: 1.125rem;
+    color: #b8bec8;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Centered Card */
+  .call-agent-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 3rem auto 0;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(26, 32, 45, 0.9), rgba(15, 20, 25, 0.95));
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(255, 140, 0, 0.2);
+  }
+
+  /* Pulsing Rings */
+  .call-agent-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .call-agent-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 140, 0, 0.3);
+    border-radius: 50%;
+    animation: pulse-ring 2s ease-out infinite;
+  }
+
+  .call-agent-ring:nth-child(1) {
+    width: 280px;
+    height: 280px;
+    animation-delay: 0s;
+  }
+
+  .call-agent-ring:nth-child(2) {
+    width: 380px;
+    height: 380px;
+    animation-delay: 0.6s;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+  }
+
+  /* Animated AI Avatar */
+  .call-agent-avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.4);
+    animation: avatar-float 3s ease-in-out infinite;
+  }
+
+  @keyframes avatar-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Sound Wave Bars */
+  .call-agent-soundwave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin: 1.5rem auto;
+    height: 40px;
+  }
+
+  .call-agent-bar {
+    width: 4px;
+    background: linear-gradient(180deg, #ff8c00, #ffa500);
+    border-radius: 2px;
+    animation: wave 0.8s ease-in-out infinite;
+  }
+
+  .call-agent-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
+  .call-agent-bar:nth-child(2) { height: 28px; animation-delay: 0.1s; }
+  .call-agent-bar:nth-child(3) { height: 32px; animation-delay: 0.2s; }
+  .call-agent-bar:nth-child(4) { height: 28px; animation-delay: 0.1s; }
+  .call-agent-bar:nth-child(5) { height: 20px; animation-delay: 0s; }
+
+  @keyframes wave {
+    0%, 100% {
+      height: 20px;
+    }
+    50% {
+      height: 100%;
+    }
+  }
+
+  /* Agent Info */
+  .call-agent-info {
+    margin: 2rem 0;
+  }
+
+  .call-agent-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #ff8c00;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .call-agent-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff8c00;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .call-agent-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .call-agent-activity {
+    font-size: 0.875rem;
+    color: #b8bec8;
+  }
+
+  /* Phone Number */
+  .call-agent-phone {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 140, 0, 0.05);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 12px;
+  }
+
+  .call-agent-phone-label {
+    font-size: 0.875rem;
+    color: #b8bec8;
+    margin-bottom: 0.5rem;
+  }
+
+  .call-agent-phone-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff8c00;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+  }
+
+  /* CTA Button */
+  .call-agent-cta {
+    display: inline-block;
+    margin: 2rem auto;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.5);
+  }
+
+  .call-agent-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 140, 0, 0.8);
+  }
+
+  /* Feature Columns */
+  .call-agent-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 140, 0, 0.2);
+  }
+
+  .call-agent-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .call-agent-feature-icon {
+    width: 32px;
+    height: 32px;
+    color: #ff8c00;
+  }
+
+  .call-agent-feature-title {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.95rem;
+  }
+
+  .call-agent-feature-desc {
+    font-size: 0.8rem;
+    color: #b8bec8;
+    line-height: 1.4;
+  }
+
+  /* Bottom CTA Text */
+  .call-agent-bottom-cta {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 140, 0, 0.05);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #b8bec8;
+    line-height: 1.6;
+  }
+
+  .call-agent-bottom-cta strong {
+    color: #ff8c00;
+  }
+
+  @media (max-width: 768px) {
+    .call-agent-section {
+      padding: 2rem 1rem;
+    }
+
+    .call-agent-headline {
+      font-size: 1.75rem;
+    }
+
+    .call-agent-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .call-agent-features {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .call-agent-ring:nth-child(1) {
+      width: 240px;
+      height: 240px;
+    }
+
+    .call-agent-ring:nth-child(2) {
+      width: 320px;
+      height: 320px;
+    }
+  }
 `;
 
 export default function ServicesPage() {
@@ -56,7 +400,7 @@ export default function ServicesPage() {
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={[
-              { name: "Services", id: "services" },
+              { name: "Services", id: "call-agent" },
               { name: "Probleme", id: "problems" },
               { name: "Agenten", id: "agents" },
               { name: "So funktioniert's", id: "howitworks" },
@@ -68,6 +412,7 @@ export default function ServicesPage() {
           />
         </div>
 
+        {/* Hero Section */}
         <div id="services" data-section="services">
           <HeroBillboard
             title="Unsere KI-Services für Solarunternehmen"
@@ -91,6 +436,84 @@ export default function ServicesPage() {
             imageAlt="VoiceLinkAI Solar Dashboard"
             mediaAnimation="blur-reveal"
           />
+        </div>
+
+        {/* Call Agent Section - Full Width Dark */}
+        <div id="call-agent" data-section="call-agent" className="call-agent-section">
+          <div className="call-agent-container">
+            <div className="call-agent-header">
+              <div className="call-agent-tag">
+                <Phone size={16} />
+                <span>Live AI Agent</span>
+              </div>
+              <h2 className="call-agent-headline">
+                Besucher können deinen KI-Agenten jetzt anrufen
+              </h2>
+              <p className="call-agent-subheadline">
+                Dein virtueller Assistent nimmt Anrufe entgegen, beantwortet Fragen und bucht Termine – 24/7, ohne dass ein Mensch abheben muss.
+              </p>
+            </div>
+
+            {/* Centered Card with Avatar, Rings, and Sound Waves */}
+            <div className="call-agent-card">
+              <div className="call-agent-rings">
+                <div className="call-agent-ring" />
+                <div className="call-agent-ring" />
+              </div>
+
+              <div className="call-agent-avatar">🤖</div>
+
+              <div className="call-agent-soundwave">
+                <div className="call-agent-bar" />
+                <div className="call-agent-bar" />
+                <div className="call-agent-bar" />
+                <div className="call-agent-bar" />
+                <div className="call-agent-bar" />
+              </div>
+
+              <div className="call-agent-info">
+                <div className="call-agent-status">
+                  <div className="call-agent-status-dot" />
+                  <span>Online aktiv</span>
+                </div>
+                <div className="call-agent-name">VoiceLink Agent</div>
+                <div className="call-agent-activity">Bereit für Anrufe</div>
+              </div>
+
+              <div className="call-agent-phone">
+                <div className="call-agent-phone-label">Jetzt anrufen:</div>
+                <div className="call-agent-phone-number">+49 (0) 123 456789</div>
+              </div>
+
+              <a href="https://calendly.com/voicelinkai/info" className="call-agent-cta">
+                👉 Live-Demo anfordern
+              </a>
+
+              {/* Feature Columns */}
+              <div className="call-agent-features">
+                <div className="call-agent-feature">
+                  <Headphones className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-title">24/7 Support</div>
+                  <div className="call-agent-feature-desc">Kein Anruf geht verloren</div>
+                </div>
+                <div className="call-agent-feature">
+                  <MessageSquare className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-title">Intelligente Qualifizierung</div>
+                  <div className="call-agent-feature-desc">Nur warme Leads für dein Team</div>
+                </div>
+                <div className="call-agent-feature">
+                  <Calendar className="call-agent-feature-icon" />
+                  <div className="call-agent-feature-title">Auto-Terminbuchung</div>
+                  <div className="call-agent-feature-desc">Direkt in deinen Kalender</div>
+                </div>
+              </div>
+
+              {/* Bottom CTA Text */}
+              <div className="call-agent-bottom-cta">
+                <strong>Warme Leads für dein Team.</strong> Zufriedene Kunden. Null Anrufe verloren.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="problems" data-section="problems">
