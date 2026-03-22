@@ -658,7 +658,6 @@ export default function LandingPage() {
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoiceLinkAI"
-            logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774178090595-07yyup1t.png"
           />
         </div>
 
