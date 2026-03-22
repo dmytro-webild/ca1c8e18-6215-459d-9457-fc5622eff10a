@@ -400,12 +400,12 @@ export default function ServicesPage() {
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={[
-              { name: "Services", id: "/services" },
+              { name: "Services", id: "call-agent" },
               { name: "Probleme", id: "problems" },
               { name: "Agenten", id: "agents" },
               { name: "So funktioniert's", id: "howitworks" },
               { name: "FAQ", id: "faq" },
-              { name: "Über uns", id: "/about" }
+              { name: "Über uns", id: "about" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoiceLinkAI"
