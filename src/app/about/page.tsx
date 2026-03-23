@@ -808,7 +808,7 @@ export default function AboutPage() {
                 </div>
               </div>
               
-              <a href="tel:+4901234567890" className="live-call-cta">
+              <a href="tel:+4901234567890" className="live-call-cta hidden md:inline-block">
                 👉 Jetzt anrufen
               </a>
             </div>
