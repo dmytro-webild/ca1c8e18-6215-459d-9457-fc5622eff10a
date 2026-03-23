@@ -110,7 +110,7 @@ export default function UberUnsPage() {
                             { name: "Agenten", id: "agents" },
                             { name: "So funktioniert's", id: "howitworks" },
                             { name: "FAQ", id: "faq" },
-                            { name: "Über uns", href: "/uber-uns" }
+                            { name: "Über uns", id: "/uber-uns" }
                         ]}
                         button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
                         brandName="VoiceLinkAI"
