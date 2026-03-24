@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import { Sparkles, Phone, Headphones, MessageSquare, Calendar, Zap, CheckCircle, AlertCircle } from 'lucide-react';
 
-const universalNavItems = [
+const consistentNavItems = [
   { name: "Home", id: "/" },
   { name: "Probleme", id: "/#problems" },
   { name: "Agenten", id: "/#agents" },
@@ -15,6 +15,8 @@ const universalNavItems = [
   { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
 ];
+
+const consistentButton = { text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" };
 
 export default function ContactPage() {
   return (
@@ -34,10 +36,10 @@ export default function ContactPage() {
       >
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
-            navItems={universalNavItems}
+            navItems={consistentNavItems}
             brandName="VoiceLinkAI"
             className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
-            button={{ text: "Kontakt", href: "/contact" }}
+            button={consistentButton}
           />
         </div>
 
