@@ -39,7 +39,7 @@ export default function LiveTestingPage() {
           <NavbarLayoutFloatingOverlay
             navItems={universalNavItems}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
-            brandName="VoiceLinkAI 📸"
+            brandName="🤖 VoiceLinkAI"
           />
         </div>
 
