@@ -37,6 +37,7 @@ export default function ContactPage() {
             navItems={universalNavItems}
             brandName="VoiceLinkAI"
             className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
+            button={{ text: "Kontakt", href: "/contact" }}
           />
         </div>
 
