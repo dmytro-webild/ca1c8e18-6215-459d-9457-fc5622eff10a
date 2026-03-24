@@ -35,7 +35,7 @@ export default function ContactPage() {
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={universalNavItems}
-            brandName="VoiceLinkAI 📸"
+            brandName="🤖 VoiceLinkAI"
             className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
             button={{ text: "Kontakt", href: "/contact" }}
           />
@@ -103,36 +103,44 @@ export default function ContactPage() {
             </div>
             
             {/* Visual Side */}
-            <div className="live-call-visual">
-              <div className="live-call-pulse-rings">
-                <div className="live-call-pulse-ring" />
-                <div className="live-call-pulse-ring" />
-              </div>
-              
-              <div style={{
-                position: 'relative',
-                zIndex: 20,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: '1.5rem'
-              }}>
-                <div className="live-call-avatar">🤖</div>
-                
-                <div className="live-call-agent-info">
-                  <div className="live-call-agent-name">VoiceLink Agent</div>
-                  <div className="live-call-agent-status">Bereit für deinen Anruf</div>
+            <div style={{
+              position: 'relative',
+              zIndex: 20,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '1.5rem'
+            }}>
+                <div className="live-call-visual">
+                  <div className="live-call-pulse-rings">
+                    <div className="live-call-pulse-ring" />
+                    <div className="live-call-pulse-ring" />
+                  </div>
+                  <div style={{
+                    position: 'relative',
+                    zIndex: 20,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '1.5rem'
+                  }}>
+                    <div className="live-call-avatar">🤖</div>
+                    
+                    <div className="live-call-agent-info">
+                      <div className="live-call-agent-name">VoiceLink Agent</div>
+                      <div className="live-call-agent-status">Bereit für deinen Anruf</div>
+                    </div>
+                    
+                    <div className="live-call-sound-bars">
+                      <div className="live-call-sound-bar" />
+                      <div className="live-call-sound-bar" />
+                      <div className="live-call-sound-bar" />
+                      <div className="live-call-sound-bar" />
+                      <div className="live-call-sound-bar" />
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="live-call-sound-bars">
-                  <div className="live-call-sound-bar" />
-                  <div className="live-call-sound-bar" />
-                  <div className="live-call-sound-bar" />
-                  <div className="live-call-sound-bar" />
-                  <div className="live-call-sound-bar" />
-                </div>
               </div>
-            </div>
           </div>
         </div>
       </ThemeProvider>
