@@ -6,7 +6,11 @@ import { Sparkles, Users, Zap, Award, Target, Heart, Headphones, MessageSquare, 
 
 const universalNavItems = [
   { name: "Home", id: "/" },
+  { name: "Probleme", id: "/#problems" },
+  { name: "Agenten", id: "/#agents" },
+  { name: "So funktioniert's", id: "/#howitworks" },
   { name: "Live Testing", id: "/live-testing" },
+  { name: "FAQ", id: "/#faq" },
   { name: "Über uns", id: "/uber-uns" },
   { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
@@ -31,10 +35,7 @@ export default function AboutPage() {
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={universalNavItems}
-            button={{
-              text: "Jetzt Anrufen",              href: "https://elevenlabs.io/app/talk-to?agent_id=agent_6501kg4x95a4ezcbvmhgnd0tv8av&branch_id=agtbrch_0801kg4x960gfgdbavp1rc5w5yfn"
-            }}
-            brandName="VoiceLinkAI"
+            brandName={<img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774380568609-9rt0310c.png" alt="VoiceLinkAI Logo" className="h-8 w-auto" />}
             className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
           />
         </div>
