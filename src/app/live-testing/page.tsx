@@ -1,8 +1,8 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
-import FeatureCardTwentySeven from '@/components/sections/feature/FeatureCardTwentySeven';
+import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
+import FeatureCardMedia from '@/components/sections/feature/FeatureCardMedia';
 import { Sparkles, PlayCircle, Mic, CalendarDays, MessageCircle, Database } from 'lucide-react';
 import React from 'react';
 
@@ -35,7 +35,7 @@ export default function LiveTestingPage() {
         headingFontWeight="semibold"
       >
         <div id="nav" data-section="nav">
-          <NavbarLayoutFloatingInline
+          <NavbarLayoutFloatingOverlay
             navItems={standardNavItems}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoiceLinkAI"
@@ -43,7 +43,7 @@ export default function LiveTestingPage() {
         </div>
 
         <div id="live-testing-hero" data-section="live-testing-hero">
-          <FeatureCardTwentySeven
+          <FeatureCardMedia
             title="Erlebe unsere KI-Agenten live in Aktion"
             description="Verfolge in Echtzeit, wie unsere Agenten Anrufe bearbeiten, Termine buchen und Leads qualifizieren. Transparenz, Performance und Kontrolle – alles auf einen Blick."
             textboxLayout="default"
@@ -52,7 +52,6 @@ export default function LiveTestingPage() {
             tagIcon={PlayCircle}
             tagAnimation="blur-reveal"
             animationType="blur-reveal"
-            gridVariant="two-items-per-row"
             features={[
               {
                 id: "1",                title: "Echtzeit-Anrufsimulation",                description: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018042-5f65a12d.png",                imageAlt: "Microphone icon"
