@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={universalNavItems}
-            brandName={<img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774380568609-9rt0310c.png" alt="VoiceLinkAI Logo" className="h-8 w-auto" />}
+            brandName="VoiceLinkAI"
             className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
           />
         </div>
