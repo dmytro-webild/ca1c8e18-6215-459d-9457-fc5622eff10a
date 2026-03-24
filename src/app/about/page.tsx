@@ -689,7 +689,7 @@ export default function AboutPage() {
               { name: "Über uns", id: "about" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
-            brandName="🎙️ VoiceLinkAI"
+            brandName="VoiceLinkAI"
           />
         </div>
 
