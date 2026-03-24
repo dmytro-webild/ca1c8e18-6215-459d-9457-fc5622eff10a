@@ -81,16 +81,16 @@ export default function LiveTestingPage() {
             gridVariant="two-items-per-row"
             features={[
               {
-                id: "1",                title: "Echtzeit-Anrufsimulation",                descriptions: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018042-5f65a12d.png",                imageAlt: "Microphone icon"
+                id: "1",                title: "Echtzeit-Anrufsimulation",                description: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018042-5f65a12d.png",                imageAlt: "Microphone icon"
               },
               {
-                id: "2",                title: "Automatisierte Terminbuchung",                descriptions: "Beobachte, wie ein Terminvorschlag erfolgreich in den Kalender eingetragen wird.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-calendar-icon-with-a-check-mark-to-sy-1774010019010-38439366.png",                imageAlt: "Calendar icon with check mark"
+                id: "2",                title: "Automatisierte Terminbuchung",                description: "Beobachte, wie ein Terminvorschlag erfolgreich in den Kalender eingetragen wird.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-calendar-icon-with-a-check-mark-to-sy-1774010019010-38439366.png",                imageAlt: "Calendar icon with check mark"
               },
               {
-                id: "3",                title: "Lead-Qualifizierung im Chat",                descriptions: "Sieh dir an, wie der Agent relevante Informationen von Interessenten sammelt.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-chat-bubble-icon-with-a-question-mark-1774010017163-9533f8e0.png",                imageAlt: "Chat bubble icon"
+                id: "3",                title: "Lead-Qualifizierung im Chat",                description: "Sieh dir an, wie der Agent relevante Informationen von Interessenten sammelt.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-chat-bubble-icon-with-a-question-mark-1774010017163-9533f8e0.png",                imageAlt: "Chat bubble icon"
               },
               {
-                id: "4",                title: "Datenintegration ins CRM",                descriptions: "Verfolge, wie die gesammelten Daten direkt in euer System übertragen werden.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-database-icon-representing-data-integr-1774010017415-430c6b16.png",                imageAlt: "Database icon"
+                id: "4",                title: "Datenintegration ins CRM",                description: "Verfolge, wie die gesammelten Daten direkt in euer System übertragen werden.",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-database-icon-representing-data-integr-1774010017415-430c6b16.png",                imageAlt: "Database icon"
               }
             ]}
           />
