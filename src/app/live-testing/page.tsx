@@ -6,10 +6,11 @@ import FeatureCardMedia from '@/components/sections/feature/FeatureCardMedia';
 import { Sparkles, PlayCircle, Mic, CalendarDays, MessageCircle, Database } from 'lucide-react';
 import React from 'react';
 
-const standardNavItems = [
+const universalNavItems = [
   { name: "Home", id: "/" },
   { name: "Probleme", id: "/#problems" },
-  { name: "Agenten", id: "/#agents" },  { name: "So funktioniert's", id: "/#howitworks" },
+  { name: "Agenten", id: "/#agents" },
+  { name: "So funktioniert's", id: "/#howitworks" },
   { name: "Live Testing", id: "/live-testing" },
   { name: "FAQ", id: "/#faq" },
   { name: "Über uns", id: "/uber-uns" },
@@ -36,7 +37,7 @@ export default function LiveTestingPage() {
       >
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingOverlay
-            navItems={standardNavItems}
+            navItems={universalNavItems}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoiceLinkAI"
           />
