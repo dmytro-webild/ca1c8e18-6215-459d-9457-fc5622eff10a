@@ -82,7 +82,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="about-body-paragraph">
-                  Wir bauen KI-Agenten, die genau diese Aufgaben übernehmen. Nicht als Baukasten, den du dir selbst zusammenklicken musst. Nicht als Plattform, auf die du dein ganzes Geschäft migrieren müsstest. Sondern als <strong>fertige Agenten, die direkt in deine bestehenden Prozesse passen</strong> – trainiert auf die Anforderungen von Solarunternehmen.
+                  Wir bauen KI-Agenten, die genau diese Aufgaben übernehmen. Nicht als Baukasten, den du dir selbst zusammenklicken müsstest. Nicht als Plattform, auf die du dein ganzes Geschäft migrieren müsstest. Sondern als <strong>fertige Agenten, die direkt in deine bestehenden Prozesse passen</strong> – trainiert auf die Anforderungen von Solarunternehmen.
                 </p>
 
                 <div className="about-quote-block">
@@ -164,8 +164,8 @@ export default function AboutPage() {
                 </div>
               </div>
               
-              <a href="tel:+4901234567890" className="live-call-cta hidden md:inline-block">
-                👉 Jetzt anrufen
+              <a href="https://calendly.com/voicelinkai/info" className="live-call-cta hidden md:inline-block">
+                Jetzt anrufen
               </a>
             </div>
             
