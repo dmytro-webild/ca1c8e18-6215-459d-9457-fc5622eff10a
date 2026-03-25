@@ -4,17 +4,17 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import { Sparkles, Users, Zap, Award, Target, Heart, Headphones, MessageSquare, Calendar, Volume2, Dot } from 'lucide-react';
 
-const consistentNavItems = [
+const updatedNavItems = [
   { name: "Home", id: "/" },
+  { name: "Leistungen", id: "/services" },
+  { name: "Preise", id: "/pricing" },
+  { name: "Über uns", id: "/uber-uns" },
+  { name: "Kontakt", id: "/contact" },
+  { name: "Live Testing", id: "/live-testing" },
   { name: "Probleme", id: "/#problems" },
   { name: "Agenten", id: "/#agents" },
   { name: "So funktioniert's", id: "/#howitworks" },
-  { name: "Live Testing", id: "/live-testing" },
-  { name: "FAQ", id: "/#faq" },
-  { name: "Über uns", id: "/uber-uns" },
-  { name: "VoiceLinkAI", id: "/about" },
-  { name: "Services", id: "/services" },
-  { name: "Kontakt", id: "/contact" }
+  { name: "FAQ", id: "/#faq" }
 ];
 
 export default function AboutPage() {
@@ -33,20 +33,13 @@ export default function AboutPage() {
         secondaryButtonStyle="layered"
         headingFontWeight="semibold"
       >
-        {/* Picture over navigation bar */}
-        <div className="w-full bg-[--background] py-2 flex justify-end pr-4">
-          <img
-            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/voicelink_ai_logo_golden_emblem.png"
-            alt="VoiceLink.ai KI-Agenten für Solarunternehmen Logo"
-            className="h-8"
-          />
-        </div>
+        
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
-            navItems={consistentNavItems}
+            navItems={updatedNavItems}
             brandName="VoiceLink.ai"
-            className="h-[70px] bg-[--background] border-b border-[rgba(249,115,22,0.15)]"
-            button={{ text: "Kontakt", href: "/contact" }}
+            className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
+            button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
           />
         </div>
 
