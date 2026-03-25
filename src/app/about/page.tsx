@@ -4,14 +4,15 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import { Sparkles, Users, Zap, Award, Target, Heart, Headphones, MessageSquare, Calendar, Volume2, Dot } from 'lucide-react';
 
-const universalNavItems = [
+const consistentNavItems = [
   { name: "Home", id: "/" },
-  { name: "Probleme", id: "problems" },
-  { name: "Agenten", id: "agents" },
-  { name: "So funktioniert's", id: "howitworks" },
+  { name: "Probleme", id: "/#problems" },
+  { name: "Agenten", id: "/#agents" },
+  { name: "So funktioniert's", id: "/#howitworks" },
   { name: "Live Testing", id: "/live-testing" },
-  { name: "FAQ", id: "faq" },
+  { name: "FAQ", id: "/#faq" },
   { name: "Über uns", id: "/uber-uns" },
+  { name: "VoiceLinkAI", id: "/about" },
   { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
 ];
@@ -42,7 +43,7 @@ export default function AboutPage() {
         </div>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
-            navItems={universalNavItems}
+            navItems={consistentNavItems}
             brandName="VoiceLink.ai"
             className="h-[70px] bg-[--background] border-b border-[rgba(249,115,22,0.15)]"
             button={{ text: "Kontakt", href: "/contact" }}
@@ -78,11 +79,11 @@ export default function AboutPage() {
 
               <div className="about-content-body">
                 <p className="about-body-paragraph">
-                  Du kennst das: Dein Team hat zu tun. Es hat viel zu tun. Aber <strong>40% der Zeit</strong> verschwinden in Aufgaben, die keinen Menschen brauchen – Routineanrufe, Terminkoordination, Anfragenverwaltung, Papierkram.
+                  Du kennst das: Dein Team hat zu tun. Es hat viel zu tun. Aber <strong className="text-white">40% der Zeit</strong> verschwinden in Aufgaben, die keinen Menschen brauchen – Routineanrufe, Terminkoordination, Anfragenverwaltung, Papierkram.
                 </p>
 
                 <p className="about-body-paragraph">
-                  Wir bauen KI-Agenten, die genau diese Aufgaben übernehmen. Nicht als Baukasten, den du dir selbst zusammenklicken müsstest. Nicht als Plattform, auf die du dein ganzes Geschäft migrieren müsstest. Sondern als <strong>fertige Agenten, die direkt in deine bestehenden Prozesse passen</strong> – trainiert auf die Anforderungen von Solarunternehmen.
+                  Wir bauen KI-Agenten, die genau diese Aufgaben übernehmen. Nicht als Baukasten, den du dir selbst zusammenklicken müsstest. Nicht als Plattform, auf die du dein ganzes Geschäft migrieren müsstest. Sondern als <strong className="text-white">fertige Agenten, die direkt in deine bestehenden Prozesse passen</strong> – trainiert auf die Anforderungen von Solarunternehmen.
                 </p>
 
                 <div className="about-quote-block">
@@ -111,7 +112,7 @@ export default function AboutPage() {
                 <Award size={40} className="about-stat-icon" />
                 <div className="about-stat-value">+31%</div>
                 <div className="about-stat-label">Durchschnittliche Kapazitätssteigerung im ersten Monat</div>
-              }
+              </div>
 
               <div className="about-stat-card">
                 <Zap size={40} className="about-stat-icon" />

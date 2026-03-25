@@ -4,14 +4,15 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import { Sparkles, Phone, Headphones, MessageSquare, Calendar, Zap, CheckCircle, AlertCircle } from 'lucide-react';
 
-const universalNavItems = [
+const consistentNavItems = [
   { name: "Home", id: "/" },
-  { name: "Probleme", id: "problems" },
-  { name: "Agenten", id: "agents" },
-  { name: "So funktioniert's", id: "howitworks" },
+  { name: "Probleme", id: "/#problems" },
+  { name: "Agenten", id: "/#agents" },
+  { name: "So funktioniert's", id: "/#howitworks" },
   { name: "Live Testing", id: "/live-testing" },
-  { name: "FAQ", id: "faq" },
+  { name: "FAQ", id: "/#faq" },
   { name: "Über uns", id: "/uber-uns" },
+  { name: "VoiceLinkAI", id: "/about" },
   { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
 ];
@@ -42,7 +43,7 @@ export default function ContactPage() {
         </div>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
-            navItems={universalNavItems}
+            navItems={consistentNavItems}
             brandName="🤖 VoiceLinkAI"
             className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
             button={{ text: "Kontakt", href: "/contact" }}
