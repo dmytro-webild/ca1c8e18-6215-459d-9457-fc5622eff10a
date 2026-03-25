@@ -111,7 +111,7 @@ export default function AboutPage() {
                 <Award size={40} className="about-stat-icon" />
                 <div className="about-stat-value">+31%</div>
                 <div className="about-stat-label">Durchschnittliche Kapazitätssteigerung im ersten Monat</div>
-              }
+              </div>
 
               <div className="about-stat-card">
                 <Zap size={40} className="about-stat-icon" />
