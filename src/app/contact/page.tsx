@@ -32,6 +32,14 @@ export default function ContactPage() {
         secondaryButtonStyle="layered"
         headingFontWeight="semibold"
       >
+        {/* Picture over navigation bar */}
+        <div className="w-full bg-[#0a0f1e] py-2 text-center">
+          <img
+            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-logo-for-a-solar-company-called-voiceli-1774010018042-5f65a12d.png"
+            alt="VoiceLinkAI Logo"
+            className="h-8 mx-auto"
+          />
+        </div>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={universalNavItems}
