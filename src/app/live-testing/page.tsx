@@ -8,11 +8,11 @@ import React from 'react';
 
 const universalNavItems = [
   { name: "Home", id: "/" },
-  { name: "Probleme", id: "/#problems" },
-  { name: "Agenten", id: "/#agents" },
-  { name: "So funktioniert's", id: "/#howitworks" },
+  { name: "Probleme", id: "problems" },
+  { name: "Agenten", id: "agents" },
+  { name: "So funktioniert's", id: "howitworks" },
   { name: "Live Testing", id: "/live-testing" },
-  { name: "FAQ", id: "/#faq" },
+  { name: "FAQ", id: "faq" },
   { name: "Über uns", id: "/uber-uns" },
   { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
@@ -38,7 +38,7 @@ export default function LiveTestingPage() {
         {/* Picture over navigation bar */}
         <div className="w-full bg-[#0a0f1e] py-2 text-center">
           <img
-            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-logo-for-a-solar-company-called-voiceli-1774010018042-5f65a12d.png"
+            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774437561639-movfbp6g.png"
             alt="VoiceLinkAI Logo"
             className="h-8 mx-auto"
           />
