@@ -33,18 +33,18 @@ export default function AboutPage() {
         headingFontWeight="semibold"
       >
         {/* Picture over navigation bar */}
-        <div className="w-full bg-[#0a0f1e] py-2 text-center">
+        <div className="w-full bg-[--background] py-2 flex justify-end pr-4">
           <img
-            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774437561639-movfbp6g.png"
-            alt="VoiceLinkAI Logo"
-            className="h-8 mx-auto"
+            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/voicelink_ai_logo_golden_emblem.png"
+            alt="VoiceLink.ai KI-Agenten für Solarunternehmen Logo"
+            className="h-8"
           />
         </div>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={universalNavItems}
-            brandName="🤖 VoiceLinkAI"
-            className="h-[70px] bg-[#0a0f1e] border-b border-[rgba(249,115,22,0.15)]"
+            brandName="VoiceLink.ai"
+            className="h-[70px] bg-[--background] border-b border-[rgba(249,115,22,0.15)]"
             button={{ text: "Kontakt", href: "/contact" }}
           />
         </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 <Award size={40} className="about-stat-icon" />
                 <div className="about-stat-value">+31%</div>
                 <div className="about-stat-label">Durchschnittliche Kapazitätssteigerung im ersten Monat</div>
-              </div>
+              }
 
               <div className="about-stat-card">
                 <Zap size={40} className="about-stat-icon" />
