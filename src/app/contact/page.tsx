@@ -105,8 +105,8 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              <a href="tel:+4901234567890" className="live-call-cta">
-                👉 Jetzt anrufen
+              <a href="https://calendly.com/voicelinkai/info" className="live-call-cta">
+                Jetzt anrufen
               </a>
             </div>
             
