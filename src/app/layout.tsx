@@ -7,6 +7,7 @@ import Tag from "@/tag/Tag";
 import { getVisualEditScript } from "@/utils/visual-edit-script";
 import { Manrope } from "next/font/google";
 import { DM_Sans } from "next/font/google";
+import { Nunito } from "next/font/google";
 
 
 
@@ -15,11 +16,10 @@ export const metadata: Metadata = {
   description: 'Automatisieren Sie Routineaufgaben mit KI-Agenten speziell für Solarunternehmen. 24/7 Kundenservice, intelligente Terminbuchung, Chat-Automation – DSGVO-konform, in 1–2 Wochen live.',
 };
 
-const manrope = Manrope({
-  variable: "--font-manrope",  subsets: ["latin"],
-});
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",  subsets: ["latin"],
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <ServiceWrapper>
-        <body className={`${manrope.variable} ${dmSans.variable} antialiased`}>
+        <body className={`${nunito.variable} antialiased`}>
           <Tag />
           {children}
           <script
