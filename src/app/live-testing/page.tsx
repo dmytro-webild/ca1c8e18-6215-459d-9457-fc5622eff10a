@@ -16,7 +16,8 @@ const consistentNavItems = [
   { name: "Über uns", id: "/uber-uns" },
   { name: "VoiceLinkAI", id: "/about" },
   { name: "Services", id: "/services" },
-  { name: "Kontakt", id: "/contact" }
+  { name: "Kontakt", id: "/contact" },
+  { name: "AGB", id: "/terms-of-service" }
 ];
 
 
@@ -64,7 +65,7 @@ export default function LiveTestingPage() {
             animationType="blur-reveal"
             features={[
               {
-                id: "1",                title: "Echtzeit-Anrufsimulation",                description: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                tag: "Anrufsimulation",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018042-5f65a12d.png",                imageAlt: "Microphone icon"
+                id: "1",                title: "Echtzeit-Anrufsimulation",                description: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                tag: "Anrufsimulation",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018432-5f65a12d.png",                imageAlt: "Microphone icon"
               },
               {
                 id: "2",                title: "Automatisierte Terminbuchung",                description: "Beobachte, wie ein Terminvorschlag erfolgreich in den Kalender eingetragen wird.",                tag: "Terminbuchung",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-calendar-icon-with-a-check-mark-to-sy-1774010019010-38439366.png",                imageAlt: "Calendar icon with check mark"
