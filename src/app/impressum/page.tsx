@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import LegalSection from '@/components/legal/LegalSection';
-import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
+import FooterCard from '@/components/sections/footer/FooterCard';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -34,6 +34,7 @@ export default function ImpressumPage() {
         <NavbarLayoutFloatingInline
           navItems={navItems}
           brandName="VoiceLink.ai"
+          button={{ text: "Get Started", href: "/contact" }}
           className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
         />
       </div>
@@ -57,7 +58,7 @@ export default function ImpressumPage() {
       </div>
 
       <div id="footer" data-section="footer">
-        <FooterBaseCard
+        <FooterCard
           logoText="VoiceLinkAI"
           copyrightText="© 2025 VoiceLinkAI"
         />
