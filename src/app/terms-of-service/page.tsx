@@ -18,21 +18,29 @@ const navItems = [
 
 const tosContent = [
   {
-    heading: "1. Geltungsbereich",    content: { type: "paragraph", text: "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen VoiceLinkAI und unseren Kunden, die unsere KI-Agenten-Lösungen in Anspruch nehmen." }
+    heading: "1. Geltungsbereich",    
+    content: [{ type: "paragraph", text: "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen VoiceLinkAI und unseren Kunden, die unsere KI-Agenten-Lösungen in Anspruch nehmen." }]
   },
   {
-    heading: "2. Vertragsgegenstand",    content: { type: "paragraph", text: "VoiceLinkAI stellt Solarunternehmen spezialisierte KI-Agenten zur Automatisierung von Telefonie-, Termin- und Qualifizierungsprozessen bereit. Die Erbringung der Leistungen erfolgt gemäß der individuellen Leistungsbeschreibung im jeweiligen Angebot." }
+    heading: "2. Vertragsgegenstand",    
+    content: [{ type: "paragraph", text: "VoiceLinkAI stellt Solarunternehmen spezialisierte KI-Agenten zur Automatisierung von Telefonie-, Termin- und Qualifizierungsprozessen bereit. Die Erbringung der Leistungen erfolgt gemäß der individuellen Leistungsbeschreibung im jeweiligen Angebot." }]
   },
   {
-    heading: "3. Pflichten des Kunden",    content: { 
-      type: "list", 
-      items: [
-        "Der Kunde stellt sicher, dass alle notwendigen Zugangsdaten und Schnittstellen korrekt bereitgestellt werden.",        "Der Kunde ist für die Einhaltung datenschutzrechtlicher Vorgaben in seinem eigenen Betrieb verantwortlich.",        "Der Kunde verpflichtet sich, die KI-Agenten nur bestimmungsgemäß zu nutzen."
-      ] 
-    }
+    heading: "3. Pflichten des Kunden",    
+    content: [ 
+      { 
+        type: "list", 
+        items: [
+          "Der Kunde stellt sicher, dass alle notwendigen Zugangsdaten und Schnittstellen korrekt bereitgestellt werden.",        
+          "Der Kunde ist für die Einhaltung datenschutzrechtlicher Vorgaben in seinem eigenen Betrieb verantwortlich.",        
+          "Der Kunde verpflichtet sich, die KI-Agenten nur bestimmungsgemäß zu nutzen."
+        ] 
+      }
+    ]
   },
   {
-    heading: "4. Haftung",    content: { type: "paragraph", text: "VoiceLinkAI haftet für Schäden nur bei Vorsatz oder grober Fahrlässigkeit. Eine Haftung für entgangenen Gewinn ist ausgeschlossen." }
+    heading: "4. Haftung",    
+    content: [{ type: "paragraph", text: "VoiceLinkAI haftet für Schäden nur bei Vorsatz oder grober Fahrlässigkeit. Eine Haftung für entgangenen Gewinn ist ausgeschlossen." }]
   }
 ];
 
