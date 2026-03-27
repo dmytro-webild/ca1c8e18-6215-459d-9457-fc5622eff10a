@@ -45,19 +45,13 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: {
-                type: "paragraph",                text: "VoiceLinkAI \nVertreten durch: Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin"
-              }
+              heading: "Angaben gemäß § 5 TMG",              content: { text: "VoiceLinkAI \nVertreten durch: Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin" }
             },
             {
-              heading: "Kontakt",              content: {
-                type: "paragraph",                text: "E-Mail: kontakt@voicelink.ai \nTelefon: +49 (0) 123 456789"
-              }
+              heading: "Kontakt",              content: { text: "E-Mail: kontakt@voicelink.ai \nTelefon: +49 (0) 123 456789" }
             },
             {
-              heading: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",              content: {
-                type: "paragraph",                text: "Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin"
-              }
+              heading: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",              content: { text: "Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin" }
             }
           ]}
         />
