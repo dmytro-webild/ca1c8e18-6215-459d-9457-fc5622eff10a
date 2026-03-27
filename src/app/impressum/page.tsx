@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import LegalSection from '@/components/legal/LegalSection';
-import FooterCard from '@/components/sections/footer/FooterCard';
+import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -40,20 +40,25 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
+              heading: "Angaben gemäß § 5 TMG",              
+              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
             },
             {
-              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
+              heading: "Kontakt",              
+              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
             },
             {
-              heading: "Registereintrag",              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
+              heading: "Registereintrag",              
+              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
             }
           ]}
         />
       </div>
       <div id="footer" data-section="footer">
-        <FooterCard
+        <FooterLogoReveal
           logoText="VoiceLinkAI"
+          leftLink={{ text: "Home", href: "/" }}
+          rightLink={{ text: "Kontakt", href: "/contact" }}
         />
       </div>
     </ThemeProvider>
