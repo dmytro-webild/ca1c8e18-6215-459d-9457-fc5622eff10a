@@ -40,13 +40,13 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
+              heading: "Angaben gemäß § 5 TMG",              content: { text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler", type: "paragraph" }
             },
             {
-              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
+              heading: "Kontakt",              content: { text: "E-Mail: info@voicelinkai.de", type: "paragraph" }
             },
             {
-              heading: "Registereintrag",              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
+              heading: "Registereintrag",              content: { text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456", type: "paragraph" }
             }
           ]}
         />
