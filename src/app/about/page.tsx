@@ -14,8 +14,7 @@ const updatedNavItems = [
   { name: "Probleme", id: "/#problems" },
   { name: "Agenten", id: "/#agents" },
   { name: "So funktioniert's", id: "/#howitworks" },
-  { name: "FAQ", id: "/#faq" },
-  { name: "AGB", id: "/terms-of-service" }
+  { name: "FAQ", id: "/#faq" }
 ];
 
 export default function AboutPage() {
