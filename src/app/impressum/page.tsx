@@ -1,9 +1,9 @@
 "use client"
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
+import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import LegalSection from '@/components/legal/LegalSection';
-import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
+import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -29,9 +29,11 @@ export default function ImpressumPage() {
       headingFontWeight="semibold"
     >
       <div id="nav" data-section="nav">
-        <NavbarStyleApple
+        <NavbarLayoutFloatingInline
           navItems={navItems}
           brandName="VoiceLink.ai"
+          className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
+          button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
       <div className="pt-24">
@@ -40,25 +42,43 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              
-              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
+              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
             },
             {
-              heading: "Kontakt",              
-              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
+              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
             },
             {
-              heading: "Registereintrag",              
-              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
+              heading: "Registereintrag",              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
             }
           ]}
         />
       </div>
       <div id="footer" data-section="footer">
-        <FooterLogoReveal
+        <FooterBaseCard
           logoText="VoiceLinkAI"
-          leftLink={{ text: "Home", href: "/" }}
-          rightLink={{ text: "Kontakt", href: "/contact" }}
+          columns={[
+            {
+              title: "Produkt",              items: [
+                { label: "KI-Telefonassistent", href: "/#agents" },
+                { label: "KI-Buchungsagent", href: "/#agents" },
+                { label: "KI-Chat-Agent", href: "/#agents" }
+              ]
+            },
+            {
+              title: "Unternehmen",              items: [
+                { label: "Über uns", href: "/uber-uns" },
+                { label: "So funktioniert's", href: "/#howitworks" },
+                { label: "Kontakt", href: "/contact" }
+              ]
+            },
+            {
+              title: "Rechtliches",              items: [
+                { label: "Impressum", href: "/impressum" },
+                { label: "Datenschutz", href: "#" },
+                { label: "AGB", href: "#" }
+              ]
+            }
+          ]}
         />
       </div>
     </ThemeProvider>
