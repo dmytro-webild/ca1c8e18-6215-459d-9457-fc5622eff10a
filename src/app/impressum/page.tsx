@@ -1,9 +1,9 @@
 "use client"
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
+import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import LegalSection from '@/components/legal/LegalSection';
-import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
+import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -29,7 +29,7 @@ export default function ImpressumPage() {
       headingFontWeight="semibold"
     >
       <div id="nav" data-section="nav">
-        <NavbarLayoutFloatingInline
+        <NavbarStyleApple
           navItems={navItems}
           brandName="VoiceLink.ai"
         />
@@ -52,16 +52,10 @@ export default function ImpressumPage() {
         />
       </div>
       <div id="footer" data-section="footer">
-        <FooterBaseCard
+        <FooterLogoReveal
           logoText="VoiceLinkAI"
-          columns={[
-            {
-              title: "Navigation",              items: [
-                { label: "Home", href: "/" },
-                { label: "Kontakt", href: "/contact" }
-              ]
-            }
-          ]}
+          leftLink={{ text: "Home", href: "/" }}
+          rightLink={{ text: "Kontakt", href: "/contact" }}
         />
       </div>
     </ThemeProvider>
