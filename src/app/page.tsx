@@ -409,7 +409,8 @@ export default function LandingPage() {
               { name: "Probleme", id: "problems" },
               { name: "Agenten", id: "agents" },
               { name: "So funktioniert's", id: "howitworks" },
-              { name: "FAQ", id: "faq" }
+              { name: "FAQ", id: "faq" },
+              { name: "AGB", id: "/terms-of-service" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoiceLinkAI"
@@ -481,7 +482,7 @@ export default function LandingPage() {
             logoText="VoiceLinkAI"
             columns={[
               { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "#agents" }] },
-              { title: "Unternehmen", items: [{ label: "Über uns", href: "#about" }] }
+              { title: "Unternehmen", items: [{ label: "Über uns", href: "#about" }, { label: "AGB", href: "/terms-of-service" }] }
             ]}
           />
         </div>
