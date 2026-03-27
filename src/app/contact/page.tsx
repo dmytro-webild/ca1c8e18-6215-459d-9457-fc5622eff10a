@@ -14,7 +14,8 @@ const consistentNavItems = [
   { name: "Über uns", id: "/uber-uns" },
   { name: "VoiceLinkAI", id: "/about" },
   { name: "Services", id: "/services" },
-  { name: "Kontakt", id: "/contact" }
+  { name: "Kontakt", id: "/contact" },
+  { name: "AGB", id: "/terms-of-service" }
 ];
 
 export default function ContactPage() {
