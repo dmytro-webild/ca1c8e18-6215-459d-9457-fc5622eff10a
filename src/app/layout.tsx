@@ -12,8 +12,8 @@ import { Nunito } from "next/font/google";
 
 
 export const metadata: Metadata = {
-  title: 'Impressum | VoiceLink.ai',
-  description: 'Impressum und rechtliche Angaben für VoiceLink.ai',
+  title: 'VoiceLinkAI – KI-Agenten für Solarunternehmen',
+  description: 'Automatisieren Sie Routineaufgaben mit KI-Agenten speziell für Solarunternehmen. 24/7 Kundenservice, intelligente Terminbuchung, Chat-Automation – DSGVO-konform, in 1–2 Wochen live.',
 };
 
 
