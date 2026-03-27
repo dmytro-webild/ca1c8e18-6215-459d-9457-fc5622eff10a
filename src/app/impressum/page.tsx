@@ -11,8 +11,6 @@ const navItems = [
   { name: "Agenten", id: "/#agents" },
   { name: "So funktioniert's", id: "/#howitworks" },
   { name: "FAQ", id: "/#faq" },
-  { name: "Über uns", id: "/uber-uns" },
-  { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
 ];
 
@@ -22,7 +20,7 @@ export default function ImpressumPage() {
       defaultButtonVariant="text-stagger"
       defaultTextAnimation="reveal-blur"
       borderRadius="rounded"
-      contentWidth="medium"
+      contentWidth="small"
       sizing="mediumLarge"
       background="none"
       cardStyle="gradient-bordered"
@@ -38,34 +36,49 @@ export default function ImpressumPage() {
           button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
-
       <div className="pt-24">
         <LegalSection
           layout="page"
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { text: "VoiceLinkAI \nVertreten durch: Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin" }
+              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
             },
             {
-              heading: "Kontakt",              content: { text: "E-Mail: kontakt@voicelink.ai \nTelefon: +49 (0) 123 456789" }
+              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
             },
             {
-              heading: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",              content: { text: "Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin" }
+              heading: "Registereintrag",              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
             }
           ]}
         />
       </div>
-
       <div id="footer" data-section="footer">
         <FooterBaseCard
           logoText="VoiceLinkAI"
           columns={[
-            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "/#agents" }, { label: "KI-Buchungsagent", href: "/#agents" }, { label: "KI-Chat-Agent", href: "/#agents" }] },
-            { title: "Unternehmen", items: [{ label: "Über uns", href: "/uber-uns" }, { label: "So funktioniert's", href: "/#howitworks" }, { label: "Kontakt", href: "/contact" }] },
-            { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }, { label: "Datenschutz", href: "/#" }, { label: "AGB", href: "/#" }] }
+            {
+              title: "Produkt",              items: [
+                { label: "KI-Telefonassistent", href: "/#agents" },
+                { label: "KI-Buchungsagent", href: "/#agents" },
+                { label: "KI-Chat-Agent", href: "/#agents" }
+              ]
+            },
+            {
+              title: "Unternehmen",              items: [
+                { label: "Über uns", href: "/uber-uns" },
+                { label: "So funktioniert's", href: "/#howitworks" },
+                { label: "Kontakt", href: "/contact" }
+              ]
+            },
+            {
+              title: "Rechtliches",              items: [
+                { label: "Impressum", href: "/impressum" },
+                { label: "Datenschutz", href: "#" },
+                { label: "AGB", href: "#" }
+              ]
+            }
           ]}
-          copyrightText="© 2025 VoiceLinkAI"
         />
       </div>
     </ThemeProvider>
