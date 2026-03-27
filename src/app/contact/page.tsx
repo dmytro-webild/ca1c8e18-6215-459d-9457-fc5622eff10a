@@ -14,8 +14,7 @@ const consistentNavItems = [
   { name: "Über uns", id: "/uber-uns" },
   { name: "VoiceLinkAI", id: "/about" },
   { name: "Services", id: "/services" },
-  { name: "Kontakt", id: "/contact" },
-  { name: "AGB", id: "/terms-of-service" }
+  { name: "Kontakt", id: "/contact" }
 ];
 
 export default function ContactPage() {
@@ -35,11 +34,11 @@ export default function ContactPage() {
         headingFontWeight="semibold"
       >
         {/* Picture over navigation bar */}
-        <div className="relative w-full bg-[#0a0f1e] py-2 flex justify-end px-4">
+        <div className="relative w-full bg-[#0a0f1e] py-2">
           <img
-            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774610235649-b1wh8qy6.png"
+            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774438142804-lhst1ilk.png"
             alt="VoiceLinkAI Logo"
-            className="h-12 w-auto object-contain"
+            className="absolute top-1/2 -translate-y-1/2 right-4 h-8"
           />
         </div>
         <div id="nav" data-section="nav">
