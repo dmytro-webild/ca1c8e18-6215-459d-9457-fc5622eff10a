@@ -16,8 +16,7 @@ const consistentNavItems = [
   { name: "Über uns", id: "/uber-uns" },
   { name: "VoiceLinkAI", id: "/about" },
   { name: "Services", id: "/services" },
-  { name: "Kontakt", id: "/contact" },
-  { name: "AGB", id: "/terms-of-service" }
+  { name: "Kontakt", id: "/contact" }
 ];
 
 
@@ -38,11 +37,11 @@ export default function LiveTestingPage() {
         headingFontWeight="semibold"
       >
         {/* Picture over navigation bar */}
-        <div className="relative w-full bg-[#0a0f1e] py-2 flex justify-end px-4">
+        <div className="relative w-full bg-[#0a0f1e] py-2">
           <img
-            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774610235649-b1wh8qy6.png"
+            src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774438142804-lhst1ilk.png"
             alt="VoiceLinkAI Logo"
-            className="h-12 w-auto object-contain"
+            className="absolute top-1/2 -translate-y-1/2 right-4 h-8"
           />
         </div>
         <div id="nav" data-section="nav">
@@ -65,7 +64,7 @@ export default function LiveTestingPage() {
             animationType="blur-reveal"
             features={[
               {
-                id: "1",                title: "Echtzeit-Anrufsimulation",                description: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                tag: "Anrufsimulation",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018432-5f65a12d.png",                imageAlt: "Microphone icon"
+                id: "1",                title: "Echtzeit-Anrufsimulation",                description: "Höre, wie unser Agent einen Kundenanruf bearbeitet und Anfragen löst.",                tag: "Anrufsimulation",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-microphone-icon-with-sound-waves-in-t-1774010018042-5f65a12d.png",                imageAlt: "Microphone icon"
               },
               {
                 id: "2",                title: "Automatisierte Terminbuchung",                description: "Beobachte, wie ein Terminvorschlag erfolgreich in den Kalender eingetragen wird.",                tag: "Terminbuchung",                imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-calendar-icon-with-a-check-mark-to-sy-1774010019010-38439366.png",                imageAlt: "Calendar icon with check mark"
