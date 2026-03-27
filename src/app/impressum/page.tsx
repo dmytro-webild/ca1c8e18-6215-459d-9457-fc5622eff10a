@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import LegalSection from '@/components/legal/LegalSection';
-import FooterCard from '@/components/sections/footer/FooterCard';
+import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -11,8 +11,6 @@ const navItems = [
   { name: "Agenten", id: "/#agents" },
   { name: "So funktioniert's", id: "/#howitworks" },
   { name: "FAQ", id: "/#faq" },
-  { name: "Über uns", id: "/uber-uns" },
-  { name: "Services", id: "/services" },
   { name: "Kontakt", id: "/contact" }
 ];
 
@@ -22,7 +20,7 @@ export default function ImpressumPage() {
       defaultButtonVariant="text-stagger"
       defaultTextAnimation="reveal-blur"
       borderRadius="rounded"
-      contentWidth="medium"
+      contentWidth="small"
       sizing="mediumLarge"
       background="none"
       cardStyle="gradient-bordered"
@@ -34,33 +32,53 @@ export default function ImpressumPage() {
         <NavbarLayoutFloatingInline
           navItems={navItems}
           brandName="VoiceLink.ai"
-          button={{ text: "Get Started", href: "/contact" }}
           className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
+          button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
-
       <div className="pt-24">
         <LegalSection
           layout="page"
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI \nVertreten durch: Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin" }
+              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
             },
             {
-              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: kontakt@voicelink.ai \nTelefon: +49 (0) 123 456789" }
+              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
             },
             {
-              heading: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",              content: { type: "paragraph", text: "Florian Schüßler \nMax-Mustermann-Straße 1 \n12345 Berlin" }
+              heading: "Registereintrag",              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
             }
           ]}
         />
       </div>
-
       <div id="footer" data-section="footer">
-        <FooterCard
+        <FooterBaseCard
           logoText="VoiceLinkAI"
-          copyrightText="© 2025 VoiceLinkAI"
+          columns={[
+            {
+              title: "Produkt",              items: [
+                { label: "KI-Telefonassistent", href: "/#agents" },
+                { label: "KI-Buchungsagent", href: "/#agents" },
+                { label: "KI-Chat-Agent", href: "/#agents" }
+              ]
+            },
+            {
+              title: "Unternehmen",              items: [
+                { label: "Über uns", href: "/uber-uns" },
+                { label: "So funktioniert's", href: "/#howitworks" },
+                { label: "Kontakt", href: "/contact" }
+              ]
+            },
+            {
+              title: "Rechtliches",              items: [
+                { label: "Impressum", href: "/impressum" },
+                { label: "Datenschutz", href: "#" },
+                { label: "AGB", href: "#" }
+              ]
+            }
+          ]}
         />
       </div>
     </ThemeProvider>
