@@ -15,49 +15,54 @@ export default function ImpressumPage() {
       sizing="medium"
       background="none"
       cardStyle="solid"
-      primaryButtonStyle="flat"
-      secondaryButtonStyle="solid"
-      headingFontWeight="normal"
+      primaryButtonStyle="gradient"
+      secondaryButtonStyle="glass"
+      headingFontWeight="semibold"
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "Home", id: "/" },
-            { name: "Probleme", id: "/#problems" },
-            { name: "Agenten", id: "/#agents" },
-            { name: "So funktioniert's", id: "/#howitworks" }
+            { name: "Impressum", id: "/impressum" }
           ]}
           brandName="VoiceLinkAI"
+          button={{ text: "Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
-
       <div id="impressum" data-section="impressum">
         <LegalSection
           layout="page"
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI, Musterstraße 1, 12345 Musterstadt, Deutschland." }
+              heading: "Angaben gemäß § 5 TMG",              content: { 
+                type: "paragraph", 
+                text: "VoiceLinkAI, vertreten durch die Geschäftsführung, Musterstraße 1, 12345 Musterstadt."
+              }
             },
             {
-              heading: "Kontakt",              content: { type: "list", items: ["E-Mail: kontakt@voicelinkai.de", "Telefon: +49 123 456 789"] }
+              heading: "Kontakt",              content: { 
+                type: "paragraph", 
+                text: "E-Mail: kontakt@voicelinkai.de"
+              }
             },
             {
-              heading: "Verantwortlich für den Inhalt",              content: { type: "numbered-list", items: ["Max Mustermann"] }
+              heading: "Umsatzsteuer-ID",              content: { 
+                type: "paragraph", 
+                text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
+              }
             }
           ]}
         />
       </div>
-
       <div id="footer" data-section="footer">
         <FooterBaseCard
           logoText="VoiceLinkAI"
           columns={[
-            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "/#agents" }] },
-            { title: "Unternehmen", items: [{ label: "Über uns", href: "/#" }] },
+            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "#" }] },
+            { title: "Unternehmen", items: [{ label: "Über uns", href: "#" }] },
             { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
           ]}
-          copyrightText="© 2025 VoiceLinkAI"
         />
       </div>
     </ThemeProvider>
