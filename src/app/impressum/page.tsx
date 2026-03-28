@@ -36,19 +36,16 @@ export default function ImpressumPage() {
           sections={[
             {
               heading: "Angaben gemäß § 5 TMG",              content: { 
-                type: "paragraph", 
                 text: "VoiceLinkAI, vertreten durch die Geschäftsführung, Musterstraße 1, 12345 Musterstadt."
               }
             },
             {
               heading: "Kontakt",              content: { 
-                type: "paragraph", 
                 text: "E-Mail: kontakt@voicelinkai.de"
               }
             },
             {
               heading: "Umsatzsteuer-ID",              content: { 
-                type: "paragraph", 
                 text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
               }
             }
