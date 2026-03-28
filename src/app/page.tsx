@@ -6,6 +6,7 @@ import HeroBillboard from '@/components/sections/hero/HeroBillboard';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
+import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
@@ -26,6 +27,19 @@ export default function LandingPage() {
       </div>
       <div id="hero" data-section="hero">
         <HeroBillboard title="VoiceLinkAI: Next-Gen Solar Automation" description="Deploy hyper-intelligent AI agents that handle lead qualification, appointment booking, and customer support 24/7. Built specifically for solar installers." background={{ variant: "sparkles-gradient" }} />
+      </div>
+      <div id="metrics" data-section="metrics">
+        <MetricCardFourteen 
+          title="VoiceLinkAI – Kein Anruf bleibt mehr unbeantwortet." 
+          tag="Impact"
+          metrics={[
+            { id: "missed", value: "38%", description: "Missed calls reduced" },
+            { id: "revenue", value: "4.200 €", description: "Monthly lost revenue recovered" },
+            { id: "growth", value: "+31%", description: "Increased revenue with AI agents" }
+          ]}
+          metricsAnimation="slide-up"
+          useInvertedBackground={true}
+        />
       </div>
       <div id="problems" data-section="problems">
         <FeatureCardNineteen title="The Solar Bottleneck" description="Your team is trapped in admin tasks instead of closing deals." textboxLayout="default" features={[
