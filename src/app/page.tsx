@@ -94,7 +94,10 @@ export default function LandingPage() {
         </div>
 
         <div id="footer" data-section="footer">
-          <FooterBaseCard />
+          <FooterBaseCard 
+            columns={[{ title: "Links", items: [{ label: "Home", href: "/" }] }]}
+            logoText="VoiceLinkAI"
+          />
         </div>
       </ThemeProvider>
     </>
