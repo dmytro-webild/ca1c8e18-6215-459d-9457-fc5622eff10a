@@ -22,7 +22,7 @@ export default function LandingPage() {
   return (
     <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
       <div id="nav" data-section="nav">
-        <NavbarLayoutFloatingInline navItems={navItems} />
+        <NavbarLayoutFloatingInline navItems={navItems} button={{ text: "Get Started", href: "/contact" }} />
       </div>
       <div id="hero" data-section="hero">
         <HeroBillboard title="KI-Agenten" description="Automatisierung für Solar" background={{ variant: "plain" }} />
@@ -31,7 +31,7 @@ export default function LandingPage() {
         <FeatureCardNineteen title="Probleme" description="Herausforderungen." textboxLayout="default" features={[]} useInvertedBackground={false} />
       </div>
       <div id="solution" data-section="solution">
-        <TestimonialAboutCard tag="Lösung" title="Automation" description="Wir helfen dir." subdescription="." icon={Zap} imageSrc="/placeholder.png" videoSrc="" useInvertedBackground={false} />
+        <TestimonialAboutCard tag="Lösung" title="Automation" description="Wir helfen dir." subdescription="." icon={Zap} videoSrc="https://www.youtube.com/watch?v=dQw4w9WgXcQ" useInvertedBackground={false} />
       </div>
       <div id="agents" data-section="agents">
         <FeatureBento title="Agenten" description="Agentenliste" animationType="blur-reveal" textboxLayout="default" useInvertedBackground={false} features={[]} />
@@ -40,7 +40,7 @@ export default function LandingPage() {
         <FeatureCardNineteen title="So funktioniert's" description="Schritt für Schritt." textboxLayout="default" features={[]} useInvertedBackground={false} />
       </div>
       <div id="about" data-section="about">
-        <TestimonialAboutCard tag="Über uns" title="VoiceLinkAI" description="Expertise." subdescription="." icon={Info} imageSrc="/placeholder.png" videoSrc="" useInvertedBackground={false} />
+        <TestimonialAboutCard tag="Über uns" title="VoiceLinkAI" description="Expertise." subdescription="." icon={Info} videoSrc="https://www.youtube.com/watch?v=dQw4w9WgXcQ" useInvertedBackground={false} />
       </div>
       <div id="faq" data-section="faq">
         <FaqDouble title="FAQ" description="Fragen." faqs={[]} faqsAnimation="blur-reveal" textboxLayout="default" useInvertedBackground={false} />
