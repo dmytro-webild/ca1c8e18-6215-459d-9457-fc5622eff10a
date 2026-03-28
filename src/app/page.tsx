@@ -10,7 +10,7 @@ import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { Bot, Phone, Clock, TrendingDown, Info, Zap } from 'lucide-react';
+import { Bot, Phone, Clock, TrendingDown } from 'lucide-react';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -76,7 +76,14 @@ export default function LandingPage() {
         <ContactSplit tag="Jetzt starten" title="Bereit für 24/7 Erreichbarkeit?" description="Sichern Sie sich Ihren Wettbewerbsvorteil im Solarmarkt mit VoiceLinkAI." background={{ variant: "sparkles-gradient" }} useInvertedBackground={true} mediaAnimation="slide-up" />
       </div>
       <div id="footer" data-section="footer">
-        <FooterBaseCard columns={[{ title: "Unternehmen", items: [{ label: "Über uns", href: "/about" }, { label: "Kontakt", href: "/contact" }, { label: "Impressum", href: "/impressum" }] }]} copyrightText="© 2025 VoiceLinkAI" />
+        <FooterBaseCard 
+          copyrightText="© 2025 VoiceLinkAI" 
+          columns={[
+            { title: "Produkt", items: [{ label: "Features", href: "#" }, { label: "Integrationen", href: "#" }, { label: "Preise", href: "#" }] },
+            { title: "Unternehmen", items: [{ label: "Über uns", href: "/about" }, { label: "Karriere", href: "#" }, { label: "Kontakt", href: "/contact" }] },
+            { title: "Rechtliches", items: [{ label: "Datenschutz", href: "#" }, { label: "Impressum", href: "/impressum" }] }
+          ]} 
+        />
       </div>
     </ThemeProvider>
   );
