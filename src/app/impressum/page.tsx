@@ -28,7 +28,6 @@ export default function ImpressumPage() {
             { name: "So funktioniert's", id: "/#howitworks" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Kontakt", href: "/contact" }}
         />
       </div>
 
