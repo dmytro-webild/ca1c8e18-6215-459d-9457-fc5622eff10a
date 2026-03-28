@@ -26,7 +26,6 @@ export default function ImpressumPage() {
             { name: "Impressum", id: "/impressum" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Get Started", href: "#" }}
         />
       </div>
       <div id="impressum" data-section="impressum">
