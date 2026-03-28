@@ -26,7 +26,7 @@ export default function ImpressumPage() {
             { name: "Impressum", id: "/impressum" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Get Started", href: "/#" }}
+          button={{ text: "Get Started", href: "/" }}
         />
       </div>
       <div id="impressum" data-section="impressum">
@@ -59,8 +59,8 @@ export default function ImpressumPage() {
         <FooterBaseCard
           logoText="VoiceLinkAI"
           columns={[
-            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "#" }] },
-            { title: "Unternehmen", items: [{ label: "Über uns", href: "#" }] },
+            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "/" }] },
+            { title: "Unternehmen", items: [{ label: "Über uns", href: "/uber-uns" }] },
             { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
           ]}
         />
