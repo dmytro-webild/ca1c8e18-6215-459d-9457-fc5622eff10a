@@ -15,7 +15,7 @@ export default function ContactPage() {
   return (
     <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
       <div id="nav" data-section="nav">
-        <NavbarLayoutFloatingInline navItems={navItems} />
+        <NavbarLayoutFloatingInline navItems={navItems} button={{ text: "Get Started", href: "/contact" }} />
       </div>
       <div id="contact" data-section="contact" className="py-20">
         <div className="max-w-4xl mx-auto px-6">
