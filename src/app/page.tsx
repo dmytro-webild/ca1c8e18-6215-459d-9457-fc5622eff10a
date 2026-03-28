@@ -3,9 +3,14 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import HeroBillboard from '@/components/sections/hero/HeroBillboard';
+import MetricCardEleven from '@/components/sections/metrics/MetricCardEleven';
 import FeatureCardNineteen from '@/components/sections/feature/FeatureCardNineteen';
+import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
+import FaqDouble from '@/components/sections/faq/FaqDouble';
+import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { AlertCircle, Zap } from 'lucide-react';
+import FeatureBento from '@/components/sections/feature/FeatureBento';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, CheckCircle, Headphones, Calendar, Phone } from 'lucide-react';
 
 const animatedBorderStyle = `
   [data-section] {
