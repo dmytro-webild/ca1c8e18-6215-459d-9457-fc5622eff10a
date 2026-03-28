@@ -13,54 +13,45 @@ export default function ImpressumPage() {
       borderRadius="rounded"
       contentWidth="medium"
       sizing="medium"
-      background="none"
-      cardStyle="solid"
+      background="circleGradient"
+      cardStyle="glass-elevated"
       primaryButtonStyle="gradient"
       secondaryButtonStyle="glass"
-      headingFontWeight="semibold"
+      headingFontWeight="normal"
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "Home", id: "/" },
-            { name: "Impressum", id: "/impressum" }
+            { name: "Impressum", id: "impressum" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Get Started", href: "/" }}
+          button={{ text: "Get Started", href: "/#" }}
         />
       </div>
-      <div id="impressum" data-section="impressum">
+
+      <div id="legal" data-section="legal">
         <LegalSection
           layout="page"
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { 
-                type: "paragraph", 
-                text: "VoiceLinkAI, vertreten durch die Geschäftsführung, Musterstraße 1, 12345 Musterstadt."
-              }
+              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, E-Mail: kontakt@voicelink.ai" }
             },
             {
-              heading: "Kontakt",              content: { 
-                type: "paragraph", 
-                text: "E-Mail: kontakt@voicelinkai.de"
-              }
+              heading: "Verantwortlich für den Inhalt",              content: { type: "paragraph", text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin" }
             },
             {
-              heading: "Umsatzsteuer-ID",              content: { 
-                type: "paragraph", 
-                text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
-              }
+              heading: "Haftungsausschluss",              content: { type: "paragraph", text: "Wir übernehmen keine Haftung für die Inhalte externer Links." }
             }
           ]}
         />
       </div>
+
       <div id="footer" data-section="footer">
         <FooterBaseCard
           logoText="VoiceLinkAI"
           columns={[
-            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "/" }] },
-            { title: "Unternehmen", items: [{ label: "Über uns", href: "/uber-uns" }] },
             { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
           ]}
         />
