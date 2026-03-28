@@ -209,7 +209,7 @@ export default function LandingPage() {
             useInvertedBackground={false}
             animationType="blur-reveal"
             features={[
-              { title: "Telefon", description: "Anrufe 24/7", bentoComponent: "phone", statusIcon: Zap, alertIcon: AlertCircle, alertTitle: "", alertMessage: "", apps: Array(8).fill({ name: "", icon: Zap }) },
+              { title: "Telefon", description: "Anrufe 24/7", bentoComponent: "phone", statusIcon: Zap, alertIcon: AlertCircle, alertTitle: "", alertMessage: "", apps: [{name:"", icon:Zap}, {name:"", icon:Zap}, {name:"", icon:Zap}, {name:"", icon:Zap}, {name:"", icon:Zap}, {name:"", icon:Zap}, {name:"", icon:Zap}, {name:"", icon:Zap}] },
               { title: "Termine", description: "Automatische Buchung", bentoComponent: "timeline", heading: "", subheading: "", items: [{ label: "", detail: "" }, { label: "", detail: "" }, { label: "", detail: "" }], completedLabel: "" },
               { title: "Chat", description: "Lead Qualifizierung", bentoComponent: "chat", aiIcon: Bot, userIcon: MessageSquare, exchanges: [], placeholder: "" }
             ]}
