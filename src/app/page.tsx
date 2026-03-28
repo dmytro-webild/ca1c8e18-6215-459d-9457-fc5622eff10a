@@ -9,7 +9,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Rocket, Sparkles, Workflow, Zap, MessageSquare, TrendingUp, Shield, Headphones, Calendar, Phone } from 'lucide-react';
+import { AlertCircle, Bot, Info, Lightbulb, Rocket, Sparkles, Zap, MessageSquare } from 'lucide-react';
 
 const animatedBorderStyle = `
   [data-section] {
@@ -197,6 +197,7 @@ export default function LandingPage() {
             icon={Zap}
             imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-sophisticated-diagram-showing-seamless-1774010017346-e1338d62.png"
             useInvertedBackground={true}
+            mediaAnimation="none"
           />
         </div>
 
@@ -208,8 +209,8 @@ export default function LandingPage() {
             useInvertedBackground={false}
             animationType="blur-reveal"
             features={[
-              { title: "Telefon", description: "Anrufe 24/7", bentoComponent: "phone", statusIcon: Zap, alertIcon: AlertCircle, alertTitle: "", alertMessage: "", apps: [] },
-              { title: "Termine", description: "Automatische Buchung", bentoComponent: "timeline", heading: "", subheading: "", items: [{ label: "", detail: "" }], completedLabel: "" },
+              { title: "Telefon", description: "Anrufe 24/7", bentoComponent: "phone", statusIcon: Zap, alertIcon: AlertCircle, alertTitle: "", alertMessage: "", apps: Array(8).fill({ name: "", icon: Zap }) },
+              { title: "Termine", description: "Automatische Buchung", bentoComponent: "timeline", heading: "", subheading: "", items: [{ label: "", detail: "" }, { label: "", detail: "" }, { label: "", detail: "" }], completedLabel: "" },
               { title: "Chat", description: "Lead Qualifizierung", bentoComponent: "chat", aiIcon: Bot, userIcon: MessageSquare, exchanges: [], placeholder: "" }
             ]}
           />
@@ -239,6 +240,7 @@ export default function LandingPage() {
             icon={Lightbulb}
             imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png"
             useInvertedBackground={false}
+            mediaAnimation="none"
           />
         </div>
 
@@ -274,6 +276,7 @@ export default function LandingPage() {
             background={{ variant: "radial-gradient" }}
             useInvertedBackground={true}
             buttonText="👉 Prozessanalyse buchen"
+            mediaAnimation="none"
           />
         </div>
 
