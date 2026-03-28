@@ -27,6 +27,7 @@ export default function ImpressumPage() {
             { name: "Probleme", id: "problems" }
           ]}
           brandName="VoiceLinkAI"
+          button={{ text: "Get Started", href: "#" }}
         />
       </div>
 
