@@ -3,47 +3,68 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import LegalSection from '@/components/legal/LegalSection';
+import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
 export default function ImpressumPage() {
-  const navItems = [
-    { name: "Home", id: "/" },
-    { name: "Leistungen", id: "/services" },
-    { name: "Kontakt", id: "/contact" },
-    { name: "Impressum", id: "/impressum" },
-    { name: "Datenschutz", id: "/datenschutz" }
-  ];
-
   return (
     <ThemeProvider
-        defaultButtonVariant="text-stagger"
-        defaultTextAnimation="reveal-blur"
-        borderRadius="rounded"
-        contentWidth="small"
-        sizing="mediumLarge"
-        background="none"
-        cardStyle="gradient-bordered"
-        primaryButtonStyle="flat"
-        secondaryButtonStyle="layered"
-        headingFontWeight="semibold"
-      >
-        <div id="nav" data-section="nav">
-          <NavbarLayoutFloatingInline
-            navItems={navItems}
-            brandName="VoiceLink.ai"
-            className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
-            button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
-          />
-        </div>
-        <div className="pt-24">
-            <LegalSection
-                layout="page"
-                title="Impressum"
-                sections={[
-                    { heading: "Angaben gemäß § 5 TMG", content: { type: "paragraph", text: "SIXEIGHT VISUALS\n[Adresse einfügen]\n[PLZ Ort einfügen]" } },
-                    { heading: "Kontakt", content: { type: "paragraph", text: "E-Mail: [E-Mail einfügen]\nTelefon: [Telefon einfügen]" } }
-                ]}
-            />
-        </div>
+      defaultButtonVariant="text-stagger"
+      defaultTextAnimation="reveal-blur"
+      borderRadius="rounded"
+      contentWidth="medium"
+      sizing="medium"
+      background="none"
+      cardStyle="solid"
+      primaryButtonStyle="gradient"
+      secondaryButtonStyle="glass"
+      headingFontWeight="semibold"
+    >
+      <div id="nav" data-section="nav">
+        <NavbarLayoutFloatingInline
+          navItems={[
+            { name: "Home", id: "/" },
+            { name: "Impressum", id: "/impressum" }
+          ]}
+          brandName="VoiceLinkAI"
+          button={{ text: "Get Started", href: "/#" }}
+        />
+      </div>
+      <div id="impressum" data-section="impressum">
+        <LegalSection
+          layout="page"
+          title="Impressum"
+          sections={[
+            {
+              heading: "Angaben gemäß § 5 TMG",              content: { 
+                type: "paragraph", 
+                text: "VoiceLinkAI, vertreten durch die Geschäftsführung, Musterstraße 1, 12345 Musterstadt."
+              }
+            },
+            {
+              heading: "Kontakt",              content: { 
+                type: "paragraph", 
+                text: "E-Mail: kontakt@voicelinkai.de"
+              }
+            },
+            {
+              heading: "Umsatzsteuer-ID",              content: { 
+                type: "paragraph", 
+                text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
+              }
+            }
+          ]}
+        />
+      </div>
+      <div id="footer" data-section="footer">
+        <FooterBaseCard
+          logoText="VoiceLinkAI"
+          columns={[
+            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "#" }] },
+            { title: "Unternehmen", items: [{ label: "Über uns", href: "#" }] },
+            { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
+          ]}
+        />
+      </div>
     </ThemeProvider>
   );
 }
