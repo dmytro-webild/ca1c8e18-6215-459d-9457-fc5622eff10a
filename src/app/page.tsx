@@ -10,7 +10,7 @@ import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { Zap, Info, Bot, Headset, Settings, BarChart } from 'lucide-react';
+import { Zap, Info, Bot, Headset, Settings, BarChart, Phone, Clock, TrendingDown } from 'lucide-react';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -27,6 +27,21 @@ export default function LandingPage() {
       </div>
       <div id="hero" data-section="hero">
         <HeroBillboard title="VoiceLinkAI: Next-Gen Solar Automation" description="Deploy hyper-intelligent AI agents that handle lead qualification, appointment booking, and customer support 24/7. Built specifically for solar installers." background={{ variant: "sparkles-gradient" }} />
+      </div>
+      <div id="product-visual" data-section="product-visual">
+        <FeatureBento 
+          title="KI-Telefonassistent für Solar-Experten" 
+          description="Maximale Erreichbarkeit rund um die Uhr mit nahtloser Integration in Ihren Workflow."
+          animationType="slide-up"
+          textboxLayout="split-description"
+          useInvertedBackground={true}
+          features={[
+            { title: "24/7 Service", description: "Kein Anruf geht verloren", bentoComponent: 'reveal-icon', icon: Phone },
+            { title: "Schnelle Antworten", description: "Sofortige Reaktion auf Anfragen", bentoComponent: 'reveal-icon', icon: Clock },
+            { title: "Routine-Entlastung", description: "Weniger Call-Volumen für Ihr Team", bentoComponent: 'reveal-icon', icon: TrendingDown },
+            { title: "Solar-Spezialist", description: "Versteht Kundenfragen zu Photovoltaik & Speicher", bentoComponent: 'reveal-icon', icon: Bot }
+          ]}
+        />
       </div>
       <div id="metrics" data-section="metrics">
         <MetricCardFourteen 
