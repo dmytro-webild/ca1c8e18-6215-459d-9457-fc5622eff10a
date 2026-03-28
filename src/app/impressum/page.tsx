@@ -5,80 +5,59 @@ import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloating
 import LegalSection from '@/components/legal/LegalSection';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 
-const navItems = [
-  { name: "Home", id: "/" },
-  { name: "Probleme", id: "/#problems" },
-  { name: "Agenten", id: "/#agents" },
-  { name: "So funktioniert's", id: "/#howitworks" },
-  { name: "FAQ", id: "/#faq" },
-  { name: "Kontakt", id: "/contact" }
-];
-
 export default function ImpressumPage() {
   return (
     <ThemeProvider
       defaultButtonVariant="text-stagger"
       defaultTextAnimation="reveal-blur"
       borderRadius="rounded"
-      contentWidth="small"
-      sizing="mediumLarge"
+      contentWidth="medium"
+      sizing="medium"
       background="none"
-      cardStyle="gradient-bordered"
+      cardStyle="solid"
       primaryButtonStyle="flat"
-      secondaryButtonStyle="layered"
-      headingFontWeight="semibold"
+      secondaryButtonStyle="solid"
+      headingFontWeight="normal"
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
-          navItems={navItems}
-          brandName="VoiceLink.ai"
-          className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
-          button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
+          navItems={[
+            { name: "Home", id: "/" },
+            { name: "Probleme", id: "/#problems" },
+            { name: "Agenten", id: "/#agents" },
+            { name: "So funktioniert's", id: "/#howitworks" }
+          ]}
+          brandName="VoiceLinkAI"
         />
       </div>
-      <div className="pt-24">
+
+      <div id="impressum" data-section="impressum">
         <LegalSection
           layout="page"
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI GmbH\nMusterstraße 1\n12345 Musterstadt\n\nVertreten durch:\nFlorian Schüßler" }
+              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI, Musterstraße 1, 12345 Musterstadt, Deutschland." }
             },
             {
-              heading: "Kontakt",              content: { type: "paragraph", text: "E-Mail: info@voicelinkai.de" }
+              heading: "Kontakt",              content: { type: "list", items: ["E-Mail: kontakt@voicelinkai.de", "Telefon: +49 123 456 789"] }
             },
             {
-              heading: "Registereintrag",              content: { type: "paragraph", text: "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Musterstadt\nRegisternummer: HRB 123456" }
+              heading: "Verantwortlich für den Inhalt",              content: { type: "numbered-list", items: ["Max Mustermann"] }
             }
           ]}
         />
       </div>
+
       <div id="footer" data-section="footer">
         <FooterBaseCard
           logoText="VoiceLinkAI"
           columns={[
-            {
-              title: "Produkt",              items: [
-                { label: "KI-Telefonassistent", href: "/#agents" },
-                { label: "KI-Buchungsagent", href: "/#agents" },
-                { label: "KI-Chat-Agent", href: "/#agents" }
-              ]
-            },
-            {
-              title: "Unternehmen",              items: [
-                { label: "Über uns", href: "/uber-uns" },
-                { label: "So funktioniert's", href: "/#howitworks" },
-                { label: "Kontakt", href: "/contact" }
-              ]
-            },
-            {
-              title: "Rechtliches",              items: [
-                { label: "Impressum", href: "/impressum" },
-                { label: "Datenschutz", href: "#" },
-                { label: "AGB", href: "#" }
-              ]
-            }
+            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "/#agents" }] },
+            { title: "Unternehmen", items: [{ label: "Über uns", href: "/#" }] },
+            { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
           ]}
+          copyrightText="© 2025 VoiceLinkAI"
         />
       </div>
     </ThemeProvider>
