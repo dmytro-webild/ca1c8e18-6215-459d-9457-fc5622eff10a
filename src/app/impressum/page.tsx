@@ -26,7 +26,6 @@ export default function ImpressumPage() {
             { name: "Impressum", id: "/impressum" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
       <div id="impressum" data-section="impressum">
@@ -35,19 +34,22 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { 
+              heading: "Angaben gemäß § 5 TMG",              
+              content: { 
                 type: "paragraph", 
                 text: "VoiceLinkAI, vertreten durch die Geschäftsführung, Musterstraße 1, 12345 Musterstadt."
               }
             },
             {
-              heading: "Kontakt",              content: { 
+              heading: "Kontakt",              
+              content: { 
                 type: "paragraph", 
                 text: "E-Mail: kontakt@voicelinkai.de"
               }
             },
             {
-              heading: "Umsatzsteuer-ID",              content: { 
+              heading: "Umsatzsteuer-ID",              
+              content: { 
                 type: "paragraph", 
                 text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
               }
