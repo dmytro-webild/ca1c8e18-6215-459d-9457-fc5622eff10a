@@ -37,19 +37,22 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { 
+              heading: "Angaben gemäß § 5 TMG",              
+              content: { 
                 type: "paragraph", 
                 text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, Geschäftsführer: Max Mustermann"
               }
             },
             {
-              heading: "Kontakt",              content: { 
+              heading: "Kontakt",              
+              content: { 
                 type: "paragraph", 
                 text: "E-Mail: info@voicelinkai.de, Telefon: +49 123 456789"
               }
             },
             {
-              heading: "Umsatzsteuer-ID",              content: { 
+              heading: "Umsatzsteuer-ID",              
+              content: { 
                 type: "paragraph", 
                 text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
               }
