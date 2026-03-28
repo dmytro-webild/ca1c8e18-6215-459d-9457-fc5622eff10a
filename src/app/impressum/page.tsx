@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -17,18 +17,19 @@ export default function ImpressumPage() {
       cardStyle="solid"
       primaryButtonStyle="gradient"
       secondaryButtonStyle="glass"
-      headingFontWeight="semibold"
+      headingFontWeight="normal"
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "Home", id: "/" },
-            { name: "Impressum", id: "/impressum" }
+            { name: "Impressum", id: "impressum" },
+            { name: "Probleme", id: "problems" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Get Started", href: "/#" }}
         />
       </div>
+
       <div id="impressum" data-section="impressum">
         <LegalSection
           layout="page"
@@ -37,13 +38,13 @@ export default function ImpressumPage() {
             {
               heading: "Angaben gemäß § 5 TMG",              content: { 
                 type: "paragraph", 
-                text: "VoiceLinkAI, vertreten durch die Geschäftsführung, Musterstraße 1, 12345 Musterstadt."
+                text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, Geschäftsführer: Max Mustermann"
               }
             },
             {
               heading: "Kontakt",              content: { 
                 type: "paragraph", 
-                text: "E-Mail: kontakt@voicelinkai.de"
+                text: "E-Mail: info@voicelinkai.de, Telefon: +49 123 456789"
               }
             },
             {
@@ -55,6 +56,7 @@ export default function ImpressumPage() {
           ]}
         />
       </div>
+
       <div id="footer" data-section="footer">
         <FooterBaseCard
           logoText="VoiceLinkAI"
