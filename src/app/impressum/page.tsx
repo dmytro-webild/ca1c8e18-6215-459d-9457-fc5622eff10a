@@ -14,8 +14,6 @@ const navItems = [
   { name: "Kontakt", id: "/contact" }
 ];
 
-const button = { text: "Jetzt buchen", href: "https://calendly.com/voicelinkai/info" };
-
 export default function ImpressumPage() {
   return (
     <ThemeProvider
@@ -34,8 +32,8 @@ export default function ImpressumPage() {
         <NavbarLayoutFloatingInline
           navItems={navItems}
           brandName="VoiceLink.ai"
-          button={button}
           className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
+          button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
       <div className="pt-24">
