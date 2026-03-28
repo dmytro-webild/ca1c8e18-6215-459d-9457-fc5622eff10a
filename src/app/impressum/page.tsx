@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -13,8 +13,8 @@ export default function ImpressumPage() {
       borderRadius="rounded"
       contentWidth="medium"
       sizing="medium"
-      background="none"
-      cardStyle="solid"
+      background="circleGradient"
+      cardStyle="glass-elevated"
       primaryButtonStyle="gradient"
       secondaryButtonStyle="glass"
       headingFontWeight="normal"
@@ -23,38 +23,30 @@ export default function ImpressumPage() {
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "Home", id: "/" },
-            { name: "Impressum", id: "impressum" },
-            { name: "Probleme", id: "problems" }
+            { name: "Impressum", id: "impressum" }
           ]}
           brandName="VoiceLinkAI"
-          button={{ text: "Get Started", href: "#" }}
         />
       </div>
 
-      <div id="impressum" data-section="impressum">
+      <div id="legal" data-section="legal">
         <LegalSection
           layout="page"
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              
-              content: { 
-                type: "paragraph", 
-                text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, Geschäftsführer: Max Mustermann"
+              heading: "Angaben gemäß § 5 TMG",              content: {
+                type: "paragraph",                text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, E-Mail: kontakt@voicelink.ai"
               }
             },
             {
-              heading: "Kontakt",              
-              content: { 
-                type: "paragraph", 
-                text: "E-Mail: info@voicelinkai.de, Telefon: +49 123 456789"
+              heading: "Verantwortlich für den Inhalt",              content: {
+                type: "paragraph",                text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin"
               }
             },
             {
-              heading: "Umsatzsteuer-ID",              
-              content: { 
-                type: "paragraph", 
-                text: "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789"
+              heading: "Haftungsausschluss",              content: {
+                type: "paragraph",                text: "Wir übernehmen keine Haftung für die Inhalte externer Links."
               }
             }
           ]}
@@ -65,8 +57,6 @@ export default function ImpressumPage() {
         <FooterBaseCard
           logoText="VoiceLinkAI"
           columns={[
-            { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "#" }] },
-            { title: "Unternehmen", items: [{ label: "Über uns", href: "#" }] },
             { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
           ]}
         />
