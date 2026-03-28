@@ -36,13 +36,13 @@ export default function ImpressumPage() {
           title="Impressum"
           sections={[
             {
-              heading: "Angaben gemäß § 5 TMG",              content: { text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, E-Mail: kontakt@voicelink.ai" }
+              heading: "Angaben gemäß § 5 TMG",              content: { type: "paragraph", text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin, E-Mail: kontakt@voicelink.ai" }
             },
             {
-              heading: "Verantwortlich für den Inhalt",              content: { text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin" }
+              heading: "Verantwortlich für den Inhalt",              content: { type: "paragraph", text: "VoiceLinkAI, Musterstraße 1, 12345 Berlin" }
             },
             {
-              heading: "Haftungsausschluss",              content: { text: "Wir übernehmen keine Haftung für die Inhalte externer Links." }
+              heading: "Haftungsausschluss",              content: { type: "paragraph", text: "Wir übernehmen keine Haftung für die Inhalte externer Links." }
             }
           ]}
         />
