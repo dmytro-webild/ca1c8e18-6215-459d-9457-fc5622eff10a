@@ -32,11 +32,11 @@ export default function LandingPage() {
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingInline
             navItems={[
-              { name: "Impressum", id: "/impressum" },
-              { name: "Probleme", id: "/" },
-              { name: "Agenten", id: "/" },
-              { name: "So funktioniert's", id: "/" },
-              { name: "FAQ", id: "/" }
+              { name: "Impressum", id: "impressum" },
+              { name: "Probleme", id: "problems" },
+              { name: "Agenten", id: "agents" },
+              { name: "So funktioniert's", id: "howitworks" },
+              { name: "FAQ", id: "faq" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoicelinkSolarAi"
@@ -67,6 +67,16 @@ export default function LandingPage() {
             mediaAnimation="blur-reveal"
           />
         </div>
+        
+        <div id="impressum" data-section="impressum">
+          <div className="w-full max-w-4xl mx-auto py-20 px-6 text-center">
+            <div className="flex flex-col items-center gap-4">
+              <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/uploaded-1774438142804-lhst1ilk.png" alt="VoiceLinkAI Logo" className="w-24 h-24" />
+              <h2 className="text-3xl font-bold">VoiceLinkAI</h2>
+              <p className="text-gray-400">Automatisierte KI-Prozesse für Solarunternehmen</p>
+            </div>
+          </div>
+        </div>
 
         <div id="problems" data-section="problems">
           <FeatureCardNineteen
@@ -89,7 +99,7 @@ export default function LandingPage() {
             columns={[
               { title: "Produkt", items: [{ label: "KI-Telefonassistent", href: "#" }] },
               { title: "Unternehmen", items: [{ label: "Über uns", href: "#" }] },
-              { title: "Rechtliches", items: [{ label: "Impressum", href: "/impressum" }] }
+              { title: "Rechtliches", items: [{ label: "Impressum", href: "#" }] }
             ]}
           />
         </div>
