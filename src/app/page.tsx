@@ -33,10 +33,10 @@ export default function LandingPage() {
           <NavbarLayoutFloatingInline
             navItems={[
               { name: "Impressum", id: "/impressum" },
-              { name: "Probleme", id: "/" },
-              { name: "Agenten", id: "/" },
-              { name: "So funktioniert's", id: "/" },
-              { name: "FAQ", id: "/" }
+              { name: "Probleme", id: "/#problems" },
+              { name: "Agenten", id: "/#agents" },
+              { name: "So funktioniert's", id: "/#howitworks" },
+              { name: "FAQ", id: "/#faq" }
             ]}
             button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
             brandName="VoicelinkSolarAi"
