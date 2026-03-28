@@ -9,7 +9,7 @@ import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import FeatureBento from '@/components/sections/feature/FeatureBento';
-import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Zap, MessageSquare, TrendingUp, Shield, Headphones, Calendar, Phone } from 'lucide-react';
+import { AlertCircle, Bot, HelpCircle, Info, Lightbulb, Zap, Sparkles } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -34,8 +34,7 @@ export default function LandingPage() {
               { name: "So funktioniert's", id: "howitworks" },
               { name: "FAQ", id: "faq" }
             ]}
-            button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
-            brandName="VoicelinkSolarAi "
+            brandName="VoicelinkSolarAi"
           />
         </div>
 
@@ -72,6 +71,7 @@ export default function LandingPage() {
             imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-modern-sleek-software-dashboard-interf-1774010018435-0a6597cd.png?_wi=1"
             background={{ variant: "plain" }}
             useInvertedBackground={false}
+            mediaAnimation="blur-reveal"
           />
         </div>
 
@@ -81,7 +81,9 @@ export default function LandingPage() {
             description="Effizienzsteigerung durch KI-Automatisierung"
             textboxLayout="default"
             useInvertedBackground={false}
-            features={[]}
+            features={[
+              { id: 1, tag: "Effizienz", title: "Höhere Produktivität", subtitle: "Schnellere Abwicklung", description: "Dein Team kann sich auf Kernaufgaben konzentrieren.", buttons: [] }
+            ]}
           />
         </div>
 
@@ -95,8 +97,8 @@ export default function LandingPage() {
             tagIcon={AlertCircle}
             tagAnimation="blur-reveal"
             features={[
-              { id: 1, tag: "Telefonverkehr", title: "Dein Telefon klingelt", subtitle: "Routineaufrufe", description: "Routineanrufe statt wichtiger Montageaufgaben.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-illustration-showing-a-frustrated-sol-1774010017180-ab16cf36.png" },
-              { id: 2, tag: "Termine", title: "Terminkoordination", subtitle: "Ineffiziente Abläufe", description: "Manuelle Terminabstimmungen verursachen Chaos.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-illustration-depicting-the-complexity-1774010017922-56bddc49.png" }
+              { id: 1, tag: "Telefonverkehr", title: "Dein Telefon klingelt", subtitle: "Routineaufrufe", description: "Routineanrufe statt wichtiger Montageaufgaben.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-illustration-showing-a-frustrated-sol-1774010017180-ab16cf36.png", buttons: [] },
+              { id: 2, tag: "Termine", title: "Terminkoordination", subtitle: "Ineffiziente Abläufe", description: "Manuelle Terminabstimmungen verursachen Chaos.", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-illustration-depicting-the-complexity-1774010017922-56bddc49.png", buttons: [] }
             ]}
           />
         </div>
@@ -112,6 +114,7 @@ export default function LandingPage() {
             icon={Zap}
             imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/a-sophisticated-diagram-showing-seamless-1774010017346-e1338d62.png"
             useInvertedBackground={true}
+            mediaAnimation="blur-reveal"
           />
         </div>
 
@@ -135,7 +138,9 @@ export default function LandingPage() {
             tag="Unser Prozess"
             tagIcon={Lightbulb}
             tagAnimation="blur-reveal"
-            features={[]}
+            features={[
+              { id: 1, tag: "Schritt 1", title: "Analyse", subtitle: "Prozessaufnahme", description: "Wir identifizieren deine größten Engpässe.", buttons: [] }
+            ]}
           />
         </div>
 
@@ -150,6 +155,7 @@ export default function LandingPage() {
             icon={Lightbulb}
             imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3BD3dlR7FZEi8PoUil2VldNiisn/an-inspiring-visualization-showing-a-sol-1774010018283-dee187fe.png"
             useInvertedBackground={false}
+            mediaAnimation="blur-reveal"
           />
         </div>
 
@@ -177,6 +183,7 @@ export default function LandingPage() {
             tagIcon={Zap}
             background={{ variant: "radial-gradient" }}
             useInvertedBackground={false}
+            mediaAnimation="blur-reveal"
           />
         </div>
 
@@ -188,12 +195,12 @@ export default function LandingPage() {
             tagIcon={Zap}
             background={{ variant: "radial-gradient" }}
             useInvertedBackground={true}
+            mediaAnimation="blur-reveal"
           />
         </div>
 
         <div id="footer" data-section="footer">
           <FooterBaseCard
-            logoText="VoiceLinkAI"
             columns={[
               { title: "Produkt", items: [{ label: "Telefon", href: "#" }] },
               { title: "Unternehmen", items: [{ label: "Über", href: "#" }] },

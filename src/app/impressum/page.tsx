@@ -33,7 +33,6 @@ export default function ImpressumPage() {
           navItems={navItems}
           brandName="VoiceLink.ai"
           className="h-[70px] bg-[#222222] w-full fixed top-0 z-50"
-          button={{ text: "Kostenloses Erstgespräch", href: "https://calendly.com/voicelinkai/info" }}
         />
       </div>
       <div className="pt-24">
