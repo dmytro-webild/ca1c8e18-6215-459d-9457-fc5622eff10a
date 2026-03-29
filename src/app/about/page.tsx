@@ -16,10 +16,10 @@ export default function AboutPage() {
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline navItems={navItems} button={{ text: "Get Started", href: "/contact" }} />
       </div>
-      <div id="about" data-section="about" className="py-20">
+      <div id="about" data-section="about" className="py-20 bg-[#0a0f1e] text-white">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl font-bold mb-6">Über uns</h1>
-          <p className="text-lg text-gray-400">Wir bauen KI-Agenten für Solarunternehmen.</p>
+          <p className="text-lg text-gray-300">Wir bauen KI-Agenten für Solarunternehmen.</p>
         </div>
       </div>
     </ThemeProvider>

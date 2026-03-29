@@ -16,7 +16,7 @@ export default function ImpressumPage() {
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline navItems={navItems} button={{ text: "Get Started", href: "/contact" }} />
       </div>
-      <div id="impressum" data-section="impressum" className="py-20">
+      <div id="impressum" data-section="impressum" className="py-20 bg-[#0a0f1e] text-white">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl font-bold mb-6">Impressum</h1>
         </div>
