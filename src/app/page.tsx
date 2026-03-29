@@ -10,7 +10,7 @@ import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { Zap, Info, Bot, Headset, Settings, BarChart, Phone, Clock, TrendingDown } from 'lucide-react';
+import { Info, Bot, Headset, Settings, BarChart, Phone, Clock, TrendingDown } from 'lucide-react';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -93,7 +93,7 @@ export default function LandingPage() {
         <ContactSplit tag="Let's Connect" title="Ready to scale your solar business?" description="Join the future of solar installation automation." background={{ variant: "sparkles-gradient" }} useInvertedBackground={true} mediaAnimation="slide-up" />
       </div>
       <div id="footer" data-section="footer">
-        <FooterBaseCard columns={[{ title: "Product", items: [{ label: "Agents", href: "/agents" }, { label: "Pricing", href: "/pricing" }] }, { title: "Company", items: [{ label: "About", href: "/about" }, { label: "Legal", href: "/impressum" }] }]} copyrightText="© 2025 VoiceLinkAI. All rights reserved." />
+        <FooterBaseCard columns={[{ title: "Product", items: [{ label: "Agents", href: "/agents" }] }, { title: "Company", items: [{ label: "About", href: "/about" }, { label: "Legal", href: "/impressum" }] }]} copyrightText="© 2025 VoiceLinkAI. All rights reserved." />
       </div>
     </ThemeProvider>
   );
