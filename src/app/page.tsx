@@ -10,7 +10,7 @@ import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCa
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { Info, Bot, Headset, Settings, BarChart, Phone, Clock, TrendingDown, Zap, BarChart3, CheckCircle } from 'lucide-react';
+import { Info, Bot, Headset, Settings, BarChart, Phone, Clock, Zap, BarChart3, CheckCircle } from 'lucide-react';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -36,8 +36,8 @@ export default function LandingPage() {
           textboxLayout="split-description"
           useInvertedBackground={true}
           features={[
-            { title: "Ohne VoiceLinkAI", description: "Reaktionszeiten von > 2 Stunden, hohe Abbruchraten, manuelle Admin-Last.", bentoComponent: '3d-task-list', title: "Manueller Betrieb", items: [{ icon: Clock, label: "Reaktionszeit > 2h", time: "Slow" }, { icon: Settings, label: "Admin-Aufwand", time: "Hoch" }, { icon: Phone, label: "Lead-Verlust", time: "Riskant" }] },
-            { title: "Mit VoiceLinkAI", description: "Reaktionszeit in Sekunden, 24/7 Präsenz, CRM-Integration, volle Automatisierung.", bentoComponent: '3d-task-list', title: "KI-gestützte Performance", items: [{ icon: Zap, label: "Reaktionszeit < 5s", time: "Instant" }, { icon: BarChart3, label: "Admin-Aufwand", time: "Zero" }, { icon: CheckCircle, label: "Lead-Qualifizierung", time: "Automated" }] }
+            { description: "Reaktionszeiten von > 2 Stunden, hohe Abbruchraten, manuelle Admin-Last.", bentoComponent: '3d-task-list', title: "Manueller Betrieb", items: [{ icon: Clock, label: "Reaktionszeit > 2h", time: "Slow" }, { icon: Settings, label: "Admin-Aufwand", time: "Hoch" }, { icon: Phone, label: "Lead-Verlust", time: "Riskant" }] },
+            { description: "Reaktionszeit in Sekunden, 24/7 Präsenz, CRM-Integration, volle Automatisierung.", bentoComponent: '3d-task-list', title: "KI-gestützte Performance", items: [{ icon: Zap, label: "Reaktionszeit < 5s", time: "Instant" }, { icon: BarChart3, label: "Admin-Aufwand", time: "Zero" }, { icon: CheckCircle, label: "Lead-Qualifizierung", time: "Automated" }] }
           ]}
         />
       </div>
