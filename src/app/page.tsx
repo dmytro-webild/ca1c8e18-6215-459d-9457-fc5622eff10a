@@ -10,8 +10,7 @@ import MetricCardFourteen from '@/components/sections/metrics/MetricCardFourteen
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import TeamCardFive from '@/components/sections/team/TeamCardFive';
-import { Bot, Phone, Clock, TrendingDown, Users } from 'lucide-react';
+import { Bot, Phone, Clock, TrendingDown } from 'lucide-react';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -34,21 +33,6 @@ export default function LandingPage() {
             { id: 2, tag: "Problem", title: "Terminkoordination", subtitle: "Zeitfresser im Büro", description: "Manuelle Terminfindung raubt Ihren Vertrieblern die Zeit für den Abschluss." },
             { id: 3, tag: "Problem", title: "Support-Last", subtitle: "Fokus verloren", description: "Wiederkehrende Kundenanfragen halten Sie vom Kerngeschäft ab." }
         ]} useInvertedBackground={true} />
-      </div>
-      <div id="about-premium" data-section="about-premium">
-        <TeamCardFive 
-            title="Über VoiceLinkAI" 
-            description="Wir sind ein Team aus KI-Spezialisten und Solar-Enthusiasten mit einer Mission: Die Digitalisierung des Handwerks durch intelligente Automatisierung voranzutreiben."
-            team={[
-                { id: "1", name: "Dr. Elena Solar", role: "Gründerin & CEO", imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400" },
-                { id: "2", name: "Marc Tech", role: "CTO & AI Architect", imageSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" },
-                { id: "3", name: "Julia Vertrieb", role: "Head of Customer Success", imageSrc: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400" }
-            ]}
-            animationType="slide-up"
-            textboxLayout="split"
-            useInvertedBackground={true}
-            tag="Premium Über uns"
-        />
       </div>
       <div id="solution" data-section="solution">
         <TestimonialAboutCard tag="Die Lösung" title="KI-Agenten für den Solarsektor" description="Unsere KI-Telefonassistenten sind speziell auf Photovoltaik-Begriffe trainiert und integrieren sich nahtlos in Ihren Kalender und Ihr CRM." subdescription="Maximale Professionalität, 24/7 erreichbar, 100% DSGVO-konform." icon={Bot} imageSrc="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1000" useInvertedBackground={false} mediaAnimation="blur-reveal" />
