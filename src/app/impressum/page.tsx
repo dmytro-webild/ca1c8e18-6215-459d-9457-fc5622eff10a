@@ -5,16 +5,16 @@ import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloating
 
 const navItems = [
   { name: "Home", id: "/" },
-  { name: "Über uns", id: "/about" },
-  { name: "Agenten", id: "/agents" },
-  { name: "Kontakt", id: "/contact" }
+  { name: "About", id: "/about" },
+  { name: "Contact", id: "/contact" },
+  { name: "Services", id: "/services" }
 ];
 
 export default function ImpressumPage() {
   return (
-    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="reveal-blur" borderRadius="pill" contentWidth="medium" sizing="medium" background="noiseDiagonalGradient" cardStyle="glass-elevated" primaryButtonStyle="primary-glow" secondaryButtonStyle="glass" headingFontWeight="semibold">
-      <div id="nav" data-section="nav" className="bg-[#0a0f1e] text-white">
-        <NavbarLayoutFloatingInline navItems={navItems} button={{ text: "Starten", href: "/contact" }} />
+    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="noiseDiagonalGradient" cardStyle="glass-elevated" primaryButtonStyle="primary-glow" secondaryButtonStyle="glass" headingFontWeight="normal">
+      <div id="nav" data-section="nav">
+        <NavbarLayoutFloatingInline navItems={navItems} button={{ text: "Get Started", href: "/contact" }} />
       </div>
       <div id="impressum" data-section="impressum" className="py-20 bg-[#0a0f1e] text-white">
         <div className="max-w-4xl mx-auto px-6">
