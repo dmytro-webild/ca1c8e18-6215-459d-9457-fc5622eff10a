@@ -10,7 +10,7 @@ import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCa
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
-import { Info, Bot, Headset, Settings, BarChart, Phone, Clock, TrendingDown } from 'lucide-react';
+import { Info, Bot, Headset, Settings, BarChart, Phone, Clock, Zap, BarChart3, CheckCircle } from 'lucide-react';
 
 const navItems = [
   { name: "Home", id: "/" },
@@ -30,16 +30,14 @@ export default function LandingPage() {
       </div>
       <div id="product-visual" data-section="product-visual" className="bg-[#0a0f1e] text-white">
         <FeatureBento 
-          title="KI-Telefonassistent für Solar-Experten" 
-          description="Maximale Erreichbarkeit rund um die Uhr mit nahtloser Integration in Ihren Workflow."
+          title="VoiceLinkAI Infografik: Leistung im Vergleich"
+          description="Erleben Sie den Unterschied zwischen manuellem Workflow und vollautomatisierter KI-Agentur-Unterstützung."
           animationType="slide-up"
           textboxLayout="split-description"
           useInvertedBackground={true}
           features={[
-            { title: "24/7 Service", description: "Kein Anruf geht verloren", bentoComponent: 'reveal-icon', icon: Phone },
-            { title: "Schnelle Antworten", description: "Sofortige Reaktion auf Anfragen", bentoComponent: 'reveal-icon', icon: Clock },
-            { title: "Routine-Entlastung", description: "Weniger Call-Volumen für Ihr Team", bentoComponent: 'reveal-icon', icon: TrendingDown },
-            { title: "Solar-Spezialist", description: "Versteht Kundenfragen zu Photovoltaik & Speicher", bentoComponent: 'reveal-icon', icon: Bot }
+            { description: "Reaktionszeiten von > 2 Stunden, hohe Abbruchraten, manuelle Admin-Last.", bentoComponent: '3d-task-list', title: "Manueller Betrieb", items: [{ icon: Clock, label: "Reaktionszeit > 2h", time: "Slow" }, { icon: Settings, label: "Admin-Aufwand", time: "Hoch" }, { icon: Phone, label: "Lead-Verlust", time: "Riskant" }] },
+            { description: "Reaktionszeit in Sekunden, 24/7 Präsenz, CRM-Integration, volle Automatisierung.", bentoComponent: '3d-task-list', title: "KI-gestützte Performance", items: [{ icon: Zap, label: "Reaktionszeit < 5s", time: "Instant" }, { icon: BarChart3, label: "Admin-Aufwand", time: "Zero" }, { icon: CheckCircle, label: "Lead-Qualifizierung", time: "Automated" }] }
           ]}
         />
       </div>
@@ -64,7 +62,7 @@ export default function LandingPage() {
         ]} useInvertedBackground={true} />
       </div>
       <div id="solution" data-section="solution" className="bg-[#0a0f1e] text-white">
-        <TestimonialAboutCard tag="Die Zukunft der Solar-Branche" title="Intelligente KI-Agenten" description="VoiceLinkAI lässt sich direkt in Ihr CRM integrieren und automatisiert Ihre gesamte Kommunikation." subdescription="Unsere Modelle verstehen Fachbegriffe der Solarindustrie, Projektnuancen und regulatorische Vorgaben." icon={Bot} videoSrc="https://www.youtube.com/watch?v=dQw4w9WgXcQ&_wi=1" useInvertedBackground={false} mediaAnimation="blur-reveal" />
+        <TestimonialAboutCard tag="Die Zukunft der Solar-Branche" title="Intelligente KI-Agenten" description="VoiceLinkAI lässt sich direkt in Ihr CRM integrieren und automatisiert Ihre gesamte Kommunikation." subdescription="Unsere Modelle verstehen Fachbegriffe der Solarindustrie, Projektnuancen und regulatorische Vorgaben." icon={Bot} imageSrc="https://images.unsplash.com/photo-1574807583823-3112a2080a2d?q=80&w=1000" useInvertedBackground={false} mediaAnimation="blur-reveal" />
       </div>
       <div id="agents" data-section="agents" className="bg-[#0a0f1e] text-white">
         <FeatureBento title="Was wir automatisieren" description="Spezialisierte Agenten für jeden Bereich Ihres Unternehmens." animationType="slide-up" textboxLayout="split-description" useInvertedBackground={true} features={[
